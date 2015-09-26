@@ -33,30 +33,163 @@ export default class Map extends React.Component {
 				center: { lat: 52.5, lng: 13.4 }
 			});
 
-			// Enable the event system on the map instance:
-			var mapEvents = new H.mapevents.MapEvents(map);
+        // Enable the event system on the map instance:
+        var mapEvents = new H.mapevents.MapEvents(map);
 
-			// Add event listener:
-			map.addEventListener('tap', function(evt) {
-					// Log 'tap' and 'mouse' events:
-					console.log(evt.type, evt.currentPointer.type); 
-			});
+        // Add event listener:
+        map.addEventListener('tap', function(evt) {
+            // Log 'tap' and 'mouse' events:
+            console.log(evt.type, evt.currentPointer.type); 
+        });
 
-			// Instantiate the default behavior, providing the mapEvents object: 
-			var behavior = new H.mapevents.Behavior(mapEvents);
+        // Instantiate the default behavior, providing the mapEvents object: 
+        var behavior = new H.mapevents.Behavior(mapEvents);
 
-			// Create a group that can hold map objects:
-			var group = new H.map.Group();
+        // Create the parameters for the routing request:
+        var routingParametersPublic = {
+          // The routing mode:
+          'mode': 'fastest;publicTransport',
+          // The start point of the route:
+          'waypoint0': 'geo!52.503861,13.331128',
+          // The end point of the route:
+          'waypoint1': 'geo!52.51366,13.47506',
+          // To retrieve the shape of the route we choose the route
+          // representation mode 'display'
+          'representation': 'display'
+        };
+        // Create the parameters for the routing request:
+        var routingParametersCar = {
+          // The routing mode:
+          'mode': 'fastest;car',
+          // The start point of the route:
+          'waypoint0': 'geo!52.503861,13.331128',
+          // The end point of the route:
+          'waypoint1': 'geo!52.51366,13.47506',
+          // To retrieve the shape of the route we choose the route
+          // representation mode 'display'
+          'representation': 'display'
+        };
 
-			// Add the group to the map object (created earlier):
-			map.addObject(group);
+        // Define a callback function to process the routing response:
+        var onPublicResult = function(result) {
+          var route,
+              routeShape,
+              startPoint,
+              endPoint,
+              strip;
+          if(result.response.route) {
+            // Pick the first route from the response:
+            route = result.response.route[0];
+            // Pick the route's shape:
+            routeShape = route.shape;
 
-			// Create a marker:
-			var marker = new H.map.Marker(map.getCenter());
+            // Create a strip to use as a point source for the route line
+            strip = new H.geo.Strip();
 
-			// Add the marker to the group (which causes 
-			// it to be displayed on the map)
-			group.addObject(marker);
+            // Push all the points in the shape into the strip:
+            routeShape.forEach(function(point) {
+              var parts = point.split(',');
+              strip.pushLatLngAlt(parts[0], parts[1]);
+            });
+
+            // Retrieve the mapped positions of the requested waypoints:
+            startPoint = route.waypoint[0].mappedPosition;
+            endPoint = route.waypoint[1].mappedPosition;
+
+            // Create a polyline to display the route:
+            var routeLine = new H.map.Polyline(strip, {
+              style: { strokeColor: 'rgba(0, 85, 170, 0.6)', lineWidth: 5 }
+            });
+
+            // Create a marker for the start point:
+            var startMarker = new H.map.Marker({
+              lat: startPoint.latitude,
+              lng: startPoint.longitude
+            });
+
+            // Create a marker for the end point:
+            var endMarker = new H.map.Marker({
+              lat: endPoint.latitude,
+              lng: endPoint.longitude
+            });
+
+            // Add the route polyline and the two markers to the map:
+            map.addObjects([routeLine, startMarker, endMarker]);
+
+            // Set the map's viewport to make the whole route visible:
+            map.setViewBounds(routeLine.getBounds());
+          }
+        };
+        // Define a callback function to process the routing response:
+        var onCarResult = function(result) {
+          var route,
+              routeShape,
+              startPoint,
+              endPoint,
+              strip;
+          if(result.response.route) {
+            // Pick the first route from the response:
+            route = result.response.route[0];
+            // Pick the route's shape:
+            routeShape = route.shape;
+
+            // Create a strip to use as a point source for the route line
+            strip = new H.geo.Strip();
+
+            // Push all the points in the shape into the strip:
+            routeShape.forEach(function(point) {
+              var parts = point.split(',');
+              strip.pushLatLngAlt(parts[0], parts[1]);
+            });
+
+            // Retrieve the mapped positions of the requested waypoints:
+            startPoint = route.waypoint[0].mappedPosition;
+            endPoint = route.waypoint[1].mappedPosition;
+
+            // Create a polyline to display the route:
+            var routeLine = new H.map.Polyline(strip, {
+              style: { strokeColor: 'blue', lineWidth: 5 }
+            });
+
+            // Create a marker for the start point:
+            var startMarker = new H.map.Marker({
+              lat: startPoint.latitude,
+              lng: startPoint.longitude
+            });
+
+            // Create a marker for the end point:
+            var endMarker = new H.map.Marker({
+              lat: endPoint.latitude,
+              lng: endPoint.longitude
+            });
+
+            // Add the route polyline and the two markers to the map:
+            map.addObjects([routeLine, startMarker, endMarker]);
+
+            // Set the map's viewport to make the whole route visible:
+            map.setViewBounds(routeLine.getBounds());
+          }
+        };
+
+        // Get an instance of the routing service:
+        var routerCar = platform.getRoutingService();
+        var routerPublic = platform.getRoutingService();
+
+        // Call calculateRoute() with the routing parameters,
+        // the callback and an error callback function (called if a
+        // communication error occurs):
+        routerCar.calculateRoute(routingParametersCar, onCarResult,
+            function(error) {
+                alert(error.message);
+        });
+        // Call calculateRoute() with the routing parameters,
+        // the callback and an error callback function (called if a
+        // communication error occurs):
+        routerPublic.calculateRoute(routingParametersPublic, onPublicResult,
+            function(error) {
+                alert(error.message);
+        });
+
 	}
 
 
