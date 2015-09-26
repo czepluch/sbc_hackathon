@@ -3,7 +3,6 @@ import React from "react";
 import io from 'socket.io-client';
 
 
-require('./style.styl');
 
 var socket = io("localhost:3001");
 
@@ -14,7 +13,7 @@ socket.on('connect', function(conn) {
 
 
 
-export default class Home extends React.Component {
+export default class Overview extends React.Component {
 
 	constructor(props) {
 		super(props);
@@ -38,7 +37,7 @@ export default class Home extends React.Component {
 			name += ' active';
 		}
 		return <div>
-			<h1>Home</h1>
+			<h1>Overview</h1>
 			<div className={name}></div>
 		</div>;
 	}

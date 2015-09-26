@@ -21,7 +21,7 @@ module.exports = function(options) {
 		"txt": "raw-loader",
 		"png|jpg|jpeg|gif|svg": "url-loader?limit=10000",
 		"woff|woff2": "url-loader?limit=100000",
-		"ttf|eot": "file-loader",
+		"ttf|eot|woff": "file-loader",
 		"wav|mp3": "file-loader",
 		"html": "html-loader",
 		"md|markdown": ["html-loader", "markdown-loader"]
@@ -49,7 +49,7 @@ module.exports = function(options) {
 	var extensions = ["", ".web.js", ".js", ".jsx"];
 	var root = path.join(__dirname, "app");
 	var publicPath = options.devServer ?
-		"http://localhost:2992/_assets/" :
+		"http://192.168.77.67:2992/_assets/" :
 		"/_assets/";
 	var output = {
 		path: path.join(__dirname, "build", options.prerender ? "prerender" : "public"),
