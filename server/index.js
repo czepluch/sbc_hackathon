@@ -11,6 +11,9 @@ var _DEVICES = {
 	},
 	"bc-f5-ac-55-59-c2": {
 		name: "Tim"
+	},
+	"28-e3-1f-60-5e-22": {
+		name: "Kati"
 	}
 };
 
@@ -42,6 +45,10 @@ function spawn() {
 		.map(function(key) {
 			return _DEVICES[key].name;
 		});
+		
+		if (foundDevices.length === 0) {
+			return;
+		}
 
 
 		if (_CONNECTED.indexOf(address) === -1) {

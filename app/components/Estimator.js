@@ -2,6 +2,7 @@
 import React from "react";
 
 
+var page = require('../images/pages/page_estimator.svg');
 
 export default class Overview extends React.Component {
 
@@ -16,7 +17,7 @@ export default class Overview extends React.Component {
 
 	render() {
 		return <div>
-			<h1>Estimator</h1>
+			<img src={page} alt="" className="page-img"/>
 		</div>;
 	}
 }

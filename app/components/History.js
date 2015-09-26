@@ -3,6 +3,7 @@
 import React from "react";
 
 
+var page = require('../images/pages/page_travelhistory.svg');
 
 export default class History extends React.Component {
 
@@ -17,7 +18,7 @@ export default class History extends React.Component {
 
 	render() {
 		return <div>
-			<h1>History</h1>
+			<img className="page-img" src={page} alt="" />
 		</div>;
 	}
 }

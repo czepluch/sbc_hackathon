@@ -1,0 +1,60 @@
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
+<svg version="1.1"
+   xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+   x="0px" y="0px" width="259.2px" height="157.786px" viewBox="0 0 259.2 157.786" enable-background="new 0 0 259.2 157.786"
+   xml:space="preserve">
+<defs>
+</defs>
+<g>
+  <path fill="#F8F8F8" d="M125.015,114.543H12.933c-0.552,0-1,0.448-1,1v41.242c0,0.552,0.448,1,1,1h112.082c0.552,0,1-0.448,1-1
+    v-41.242C126.015,114.991,125.567,114.543,125.015,114.543z"/>
+  <path fill="#F8F8F8" d="M125.015,66.468H12.933c-0.552,0-1,0.448-1,1v41.242c0,0.552,0.448,1,1,1h112.082c0.552,0,1-0.448,1-1
+    V67.468C126.015,66.916,125.567,66.468,125.015,66.468z"/>
+  <path fill="#F8F8F8" d="M243.958,114.543H131.876c-0.552,0-1,0.448-1,1v41.242c0,0.552,0.448,1,1,1h112.082c0.552,0,1-0.448,1-1
+    v-41.242C244.958,114.991,244.511,114.543,243.958,114.543z"/>
+  <path fill="#F8F8F8" d="M243.958,66.468H131.876c-0.552,0-1,0.448-1,1v41.242c0,0.552,0.448,1,1,1h112.082c0.552,0,1-0.448,1-1
+    V67.468C244.958,66.916,244.511,66.468,243.958,66.468z"/>
+  <g>
+    <rect x="59.083" y="127.292" fill="none" width="41.819" height="16.846"/>
+    <text transform="matrix(1 0 0 1 59.0822 142.2218)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="22.3842">14:11</text>
+  </g>
+  <g>
+    <rect x="178.409" y="127.03" fill="none" width="50.595" height="17.369"/>
+    <text transform="matrix(1 0 0 1 178.4085 133.0332)"><tspan x="0" y="0" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">direction to</tspan><tspan x="0" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">Potsdam HbF</tspan></text>
+  </g>
+  <g>
+    <rect x="23.933" y="127.03" fill="none" width="50.595" height="17.369"/>
+    <text transform="matrix(1 0 0 1 23.9328 143.833)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">ab</text>
+  </g>
+  <g>
+    <rect x="59.083" y="79.666" fill="none" width="67.885" height="16.846"/>
+    <text transform="matrix(1 0 0 1 59.0832 94.595)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="22.3842">0,60</text>
+  </g>
+  <g>
+    <rect x="23.933" y="79.404" fill="none" width="50.595" height="17.369"/>
+    <text transform="matrix(1 0 0 1 23.9328 85.4074)"><tspan x="0" y="0" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">costs</tspan><tspan x="0" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">in €</tspan></text>
+  </g>
+  <g>
+    <rect x="178.988" y="79.666" fill="none" width="41.334" height="16.846"/>
+    <text transform="matrix(1 0 0 1 178.9879 94.595)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="22.3842">0,20</text>
+  </g>
+  <g>
+    <rect x="144.419" y="79.404" fill="none" width="50.595" height="17.369"/>
+    <text transform="matrix(1 0 0 1 144.4182 85.4074)"><tspan x="0" y="0" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">saved</tspan><tspan x="0" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">in €</tspan></text>
+  </g>
+  <g>
+    <rect x="144.419" y="127.914" fill="none" width="29.524" height="19.385"/>
+    <text transform="matrix(1 0 0 1 144.419 142.8423)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="22.3842">S2</text>
+  </g>
+  <rect y="0" fill="#333333" width="259.2" height="58.298"/>
+  <g>
+    <rect x="21.521" y="34.657" fill="none" width="119.666" height="12.172"/>
+    <text transform="matrix(1 0 0 1 21.5215 43.4655)" fill="#FFFFFF" font-family="'ProximaNovaCond-Regular'" font-size="13.2068">Current active trip</text>
+  </g>
+  <g>
+    <rect x="174.448" y="26.84" fill="none" width="70.51" height="19.989"/>
+    
+      <text transform="matrix(1 0 0 1 202.4366 43.4837)" fill="#FFFFFF" font-family="'ProximaNovaCond-Regular'" font-size="24.9542" letter-spacing="1">0:01</text>
+  </g>
+</g>
+</svg>

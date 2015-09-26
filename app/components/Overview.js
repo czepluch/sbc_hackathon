@@ -3,6 +3,8 @@ import React from "react";
 import io from 'socket.io-client';
 
 
+var checkedIn = require('../images/pages/page_checkedin.svg');
+var notCheckedIn = require('../images/pages/page_notcheckedin.svg');
 
 var socket = io("localhost:3001");
 
@@ -24,20 +26,21 @@ export default class Overview extends React.Component {
 
 		socket.on('found', function(data) {
 			this.setState({ connected: data });
-			console.log('found', data);
 		}.bind(this));
 	}
 
 
 
 	render() {
-		var name = 'dot';
+		var src = notCheckedIn;
+
 		if (this.state.connected.length > 0) {
-			name += ' active';
+		//if (true) {
+			src = checkedIn;
 		}
+
 		return <div>
-			<h1>Overview</h1>
-			<div className={name}></div>
+			<img className="page-img" src={src} alt="" />
 		</div>;
 	}
 }

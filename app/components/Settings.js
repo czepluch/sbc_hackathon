@@ -2,6 +2,7 @@
 
 import React from "react";
 
+var page = require('../images/pages/page_settings.svg');
 
 
 export default class Overview extends React.Component {
@@ -17,7 +18,7 @@ export default class Overview extends React.Component {
 
 	render() {
 		return <div>
-			<h1>Settings</h1>
+			<img className="page-img" src={page} alt="" />
 		</div>;
 	}
 }

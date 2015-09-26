@@ -34,7 +34,7 @@ export default class Application extends React.Component {
 							<div className="icon-wrapper">
 								<img src={estimator} alt="" />
 							</div>
-							<span>Etimator</span>
+							<span>Estimator</span>
 						</Link>
 					</li>
 					<li>
