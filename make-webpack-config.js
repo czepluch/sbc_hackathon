@@ -6,7 +6,7 @@ var loadersByExtension = require("./config/loadersByExtension");
 
 module.exports = function(options) {
 	var entry = {
-		main: options.prerender ? "./config/mainPrerenderer" : "./config/mainApp"
+		main: './app/entry'
 		// second: options.prerender ? "./config/secondPrerenderer" : "./config/secondApp"
 	};
 	var loaders = {
