@@ -1,17 +1,17 @@
 <!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
 <svg version="1.1"
    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
-   x="0px" y="0px" width="277.913px" height="411.325px" viewBox="0 0 277.913 411.325" enable-background="new 0 0 277.913 411.325"
+   x="0px" y="0px" width="277.913px" height="517.325px" viewBox="0 0 277.913 517.325" enable-background="new 0 0 277.913 517.325"
    xml:space="preserve">
 <defs>
 </defs>
 <g>
   <rect x="8.013" y="0" fill="#47D2FC" width="259.2" height="239.934"/>
   <path fill="#66E81A" d="M277.913,241.215c0,0-10.75-16.89-58.414-5.89c-47.664,11-89.011-6-134.385-17
-    C39.739,207.325,0,244.934,0,244.934l8.013-0.107v166.498h259V241.36L277.913,241.215z"/>
+    C39.739,207.325,0,244.934,0,244.934l8.013-0.107v272.498h259V241.36L277.913,241.215z"/>
   <g opacity="0.75">
     <rect x="23.722" y="88.463" fill="none" width="224.867" height="51.244"/>
-    <text transform="matrix(1 0 0 1 55.7142 97.7351)"><tspan x="0" y="0" font-family="'ProximaNovaCond-Regular'" font-size="13.9018">payway will automatically start</tspan><tspan x="-20.394" y="16.682" font-family="'ProximaNovaCond-Regular'" font-size="13.9018"> if you enter a public transport vehicle.</tspan></text>
+    <text transform="matrix(1 0 0 1 55.7142 97.7351)"><tspan x="0" y="0" font-family="'ProximaNovaCond-Regular'" font-size="13.9018">waypay will automatically start</tspan><tspan x="-20.394" y="16.682" font-family="'ProximaNovaCond-Regular'" font-size="13.9018"> if you enter a public transport vehicle.</tspan></text>
   </g>
   <g opacity="0.25">
     <path fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" d="M237.997,24.511
