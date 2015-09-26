@@ -19,13 +19,12 @@ export default class Overview extends React.Component {
 		super(props);
 
 		this.state = {
-			connected: false
+			connected: []
 		};
 
 		socket.on('found', function(data) {
-			if (data.length > 0) {
-				this.setState({ connected: true });
-			}
+			this.setState({ connected: data });
+			console.log('found', data);
 		}.bind(this));
 	}
 
@@ -33,7 +32,7 @@ export default class Overview extends React.Component {
 
 	render() {
 		var name = 'dot';
-		if (this.state.connected) {
+		if (this.state.connected.length > 0) {
 			name += ' active';
 		}
 		return <div>

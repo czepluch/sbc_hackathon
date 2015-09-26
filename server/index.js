@@ -53,8 +53,11 @@ function spawn() {
 
 	});
 
+
 	setTimeout(function() {
 		n.kill();
+		io.sockets.emit('found', _CONNECTED);
+		_CONNECTED = [];
 	}, TIMEOUT);
 }
 
