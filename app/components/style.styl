@@ -2,19 +2,23 @@ body
 	font-family "ProximaNovaCond-Regular"
 	margin 0
 
-.dot
-	width 200px
-	height 200px
-	border-radius 100px
-	background red
-	&.active
-		background green
 .content
 	height 88vh
 	width 100vw
+.overview-container
 	overflow hidden
+	height 100vh 
+	&.active
+		height 88vh
+
 .page-img
 	width 100vw
+	&.overview
+		position relative
+		width 108vw
+		left -4vw
+		&.active
+			z-index 200
 
 .menu
 	position fixed
