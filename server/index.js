@@ -7,8 +7,11 @@ var _sockets = {};
 
 var _DEVICES = {
 	"00-ee-bd-53-7c-49": {
-		name: "HTC One M8"
-	} 
+		name: "Jacob"
+	},
+	"bc-f5-ac-55-59-c2": {
+		name: "Tim"
+	}
 };
 
 var _CONNECTED = [];

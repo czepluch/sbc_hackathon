@@ -49,7 +49,7 @@ module.exports = function(options) {
 	var extensions = ["", ".web.js", ".js", ".jsx"];
 	var root = path.join(__dirname, "app");
 	var publicPath = options.devServer ?
-		"http://192.168.77.67:2992/_assets/" :
+		"http://localhost:2992/_assets/" :
 		"/_assets/";
 	var output = {
 		path: path.join(__dirname, "build", options.prerender ? "prerender" : "public"),
