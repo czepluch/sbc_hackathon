@@ -14,6 +14,9 @@ var _DEVICES = {
 	},
 	"28-e3-1f-60-5e-22": {
 		name: "Kati"
+	},
+	"c0-ee-fb-26-cd-3e": {
+		name: "Daniel"
 	}
 };
 

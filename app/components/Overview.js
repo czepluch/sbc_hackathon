@@ -17,15 +17,42 @@ socket.on('connect', function(conn) {
 var lastActive = false;
 var alreadyCheckedIn = false;
 
+var _prefixZero = function(n) {
+	n = "" + n;
+	if (n.length === 1) {
+		return "0" + n;
+	}
+
+	return n;
+}
+
 export default class Overview extends React.Component {
+
+	startTimer() {
+		var tick = function () {
+			this.setState({ timer: this.state.timer + 1 });
+		}.bind(this);
+
+		tick();
+
+		setInterval(function() {
+			tick();
+		}, 1000);
+	}
 
 	constructor(props) {
 		super(props);
 
 		this.state = {
 			connected: false,
-			src: alreadyCheckedIn ? activeTrip : notCheckedIn
+			src: alreadyCheckedIn ? activeTrip : notCheckedIn,
+			timer: 0
 		};
+
+		if (alreadyCheckedIn) {
+			console.log('starting timer');
+			this.startTimer();
+		}
 
 		socket.on('found', function(data) {
 
@@ -36,7 +63,7 @@ export default class Overview extends React.Component {
 			var connected = data.length > 0;
 
 			var src = connected ? checkedIn : notCheckedIn;
-			console.log('found', data, connected);
+
 			if (connected) {
 				alreadyCheckedIn = true;
 			}
@@ -57,6 +84,7 @@ export default class Overview extends React.Component {
 				setTimeout(function() {
 					alreadyCheckedIn = true;
 					this.setState({src: activeTrip});
+					this.startTimer();
 				}.bind(this), 5000);
 			}
 			lastActive = true;
@@ -69,7 +97,22 @@ export default class Overview extends React.Component {
 			overviewClass += " active";
 		}
 
+		var timer = null;
+		var time = this.state.timer;
+
+		if (time > 0) {
+			var minutes = Math.floor(time / 60);
+			var seconds = _prefixZero(time - minutes * 60);
+
+			timer = (
+				<div className="clock">
+					<span>{minutes}:{seconds}</span>
+				</div>
+			);
+		}
+
 		return <div className={overviewClass}>
+			{timer}
 			<img className={className} src={this.state.src} alt="" />
 		</div>;
 	}
