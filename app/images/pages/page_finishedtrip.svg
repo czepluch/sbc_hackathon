@@ -54,17 +54,29 @@
     <rect x="25.283" y="119.447" fill="none" width="195.693" height="43.311"/>
     <text transform="matrix(1 0 0 1 25.2832 157.8318)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="57.5494">31g CO</text>
     
-      <text transform="matrix(0.583 0 0 0.583 176.0605 169.7155)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="57.5494">2</text>
+      <text transform="matrix(0.583 0 0 0.583 176.0595 169.7155)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="57.5494">2</text>
   </g>
   <rect x="29.521" y="204.592" fill="none" width="119.666" height="12.172"/>
   <text transform="matrix(1 0 0 1 29.5216 213.4012)" fill="#333333" font-family="'ProximaNovaCond-Regular'" font-size="13.2068">You saved</text>
   <g>
-    <rect x="25.283" y="239.296" fill="none" width="195.693" height="43.311"/>
-    <text transform="matrix(1 0 0 1 25.2832 277.6813)" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="57.5494">0,70€</text>
+    <g>
+      <path fill="#1A1A1A" d="M27.988,260.99c0-9.267,3.108-19.8,12.087-19.8s12.087,10.533,12.087,19.8
+        c0,9.209-3.108,19.856-12.087,19.856S27.988,270.199,27.988,260.99z M47.442,260.99c0-7.598-1.438-15.713-7.367-15.713
+        s-7.367,8.115-7.367,15.713c0,7.54,1.438,15.771,7.367,15.771C45.946,276.76,47.442,268.53,47.442,260.99z"/>
+      <path fill="#1A1A1A" d="M58.721,287.408l-2.072-1.669c1.842-1.267,3.454-3.511,3.684-5.353c-0.114,0-0.46,0.058-0.748,0.058
+        c-1.554,0-2.705-1.209-2.705-2.82c0-1.669,1.267-3.051,2.993-3.051c1.842,0,3.453,1.554,3.453,4.316
+        C63.325,282.343,61.311,285.566,58.721,287.408z"/>
+      <path fill="#1A1A1A" d="M69.424,280.156l12.087-34.304H65.222v-4.086H86.69v3.165l-12.374,35.225H69.424z"/>
+      <path fill="#1A1A1A" d="M90.831,260.99c0-9.267,3.108-19.8,12.087-19.8s12.087,10.533,12.087,19.8
+        c0,9.209-3.108,19.856-12.087,19.856S90.831,270.199,90.831,260.99z M110.285,260.99c0-7.598-1.439-15.713-7.367-15.713
+        c-5.929,0-7.367,8.115-7.367,15.713c0,7.54,1.438,15.771,7.367,15.771C108.789,276.76,110.285,268.53,110.285,260.99z"/>
+      <path fill="#1A1A1A" d="M146.771,275.954v4.201h-26.591v-4.201H146.771z M146.196,241.363v4.145h-25.382v-4.145H146.196z
+         M144.239,257.996v4.145h-21.525v-4.145H144.239z"/>
+    </g>
   </g>
   <g>
     <rect x="23.933" y="317.331" fill="none" width="50.595" height="17.369"/>
-    <text transform="matrix(1 0 0 1 23.9328 323.3337)"><tspan x="0" y="0" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">trip</tspan><tspan x="0" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">price (€)</tspan></text>
+    <text transform="matrix(1 0 0 1 23.9328 323.3337)"><tspan x="0" y="0" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">trip</tspan><tspan x="0" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">price (</tspan><tspan x="21.14" y="10.8" fill="#1A1A1A" font-family="'MyriadPro-Regular'" font-size="9">Ξ</tspan><tspan x="26.073" y="10.8" fill="#1A1A1A" font-family="'ProximaNovaCond-Regular'" font-size="9">)</tspan></text>
   </g>
   <g>
     <rect x="90.845" y="88.231" fill="none" width="102.063" height="17.369"/>

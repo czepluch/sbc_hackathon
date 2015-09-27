@@ -10,10 +10,11 @@ export default class Overview extends React.Component {
 		super(props);
 
 		this.state = {
-			balance: 1870
+			balance: window.balance || 1870
 		};
 		window.socket.on('balance', function(balance) {
-			this.setState({balance});
+			console.log('new balance arrived', balance);
+			this.setState({balance: balance});
 		}.bind(this));
 	}
 

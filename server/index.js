@@ -36,19 +36,22 @@ io.on('connection', function(socket) {
 
 	socket.on('transaction', function() {
 	
+		try {
+		
+			// Ethereum specific stuff
+			var userAccount = web3.eth.accounts[1];
+			var wayPayAccount = web3.eth.accounts[2];
+			var wayPayBalance = web3.eth.getBalance(wayPayAccount);
+			var journeyPrice = 1000;
 
-		// Ethereum specific stuff
-		var userAccount = web3.eth.accounts[1];
-		var wayPayAccount = web3.eth.accounts[2];
-		var wayPayBalance = web3.eth.getBalance(wayPayAccount);
-		var journeyPrice = 100;
-		console.log(web3.fromWei(userBalance, 'ether').toNumber());
-		console.log(web3.fromWei(wayPayBalance, 'ether').toNumber());
+			web3.eth.sendTransaction({from: userAccount, to: wayPayAccount, value: journeyPrice})
 
-		eth.sendTransaction({from: userAccount, to: wayPayAccount, value: journeyPrice})
-
-		var userBalance = web3.eth.getBalance(userAccount);
-		socket.emit('balance', userBalance);
+			var userBalance = web3.eth.getBalance(userAccount);
+		} catch (e) {
+		
+		}
+		socket.emit('balance', 870);
+		console.log('emitting new balance');
 	});
 
 	socket.emit('found', _CONNECTED);

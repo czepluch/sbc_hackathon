@@ -19,6 +19,7 @@ socket.on('connect', function(conn) {
 
 var lastActive = false;
 var alreadyCheckedIn = false;
+var timeoutSet = false;
 
 var _prefixZero = function(n) {
 	n = "" + n;
@@ -65,7 +66,7 @@ export default class Overview extends React.Component {
 
 		socket.on('found', function(data) {
 
-			if (this.state.endView) {
+			if (this.state.endView || this.state.connected) {
 				return;
 			}
 
@@ -78,7 +79,10 @@ export default class Overview extends React.Component {
 				setTimeout(function() {
 				
 					this.setState({src: finishedPage, connected: false, endView: true, viewTimer: false});
-				}.bind(this), 10000);
+					socket.emit('transaction', {});
+					console.log('emitting transaction');
+					window.balance = 870;
+				}.bind(this), 20000);
 			}
 	
 			this.setState({src: src, connected: connected});
@@ -94,12 +98,13 @@ export default class Overview extends React.Component {
 		if (this.state.connected === true) {
 		// if (true) {
 			className += " active";
-			if (lastActive === false) {
+			if (lastActive === false && !timeoutSet) {
 				setTimeout(function() {
 					alreadyCheckedIn = true;
-					this.setState({src: activeTrip});
+					this.setState({src: activeTrip, connected: true});
 					this.startTimer();
-				}.bind(this), 5000);
+				}.bind(this), 3000);
+				timeoutSet = true;
 			}
 			lastActive = true;
 

@@ -104,19 +104,19 @@ module.exports =
 
 	var _componentsOverview2 = _interopRequireDefault(_componentsOverview);
 
-	var _componentsEstimator = __webpack_require__(/*! components/Estimator */ 139);
+	var _componentsEstimator = __webpack_require__(/*! components/Estimator */ 149);
 
 	var _componentsEstimator2 = _interopRequireDefault(_componentsEstimator);
 
-	var _componentsHistory = __webpack_require__(/*! components/History */ 140);
+	var _componentsHistory = __webpack_require__(/*! components/History */ 151);
 
 	var _componentsHistory2 = _interopRequireDefault(_componentsHistory);
 
-	var _componentsSettings = __webpack_require__(/*! components/Settings */ 141);
+	var _componentsSettings = __webpack_require__(/*! components/Settings */ 153);
 
 	var _componentsSettings2 = _interopRequireDefault(_componentsSettings);
 
-	var _componentsMap = __webpack_require__(/*! components/Map */ 142);
+	var _componentsMap = __webpack_require__(/*! components/Map */ 145);
 
 	var _componentsMap2 = _interopRequireDefault(_componentsMap);
 
@@ -4181,7 +4181,7 @@ module.exports =
 									_react2['default'].createElement(
 										'span',
 										null,
-										'Etimator'
+										'Estimator'
 									)
 								)
 							),
@@ -4241,8 +4241,13 @@ module.exports =
 /***/ function(module, exports) {
 
 	module.exports = {
-	  "dot": "IhpfJ4pcsRoIP6ppNt8J",
+	  "content": "_2rv-FW8nz0cmSqELc4Cs-S",
+	  "overview-container": "_2cxDj_45V5DbBnd5bJ3z59",
 	  "active": "_11sabBv7L1ZyK_AP506pdj",
+	  "clock": "M_yXmo-QqNSiti-yTd-RS",
+	  "money": "_3yWIQnsAmg1WZX3mJfrjNl",
+	  "page-img": "D1XPF7QF31sdpPbF3D2fe",
+	  "overview": "_2NN_wsE0nfnljT7t7YCc14",
 	  "menu": "_39033BRni-mSDajMwVGGtT",
 	  "icon-wrapper": "q--vzGFqXFB0Ulyl-xgnS"
 	};
@@ -4299,21 +4304,21 @@ module.exports =
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 		value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(/*! react */ 2);
 
@@ -4323,56 +4328,151 @@ module.exports =
 
 	var _socketIoClient2 = _interopRequireDefault(_socketIoClient);
 
-	var socket = (0, _socketIoClient2["default"])("localhost:3001");
+	var checkedIn = __webpack_require__(/*! ../images/pages/page_checkedin.svg */ 141);
+	var notCheckedIn = __webpack_require__(/*! ../images/pages/page_notcheckedin.svg */ 142);
+	var finishedPage = __webpack_require__(/*! ../images/pages/page_finishedtrip.svg */ 143);
+	var activeTrip = __webpack_require__(/*! ../images/pages/page_live-overview.svg */ 144);
+	var Map = __webpack_require__(/*! ./Map */ 145);
+
+	var socket = (0, _socketIoClient2['default'])("localhost:3001");
+	window.socket = socket;
 
 	socket.on('connect', function (conn) {
 		console.log('connected ;)');
 	});
 
+	var lastActive = false;
+	var alreadyCheckedIn = false;
+
+	var _prefixZero = function _prefixZero(n) {
+		n = "" + n;
+		if (n.length === 1) {
+			return "0" + n;
+		}
+
+		return n;
+	};
+
+	var timerValue = 0;
+
 	var Overview = (function (_React$Component) {
 		_inherits(Overview, _React$Component);
+
+		_createClass(Overview, [{
+			key: 'startTimer',
+			value: function startTimer() {
+				var tick = (function () {
+					this.setState({ timer: this.state.timer + 1 });
+					timerValue = this.state.timer;
+				}).bind(this);
+
+				tick();
+
+				setInterval(function () {
+					tick();
+				}, 1000);
+			}
+		}]);
 
 		function Overview(props) {
 			_classCallCheck(this, Overview);
 
-			_get(Object.getPrototypeOf(Overview.prototype), "constructor", this).call(this, props);
+			_get(Object.getPrototypeOf(Overview.prototype), 'constructor', this).call(this, props);
 
 			this.state = {
-				connected: false
+				connected: false,
+				src: alreadyCheckedIn ? activeTrip : notCheckedIn,
+				timer: timerValue,
+				endView: false,
+				viewTimer: true
 			};
 
+			if (alreadyCheckedIn) {
+				console.log('starting timer');
+				this.startTimer();
+			}
+
 			socket.on('found', (function (data) {
-				if (data.length > 0) {
-					this.setState({ connected: true });
+
+				if (this.state.endView) {
+					return;
 				}
+
+				var connected = data.length > 0;
+
+				var src = connected ? checkedIn : notCheckedIn;
+
+				if (connected) {
+					alreadyCheckedIn = true;
+					setTimeout((function () {
+
+						this.setState({ src: finishedPage, connected: false, endView: true, viewTimer: false });
+					}).bind(this), 10000);
+				}
+
+				this.setState({ src: src, connected: connected });
 			}).bind(this));
 		}
 
 		_createClass(Overview, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
-				var name = 'dot';
-				if (this.state.connected) {
-					name += ' active';
+
+				var className = "page-img overview";
+				if (this.state.connected === true) {
+					// if (true) {
+					className += " active";
+					if (lastActive === false) {
+						setTimeout((function () {
+							alreadyCheckedIn = true;
+							this.setState({ src: activeTrip });
+							this.startTimer();
+						}).bind(this), 5000);
+					}
+					lastActive = true;
 				}
-				return _react2["default"].createElement(
-					"div",
-					null,
-					_react2["default"].createElement(
-						"h1",
-						null,
-						"Overview"
-					),
-					_react2["default"].createElement("div", { className: name })
+
+				var overviewClass = "overview-container";
+
+				if (alreadyCheckedIn) {
+					overviewClass += " active";
+				}
+
+				var timer = null;
+				var time = this.state.timer;
+
+				if (time > 0) {
+					var minutes = Math.floor(time / 60);
+					var seconds = _prefixZero(time - minutes * 60);
+
+					timer = _react2['default'].createElement(
+						'div',
+						{ className: 'clock' },
+						_react2['default'].createElement(
+							'span',
+							null,
+							minutes,
+							':',
+							seconds
+						)
+					);
+				}
+
+				return _react2['default'].createElement(
+					'div',
+					{ className: overviewClass },
+					this.state.viewTimer ? timer : null,
+					_react2['default'].createElement('img', { className: className, src: this.state.src, alt: '' }),
+					this.state.endView ? _react2['default'].createElement(Map, null) : null
 				);
 			}
 		}]);
 
 		return Overview;
-	})(_react2["default"].Component);
+	})(_react2['default'].Component);
 
-	exports["default"] = Overview;
-	module.exports = exports["default"];
+	exports['default'] = Overview;
+	module.exports = exports['default'];
 
 /***/ },
 /* 54 */
@@ -4478,7 +4578,7 @@ module.exports =
 	 */
 
 	exports.Manager = __webpack_require__(/*! ./manager */ 67);
-	exports.Socket = __webpack_require__(/*! ./socket */ 131);
+	exports.Socket = __webpack_require__(/*! ./socket */ 133);
 
 
 /***/ },
@@ -6423,15 +6523,15 @@ module.exports =
 
 	var url = __webpack_require__(/*! ./url */ 56);
 	var eio = __webpack_require__(/*! engine.io-client */ 68);
-	var Socket = __webpack_require__(/*! ./socket */ 131);
+	var Socket = __webpack_require__(/*! ./socket */ 133);
 	var Emitter = __webpack_require__(/*! component-emitter */ 64);
 	var parser = __webpack_require__(/*! socket.io-parser */ 60);
-	var on = __webpack_require__(/*! ./on */ 133);
-	var bind = __webpack_require__(/*! component-bind */ 134);
-	var object = __webpack_require__(/*! object-component */ 137);
+	var on = __webpack_require__(/*! ./on */ 135);
+	var bind = __webpack_require__(/*! component-bind */ 136);
+	var object = __webpack_require__(/*! object-component */ 139);
 	var debug = __webpack_require__(/*! debug */ 58)('socket.io-client:manager');
-	var indexOf = __webpack_require__(/*! indexof */ 128);
-	var Backoff = __webpack_require__(/*! backo2 */ 138);
+	var indexOf = __webpack_require__(/*! indexof */ 130);
+	var Backoff = __webpack_require__(/*! backo2 */ 140);
 
 	/**
 	 * Module exports
@@ -6965,10 +7065,10 @@ module.exports =
 	var transports = __webpack_require__(/*! ./transports */ 71);
 	var Emitter = __webpack_require__(/*! component-emitter */ 64);
 	var debug = __webpack_require__(/*! debug */ 89)('engine.io-client:socket');
-	var index = __webpack_require__(/*! indexof */ 128);
+	var index = __webpack_require__(/*! indexof */ 130);
 	var parser = __webpack_require__(/*! engine.io-parser */ 81);
-	var parseuri = __webpack_require__(/*! parseuri */ 129);
-	var parsejson = __webpack_require__(/*! parsejson */ 130);
+	var parseuri = __webpack_require__(/*! parseuri */ 131);
+	var parsejson = __webpack_require__(/*! parsejson */ 132);
 	var parseqs = __webpack_require__(/*! parseqs */ 87);
 
 	/**
@@ -11096,9 +11196,9 @@ module.exports =
 
 	var WS = module.exports = __webpack_require__(/*! ./lib/WebSocket */ 96);
 
-	WS.Server = __webpack_require__(/*! ./lib/WebSocketServer */ 126);
+	WS.Server = __webpack_require__(/*! ./lib/WebSocketServer */ 128);
 	WS.Sender = __webpack_require__(/*! ./lib/Sender */ 101);
-	WS.Receiver = __webpack_require__(/*! ./lib/Receiver */ 114);
+	WS.Receiver = __webpack_require__(/*! ./lib/Receiver */ 115);
 
 	/**
 	 * Create a new WebSocket server.
@@ -11161,11 +11261,11 @@ module.exports =
 	  , Ultron = __webpack_require__(/*! ultron */ 99)
 	  , Options = __webpack_require__(/*! options */ 100)
 	  , Sender = __webpack_require__(/*! ./Sender */ 101)
-	  , Receiver = __webpack_require__(/*! ./Receiver */ 114)
-	  , SenderHixie = __webpack_require__(/*! ./Sender.hixie */ 123)
-	  , ReceiverHixie = __webpack_require__(/*! ./Receiver.hixie */ 124)
-	  , Extensions = __webpack_require__(/*! ./Extensions */ 125)
-	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 112)
+	  , Receiver = __webpack_require__(/*! ./Receiver */ 115)
+	  , SenderHixie = __webpack_require__(/*! ./Sender.hixie */ 125)
+	  , ReceiverHixie = __webpack_require__(/*! ./Receiver.hixie */ 126)
+	  , Extensions = __webpack_require__(/*! ./Extensions */ 127)
+	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 113)
 	  , EventEmitter = __webpack_require__(/*! events */ 102).EventEmitter;
 
 	/**
@@ -12373,7 +12473,7 @@ module.exports =
 	  , EventEmitter = events.EventEmitter
 	  , ErrorCodes = __webpack_require__(/*! ./ErrorCodes */ 103)
 	  , bufferUtil = __webpack_require__(/*! ./BufferUtil */ 104).BufferUtil
-	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 112);
+	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 113);
 
 	/**
 	 * HyBi Sender implementation
@@ -12739,7 +12839,7 @@ module.exports =
 	try {
 	  module.exports = __webpack_require__(/*! bufferutil */ 105);
 	} catch (e) {
-	  module.exports = __webpack_require__(/*! ./BufferUtil.fallback */ 111);
+	  module.exports = __webpack_require__(/*! ./BufferUtil.fallback */ 112);
 	}
 
 
@@ -12755,7 +12855,7 @@ module.exports =
 	try {
 	  module.exports = __webpack_require__(/*! bindings */ 106)('bufferutil');
 	} catch (e) {
-	  module.exports = __webpack_require__(/*! ./fallback */ 110);
+	  module.exports = __webpack_require__(/*! ./fallback */ 111);
 	}
 
 
@@ -12954,7 +13054,8 @@ module.exports =
 	var map = {
 		"./README.md": 109,
 		"./bindings": 106,
-		"./bindings.js": 106
+		"./bindings.js": 106,
+		"./package.json": 110
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -12981,6 +13082,70 @@ module.exports =
 
 /***/ },
 /* 110 */
+/*!*****************************************************************************************!*\
+  !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/bufferutil/~/bindings/package.json ***!
+  \*****************************************************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"name": "bindings",
+		"description": "Helper module for loading your native module's .node file",
+		"keywords": [
+			"native",
+			"addon",
+			"bindings",
+			"gyp",
+			"waf",
+			"c",
+			"c++"
+		],
+		"version": "1.2.1",
+		"author": {
+			"name": "Nathan Rajlich",
+			"email": "nathan@tootallnate.net",
+			"url": "http://tootallnate.net"
+		},
+		"repository": {
+			"type": "git",
+			"url": "git://github.com/TooTallNate/node-bindings.git"
+		},
+		"main": "./bindings.js",
+		"bugs": {
+			"url": "https://github.com/TooTallNate/node-bindings/issues"
+		},
+		"homepage": "https://github.com/TooTallNate/node-bindings",
+		"license": "MIT",
+		"gitHead": "e404152ee27f8478ccbc7122ee051246e8e5ec02",
+		"_id": "bindings@1.2.1",
+		"scripts": {},
+		"_shasum": "14ad6113812d2d37d72e67b4cacb4bb726505f11",
+		"_from": "bindings@>=1.2.0 <1.3.0",
+		"_npmVersion": "1.4.14",
+		"_npmUser": {
+			"name": "tootallnate",
+			"email": "nathan@tootallnate.net"
+		},
+		"maintainers": [
+			{
+				"name": "TooTallNate",
+				"email": "nathan@tootallnate.net"
+			},
+			{
+				"name": "tootallnate",
+				"email": "nathan@tootallnate.net"
+			}
+		],
+		"dist": {
+			"shasum": "14ad6113812d2d37d72e67b4cacb4bb726505f11",
+			"tarball": "http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz"
+		},
+		"directories": {},
+		"_resolved": "https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz",
+		"readme": "ERROR: No README data found!"
+	};
+
+/***/ },
+/* 111 */
 /*!*****************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/bufferutil/fallback.js ***!
   \*****************************************************************************/
@@ -13046,7 +13211,7 @@ module.exports =
 
 
 /***/ },
-/* 111 */
+/* 112 */
 /*!*******************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/BufferUtil.fallback.js ***!
   \*******************************************************************************/
@@ -13102,14 +13267,14 @@ module.exports =
 
 
 /***/ },
-/* 112 */
+/* 113 */
 /*!*****************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/PerMessageDeflate.js ***!
   \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	
-	var zlib = __webpack_require__(/*! zlib */ 113);
+	var zlib = __webpack_require__(/*! zlib */ 114);
 
 	var AVAILABLE_WINDOW_BITS = [8, 9, 10, 11, 12, 13, 14, 15];
 	var DEFAULT_WINDOW_BITS = 15;
@@ -13403,7 +13568,7 @@ module.exports =
 
 
 /***/ },
-/* 113 */
+/* 114 */
 /*!***********************!*\
   !*** external "zlib" ***!
   \***********************/
@@ -13412,7 +13577,7 @@ module.exports =
 	module.exports = require("zlib");
 
 /***/ },
-/* 114 */
+/* 115 */
 /*!********************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Receiver.js ***!
   \********************************************************************/
@@ -13425,11 +13590,11 @@ module.exports =
 	 */
 
 	var util = __webpack_require__(/*! util */ 90)
-	  , Validation = __webpack_require__(/*! ./Validation */ 115).Validation
+	  , Validation = __webpack_require__(/*! ./Validation */ 116).Validation
 	  , ErrorCodes = __webpack_require__(/*! ./ErrorCodes */ 103)
-	  , BufferPool = __webpack_require__(/*! ./BufferPool */ 122)
+	  , BufferPool = __webpack_require__(/*! ./BufferPool */ 124)
 	  , bufferUtil = __webpack_require__(/*! ./BufferUtil */ 104).BufferUtil
-	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 112);
+	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 113);
 
 	/**
 	 * HyBi Receiver implementation
@@ -14123,7 +14288,7 @@ module.exports =
 
 
 /***/ },
-/* 115 */
+/* 116 */
 /*!**********************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Validation.js ***!
   \**********************************************************************/
@@ -14138,14 +14303,14 @@ module.exports =
 	 */
 
 	try {
-	  module.exports = __webpack_require__(/*! utf-8-validate */ 116);
+	  module.exports = __webpack_require__(/*! utf-8-validate */ 117);
 	} catch (e) {
-	  module.exports = __webpack_require__(/*! ./Validation.fallback */ 121);
+	  module.exports = __webpack_require__(/*! ./Validation.fallback */ 123);
 	}
 
 
 /***/ },
-/* 116 */
+/* 117 */
 /*!******************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/index.js ***!
   \******************************************************************************/
@@ -14154,14 +14319,14 @@ module.exports =
 	'use strict';
 
 	try {
-	  module.exports = __webpack_require__(/*! bindings */ 117)('validation');
+	  module.exports = __webpack_require__(/*! bindings */ 118)('validation');
 	} catch (e) {
-	  module.exports = __webpack_require__(/*! ./fallback */ 120);
+	  module.exports = __webpack_require__(/*! ./fallback */ 122);
 	}
 
 
 /***/ },
-/* 117 */
+/* 118 */
 /*!********************************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/~/bindings/bindings.js ***!
   \********************************************************************************************/
@@ -14242,7 +14407,7 @@ module.exports =
 	    }))
 	    tries.push(n)
 	    try {
-	      b = opts.path ? /*require.resolve*/(__webpack_require__(/*! . */ 118).resolve(n)) : __webpack_require__(/*! . */ 118)(n)
+	      b = opts.path ? /*require.resolve*/(__webpack_require__(/*! . */ 119).resolve(n)) : __webpack_require__(/*! . */ 119)(n)
 	      if (!opts.path) {
 	        b.path = n
 	      }
@@ -14337,16 +14502,17 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, "/index.js"))
 
 /***/ },
-/* 118 */
+/* 119 */
 /*!*****************************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/~/bindings ^\.\/.*$ ***!
   \*****************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./README.md": 119,
-		"./bindings": 117,
-		"./bindings.js": 117
+		"./README.md": 120,
+		"./bindings": 118,
+		"./bindings.js": 118,
+		"./package.json": 121
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -14359,11 +14525,11 @@ module.exports =
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 118;
+	webpackContext.id = 119;
 
 
 /***/ },
-/* 119 */
+/* 120 */
 /*!******************************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/~/bindings/README.md ***!
   \******************************************************************************************/
@@ -14372,7 +14538,71 @@ module.exports =
 	module.exports = "<h1 id=\"node-bindings\">node-bindings</h1>\n<h3 id=\"helper-module-for-loading-your-native-module-s-node-file\">Helper module for loading your native module&#39;s .node file</h3>\n<p>This is a helper module for authors of Node.js native addon modules.\nIt is basically the &quot;swiss army knife&quot; of <code>require()</code>ing your native module&#39;s\n<code>.node</code> file.</p>\n<p>Throughout the course of Node&#39;s native addon history, addons have ended up being\ncompiled in a variety of different places, depending on which build tool and which\nversion of node was used. To make matters worse, now the <em>gyp</em> build tool can\nproduce either a <em>Release</em> or <em>Debug</em> build, each being built into different\nlocations.</p>\n<p>This module checks <em>all</em> the possible locations that a native addon would be built\nat, and returns the first one that loads successfully.</p>\n<h2 id=\"installation\">Installation</h2>\n<p>Install with <code>npm</code>:</p>\n<pre><code class=\"lang-bash\">$ npm install bindings\n</code></pre>\n<p>Or add it to the <code>&quot;dependencies&quot;</code> section of your <em>package.json</em> file.</p>\n<h2 id=\"example\">Example</h2>\n<p><code>require()</code>ing the proper bindings file for the current node version, platform\nand architecture is as simple as:</p>\n<pre><code class=\"lang-js\">var bindings = require(&#39;bindings&#39;)(&#39;binding.node&#39;)\n\n// Use your bindings defined in your C files\nbindings.your_c_function()\n</code></pre>\n<h2 id=\"nice-error-output\">Nice Error Output</h2>\n<p>When the <code>.node</code> file could not be loaded, <code>node-bindings</code> throws an Error with\na nice error message telling you exactly what was tried. You can also check the\n<code>err.tries</code> Array property.</p>\n<pre><code>Error: Could not load the bindings file. Tried:\n → /Users/nrajlich/ref/build/binding.node\n → /Users/nrajlich/ref/build/Debug/binding.node\n → /Users/nrajlich/ref/build/Release/binding.node\n → /Users/nrajlich/ref/out/Debug/binding.node\n → /Users/nrajlich/ref/Debug/binding.node\n → /Users/nrajlich/ref/out/Release/binding.node\n → /Users/nrajlich/ref/Release/binding.node\n → /Users/nrajlich/ref/build/default/binding.node\n → /Users/nrajlich/ref/compiled/0.8.2/darwin/x64/binding.node\n    at bindings (/Users/nrajlich/ref/node_modules/bindings/bindings.js:84:13)\n    at Object.&lt;anonymous&gt; (/Users/nrajlich/ref/lib/ref.js:5:47)\n    at Module._compile (module.js:449:26)\n    at Object.Module._extensions..js (module.js:467:10)\n    at Module.load (module.js:356:32)\n    at Function.Module._load (module.js:312:12)\n    ...\n</code></pre><h2 id=\"license\">License</h2>\n<p>(The MIT License)</p>\n<p>Copyright (c) 2012 Nathan Rajlich &lt;nathan@tootallnate.net&gt;</p>\n<p>Permission is hereby granted, free of charge, to any person obtaining\na copy of this software and associated documentation files (the\n&#39;Software&#39;), to deal in the Software without restriction, including\nwithout limitation the rights to use, copy, modify, merge, publish,\ndistribute, sublicense, and/or sell copies of the Software, and to\npermit persons to whom the Software is furnished to do so, subject to\nthe following conditions:</p>\n<p>The above copyright notice and this permission notice shall be\nincluded in all copies or substantial portions of the Software.</p>\n<p>THE SOFTWARE IS PROVIDED &#39;AS IS&#39;, WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.\nIN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY\nCLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,\nTORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE\nSOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>\n";
 
 /***/ },
-/* 120 */
+/* 121 */
+/*!*********************************************************************************************!*\
+  !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/~/bindings/package.json ***!
+  \*********************************************************************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"name": "bindings",
+		"description": "Helper module for loading your native module's .node file",
+		"keywords": [
+			"native",
+			"addon",
+			"bindings",
+			"gyp",
+			"waf",
+			"c",
+			"c++"
+		],
+		"version": "1.2.1",
+		"author": {
+			"name": "Nathan Rajlich",
+			"email": "nathan@tootallnate.net",
+			"url": "http://tootallnate.net"
+		},
+		"repository": {
+			"type": "git",
+			"url": "git://github.com/TooTallNate/node-bindings.git"
+		},
+		"main": "./bindings.js",
+		"bugs": {
+			"url": "https://github.com/TooTallNate/node-bindings/issues"
+		},
+		"homepage": "https://github.com/TooTallNate/node-bindings",
+		"license": "MIT",
+		"gitHead": "e404152ee27f8478ccbc7122ee051246e8e5ec02",
+		"_id": "bindings@1.2.1",
+		"scripts": {},
+		"_shasum": "14ad6113812d2d37d72e67b4cacb4bb726505f11",
+		"_from": "bindings@>=1.2.0 <1.3.0",
+		"_npmVersion": "1.4.14",
+		"_npmUser": {
+			"name": "tootallnate",
+			"email": "nathan@tootallnate.net"
+		},
+		"maintainers": [
+			{
+				"name": "TooTallNate",
+				"email": "nathan@tootallnate.net"
+			},
+			{
+				"name": "tootallnate",
+				"email": "nathan@tootallnate.net"
+			}
+		],
+		"dist": {
+			"shasum": "14ad6113812d2d37d72e67b4cacb4bb726505f11",
+			"tarball": "http://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz"
+		},
+		"directories": {},
+		"_resolved": "https://registry.npmjs.org/bindings/-/bindings-1.2.1.tgz",
+		"readme": "ERROR: No README data found!"
+	};
+
+/***/ },
+/* 122 */
 /*!*********************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/~/utf-8-validate/fallback.js ***!
   \*********************************************************************************/
@@ -14394,7 +14624,7 @@ module.exports =
 
 
 /***/ },
-/* 121 */
+/* 123 */
 /*!*******************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Validation.fallback.js ***!
   \*******************************************************************************/
@@ -14415,7 +14645,7 @@ module.exports =
 
 
 /***/ },
-/* 122 */
+/* 124 */
 /*!**********************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/BufferPool.js ***!
   \**********************************************************************/
@@ -14487,7 +14717,7 @@ module.exports =
 
 
 /***/ },
-/* 123 */
+/* 125 */
 /*!************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Sender.hixie.js ***!
   \************************************************************************/
@@ -14620,7 +14850,7 @@ module.exports =
 
 
 /***/ },
-/* 124 */
+/* 126 */
 /*!**************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Receiver.hixie.js ***!
   \**************************************************************************/
@@ -14813,7 +15043,7 @@ module.exports =
 
 
 /***/ },
-/* 125 */
+/* 127 */
 /*!**********************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/Extensions.js ***!
   \**********************************************************************/
@@ -14892,7 +15122,7 @@ module.exports =
 
 
 /***/ },
-/* 126 */
+/* 128 */
 /*!***************************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/ws/lib/WebSocketServer.js ***!
   \***************************************************************************/
@@ -14910,9 +15140,9 @@ module.exports =
 	  , crypto = __webpack_require__(/*! crypto */ 97)
 	  , Options = __webpack_require__(/*! options */ 100)
 	  , WebSocket = __webpack_require__(/*! ./WebSocket */ 96)
-	  , Extensions = __webpack_require__(/*! ./Extensions */ 125)
-	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 112)
-	  , tls = __webpack_require__(/*! tls */ 127)
+	  , Extensions = __webpack_require__(/*! ./Extensions */ 127)
+	  , PerMessageDeflate = __webpack_require__(/*! ./PerMessageDeflate */ 113)
+	  , tls = __webpack_require__(/*! tls */ 129)
 	  , url = __webpack_require__(/*! url */ 74);
 
 	/**
@@ -15411,7 +15641,7 @@ module.exports =
 
 
 /***/ },
-/* 127 */
+/* 129 */
 /*!**********************!*\
   !*** external "tls" ***!
   \**********************/
@@ -15420,7 +15650,7 @@ module.exports =
 	module.exports = require("tls");
 
 /***/ },
-/* 128 */
+/* 130 */
 /*!***********************************************!*\
   !*** ./~/socket.io-client/~/indexof/index.js ***!
   \***********************************************/
@@ -15438,7 +15668,7 @@ module.exports =
 	};
 
 /***/ },
-/* 129 */
+/* 131 */
 /*!*******************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/parseuri/index.js ***!
   \*******************************************************************/
@@ -15486,7 +15716,7 @@ module.exports =
 
 
 /***/ },
-/* 130 */
+/* 132 */
 /*!********************************************************************!*\
   !*** ./~/socket.io-client/~/engine.io-client/~/parsejson/index.js ***!
   \********************************************************************/
@@ -15526,7 +15756,7 @@ module.exports =
 	};
 
 /***/ },
-/* 131 */
+/* 133 */
 /*!******************************************!*\
   !*** ./~/socket.io-client/lib/socket.js ***!
   \******************************************/
@@ -15539,11 +15769,11 @@ module.exports =
 
 	var parser = __webpack_require__(/*! socket.io-parser */ 60);
 	var Emitter = __webpack_require__(/*! component-emitter */ 64);
-	var toArray = __webpack_require__(/*! to-array */ 132);
-	var on = __webpack_require__(/*! ./on */ 133);
-	var bind = __webpack_require__(/*! component-bind */ 134);
+	var toArray = __webpack_require__(/*! to-array */ 134);
+	var on = __webpack_require__(/*! ./on */ 135);
+	var bind = __webpack_require__(/*! component-bind */ 136);
 	var debug = __webpack_require__(/*! debug */ 58)('socket.io-client:socket');
-	var hasBin = __webpack_require__(/*! has-binary */ 135);
+	var hasBin = __webpack_require__(/*! has-binary */ 137);
 
 	/**
 	 * Module exports.
@@ -15920,7 +16150,7 @@ module.exports =
 
 
 /***/ },
-/* 132 */
+/* 134 */
 /*!************************************************!*\
   !*** ./~/socket.io-client/~/to-array/index.js ***!
   \************************************************/
@@ -15942,7 +16172,7 @@ module.exports =
 
 
 /***/ },
-/* 133 */
+/* 135 */
 /*!**************************************!*\
   !*** ./~/socket.io-client/lib/on.js ***!
   \**************************************/
@@ -15975,7 +16205,7 @@ module.exports =
 
 
 /***/ },
-/* 134 */
+/* 136 */
 /*!******************************************************!*\
   !*** ./~/socket.io-client/~/component-bind/index.js ***!
   \******************************************************/
@@ -16007,7 +16237,7 @@ module.exports =
 
 
 /***/ },
-/* 135 */
+/* 137 */
 /*!**************************************************!*\
   !*** ./~/socket.io-client/~/has-binary/index.js ***!
   \**************************************************/
@@ -16018,7 +16248,7 @@ module.exports =
 	 * Module requirements.
 	 */
 
-	var isArray = __webpack_require__(/*! isarray */ 136);
+	var isArray = __webpack_require__(/*! isarray */ 138);
 
 	/**
 	 * Module exports.
@@ -16074,7 +16304,7 @@ module.exports =
 
 
 /***/ },
-/* 136 */
+/* 138 */
 /*!************************************************************!*\
   !*** ./~/socket.io-client/~/has-binary/~/isarray/index.js ***!
   \************************************************************/
@@ -16086,7 +16316,7 @@ module.exports =
 
 
 /***/ },
-/* 137 */
+/* 139 */
 /*!********************************************************!*\
   !*** ./~/socket.io-client/~/object-component/index.js ***!
   \********************************************************/
@@ -16178,7 +16408,7 @@ module.exports =
 	};
 
 /***/ },
-/* 138 */
+/* 140 */
 /*!**********************************************!*\
   !*** ./~/socket.io-client/~/backo2/index.js ***!
   \**********************************************/
@@ -16272,7 +16502,18164 @@ module.exports =
 
 
 /***/ },
-/* 139 */
+/* 141 */
+/*!*********************************************!*\
+  !*** ./app/images/pages/page_checkedin.svg ***!
+  \*********************************************/
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluICAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOmE9Imh0dHA6Ly9ucy5hZG9iZS5jb20vQWRvYmVTVkdWaWV3ZXJFeHRlbnNpb25zLzMuMC8iCiAgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjU5LjJweCIgaGVpZ2h0PSI1MjYuMzI1cHgiIHZpZXdCb3g9IjAgMCAyNTkuMiA1MjYuMzI1IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNTkuMiA1MjYuMzI1IgogICB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGRlZnM+CjwvZGVmcz4KPGc+CiAgPHJlY3QgeD0iMCIgeT0iMCIgZmlsbD0iIzQ3RDJGQyIgd2lkdGg9IjI1OS4yIiBoZWlnaHQ9IjUyNi4zMjUiLz4KICA8ZyBvcGFjaXR5PSIwLjc1Ij4KICAgIDxyZWN0IHg9IjI5LjMiIHk9IjIxOC4xNjQiIGZpbGw9Im5vbmUiIHdpZHRoPSIxOTcuNjg2IiBoZWlnaHQ9IjQxLjIzNCIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA4OS4zMzExIDIzMC40MzAzKSI+PHRzcGFuIHg9IjAiIHk9IjAiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjE4LjM4OTYiPkNoZWNrZWQgaW48L3RzcGFuPjx0c3BhbiB4PSItMTIuOTgyIiB5PSIyMi4wNjciIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjE4LjM4OTYiPlU2IHRvIE5ldWvDtmxsbjwvdHNwYW4+PC90ZXh0PgogIDwvZz4KICA8Zz4KICAgIDxnIG9wYWNpdHk9IjAuMSI+CiAgICAgIDxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0xNTEuNTEsMzYuMTY1YzAtMS4yMDEsMC43Ni0yLjIyMSwxLjgyNS0yLjYxM3YtNS45MTNoLTUwLjY3djUuOTVjMS4wMTEsMC40MTgsMS43MjMsMS40MTQsMS43MjMsMi41NzYKICAgICAgICBjMCwxLjE2My0wLjcxMiwyLjE1OC0xLjcyMywyLjU3NnY1Ljk1aDUwLjY3di01LjkxM0MxNTIuMjcxLDM4LjM4NiwxNTEuNTEsMzcuMzY2LDE1MS41MSwzNi4xNjV6Ii8+CiAgICA8L2c+CiAgICA8Zz4KICAgICAgPHBhdGggZD0iTTE1My43NDEsNDUuMDk3aC01MS40ODFWMzguNDdsMC4yNS0wLjEwNGMwLjg5NS0wLjM3LDEuNDczLTEuMjM1LDEuNDczLTIuMjAyYzAtMC45NjctMC41NzgtMS44MzItMS40NzMtMi4yMDIKICAgICAgICBsLTAuMjUtMC4xMDR2LTYuNjI3aDUxLjQ4MXY2LjYwMWwtMC4yNjUsMC4wOThjLTAuOTMzLDAuMzQ0LTEuNTU5LDEuMjQxLTEuNTU5LDIuMjMzczAuNjI3LDEuODg5LDEuNTU5LDIuMjMzbDAuMjY1LDAuMDk4CiAgICAgICAgVjQ1LjA5N3ogTTEwMy4wNyw0NC4yODZoNDkuODU5di01LjIzOWMtMS4xMDItMC41MjQtMS44MjUtMS42NDktMS44MjUtMi44ODJjMC0xLjIzMywwLjcyMy0yLjM1OCwxLjgyNS0yLjg4MnYtNS4yMzlIMTAzLjA3CiAgICAgICAgdjUuMjg2YzEuMDU1LDAuNTQ2LDEuNzIzLDEuNjMxLDEuNzIzLDIuODM1YzAsMS4yMDQtMC42NjgsMi4yODktMS43MjMsMi44MzVWNDQuMjg2eiIvPgogICAgPC9nPgogICAgPGc+CiAgICAgIDxwYXRoIGQ9Ik0xMDguNzI4LDMyLjk1M2gxLjA1MmwxLjQ2OCw0LjUyNWgwLjA4OGwxLjQ1Ny00LjUyNWgwLjgzM2wxLjUwMSw0LjUyNWgwLjA4OGwxLjM5MS00LjUyNWgxLjAxOWwtMS44NDEsNS40NzhoLTEuMzI2CiAgICAgICAgbC0xLjIyNy0zLjc2OWgtMC4wNjZsLTEuMjM4LDMuNzY5aC0xLjM1OUwxMDguNzI4LDMyLjk1M3oiLz4KICAgICAgPHBhdGggZD0iTTExOC4wNzQsMzMuMzI1YzAuODIyLTAuMzQsMS40MjQtMC40ODIsMi4zMzQtMC40ODJjMS42MTEsMCwyLjM2NywwLjU3LDIuMzY3LDEuOTA2djIuMjkKICAgICAgICBjMCwwLjUyNiwwLjEzMSwwLjY2OCwwLjY3OSwwLjY2OHYwLjcyM2MtMC4yNDEsMC4wNzctMC40MzgsMC4xMS0wLjcyMywwLjExYy0wLjQ0OSwwLTAuNzIzLTAuMzQtMC43NjctMC44OTgKICAgICAgICBjLTAuNTA0LDAuNjAzLTEuMjQ5LDAuODk4LTIuMjU3LDAuODk4Yy0xLjI4MiwwLTEuOTYxLTAuNjQ2LTEuOTYxLTEuNjc2YzAtMC40OTMsMC4xNDItMC44NzYsMC41MTUtMS4zMDQKICAgICAgICBjMC45ODYtMC4zMDcsMS45OTQtMC40MzgsMy41MjgtMC40NzF2LTAuMzA3YzAtMC43NTYtMC4zNTEtMS4wOTYtMS40MjQtMS4wOTZjLTAuNjksMC0xLjM1OSwwLjE0Mi0yLjA3MSwwLjQ0OUwxMTguMDc0LDMzLjMyNXoKICAgICAgICAgTTEyMS43ODgsMzUuODI0Yy0xLjI3MSwwLjAyMi0yLjA4MiwwLjEzMS0yLjc5NCwwLjMyOWMtMC4xNTMsMC4xODYtMC4yMTksMC4zOTUtMC4yMTksMC42NTdjMCwwLjU5MiwwLjM5NCwwLjg5OCwxLjA3NCwwLjg5OAogICAgICAgIGMwLjcyMywwLDEuMzM3LTAuMTk3LDEuOTM5LTAuNzIzVjM1LjgyNHoiLz4KICAgICAgPHBhdGggZD0iTTEyNC40MDYsMzIuOTUzbDIuMTE1LDQuNDA0aDAuMDQ0bDEuNjMyLTQuNDA0aDEuMDk2bC0yLjY5NSw2LjUzYy0wLjI5NiwwLjcwMS0wLjk3NSwxLjEyOS0xLjcyLDEuMTI5CiAgICAgICAgYy0wLjI3NCwwLTAuNDQ5LTAuMDQ0LTAuNzIzLTAuMTQybDAuMTUzLTAuNzg5YzAuMTQyLDAuMDMzLDAuMjk2LDAuMDU1LDAuNDI3LDAuMDU1YzAuNTE1LDAsMC44ODctMC4xNzUsMS4xMjgtMC43NjcKICAgICAgICBsMC4xOTctMC40OTNsLTIuNzgzLTUuNTIySDEyNC40MDZ6Ii8+CiAgICAgIDxwYXRoIGQ9Ik0xMjkuODA4LDMzLjE2MWMwLjg0NC0wLjIwOCwxLjUyMy0wLjMxOCwyLjQ4Ny0wLjMxOGMxLjk2MSwwLDMuMDM1LDEuMDc0LDMuMDM1LDIuODZjMCwxLjY1NC0wLjkyLDIuODM4LTIuODA1LDIuODM4CiAgICAgICAgYy0wLjc0NSwwLTEuMjA1LTAuMTMyLTEuNjk4LTAuNTE1djIuOTI1aC0xLjAxOVYzMy4xNjF6IE0xMzAuODI2LDM3LjA4M2MwLjUyNiwwLjQ0OSwxLjA0MSwwLjYwMywxLjY5OCwwLjYwMwogICAgICAgIGMxLjEwNywwLDEuNzg2LTAuNzM0LDEuNzg2LTEuOTgzYzAtMS4zNTktMC43NTYtMi4wNi0yLjAxNi0yLjA2Yy0wLjY2OCwwLTAuOTk3LDAuMDU1LTEuNDY4LDAuMjA4VjM3LjA4M3oiLz4KICAgICAgPHBhdGggZD0iTTEzNi4wNTIsMzMuMzI1YzAuODIyLTAuMzQsMS40MjQtMC40ODIsMi4zMzQtMC40ODJjMS42MTEsMCwyLjM2NywwLjU3LDIuMzY3LDEuOTA2djIuMjkKICAgICAgICBjMCwwLjUyNiwwLjEzMiwwLjY2OCwwLjY3OSwwLjY2OHYwLjcyM2MtMC4yNDEsMC4wNzctMC40MzgsMC4xMS0wLjcyMywwLjExYy0wLjQ0OSwwLTAuNzIzLTAuMzQtMC43NjctMC44OTgKICAgICAgICBjLTAuNTA0LDAuNjAzLTEuMjQ5LDAuODk4LTIuMjU3LDAuODk4Yy0xLjI4MiwwLTEuOTYxLTAuNjQ2LTEuOTYxLTEuNjc2YzAtMC40OTMsMC4xNDItMC44NzYsMC41MTUtMS4zMDQKICAgICAgICBjMC45ODYtMC4zMDcsMS45OTQtMC40MzgsMy41MjgtMC40NzF2LTAuMzA3YzAtMC43NTYtMC4zNTEtMS4wOTYtMS40MjQtMS4wOTZjLTAuNjksMC0xLjM1OSwwLjE0Mi0yLjA3MSwwLjQ0OUwxMzYuMDUyLDMzLjMyNXoKICAgICAgICAgTTEzOS43NjcsMzUuODI0Yy0xLjI3MSwwLjAyMi0yLjA4MiwwLjEzMS0yLjc5NCwwLjMyOWMtMC4xNTMsMC4xODYtMC4yMTksMC4zOTUtMC4yMTksMC42NTdjMCwwLjU5MiwwLjM5NSwwLjg5OCwxLjA3NCwwLjg5OAogICAgICAgIGMwLjcyMywwLDEuMzM3LTAuMTk3LDEuOTM5LTAuNzIzVjM1LjgyNHoiLz4KICAgICAgPHBhdGggZD0iTTE0Mi4zODUsMzIuOTUzbDIuMTE0LDQuNDA0aDAuMDQ0bDEuNjMyLTQuNDA0aDEuMDk2bC0yLjY5NSw2LjUzYy0wLjI5NiwwLjcwMS0wLjk3NSwxLjEyOS0xLjcyLDEuMTI5CiAgICAgICAgYy0wLjI3NCwwLTAuNDQ5LTAuMDQ0LTAuNzIzLTAuMTQybDAuMTUzLTAuNzg5YzAuMTQyLDAuMDMzLDAuMjk2LDAuMDU1LDAuNDI3LDAuMDU1YzAuNTE1LDAsMC44ODctMC4xNzUsMS4xMjktMC43NjcKICAgICAgICBsMC4xOTctMC40OTNsLTIuNzgzLTUuNTIySDE0Mi4zODV6Ii8+CiAgICA8L2c+CiAgPC9nPgogIDxnPgogICAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iCiAgICAgIDE0My4xNjYsMTYxLjQyMiAxMjEuMzQsMTkxLjg0NyAxMTIuNzQxLDE4My4yNDkgICAgIi8+CiAgPC9nPgo8L2c+Cjwvc3ZnPgo="
+
+/***/ },
+/* 142 */
+/*!************************************************!*\
+  !*** ./app/images/pages/page_notcheckedin.svg ***!
+  \************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "0c43671b4cdde949cc1eff6f16ac1fa8.svg"
+
+/***/ },
+/* 143 */
+/*!************************************************!*\
+  !*** ./app/images/pages/page_finishedtrip.svg ***!
+  \************************************************/
+/***/ function(module, exports) {
+
+	module.exports = "data:image/svg+xml;base64,PCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE4LjEuMSwgU1ZHIEV4cG9ydCBQbHVnLUluICAtLT4KPHN2ZyB2ZXJzaW9uPSIxLjEiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOmE9Imh0dHA6Ly9ucy5hZG9iZS5jb20vQWRvYmVTVkdWaWV3ZXJFeHRlbnNpb25zLzMuMC8iCiAgIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iMjU5LjJweCIgaGVpZ2h0PSI0MzIuMjE5cHgiIHZpZXdCb3g9IjAgMCAyNTkuMiA0MzIuMjE5IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNTkuMiA0MzIuMjE5IgogICB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGRlZnM+CjwvZGVmcz4KPGc+CiAgPHBhdGggZmlsbD0iI0Y4RjhGOCIgZD0iTTI0My45NTgsNjkuMjk0SDEyLjkzM2MtMC41NTIsMC0xLDAuNDQ4LTEsMXYxMTAuOTM3YzAsMC41NTIsMC40NDgsMSwxLDFoMjMxLjAyNWMwLjU1MiwwLDEtMC40NDgsMS0xCiAgICBWNzAuMjk0QzI0NC45NTgsNjkuNzQyLDI0NC41MTEsNjkuMjk0LDI0My45NTgsNjkuMjk0eiIvPgogIDxwYXRoIGZpbGw9IiNGOEY4RjgiIGQ9Ik0yNDMuOTU4LDE4Ny4xMzFIMTIuOTMzYy0wLjU1MiwwLTEsMC40NDgtMSwxdjExMC45MzdjMCwwLjU1MiwwLjQ0OCwxLDEsMWgyMzEuMDI1YzAuNTUyLDAsMS0wLjQ0OCwxLTEKICAgIFYxODguMTMxQzI0NC45NTgsMTg3LjU3OSwyNDQuNTExLDE4Ny4xMzEsMjQzLjk1OCwxODcuMTMxeiIvPgogIDxyZWN0IHg9IjAiIHk9IjAiIGZpbGw9IiMzMzMzMzMiIHdpZHRoPSIyNTkuMiIgaGVpZ2h0PSI1OC4yOTgiLz4KICA8Zz4KICAgIDxyZWN0IHg9IjIxLjUyMSIgeT0iMzQuNjU3IiBmaWxsPSJub25lIiB3aWR0aD0iMTMzLjQxOCIgaGVpZ2h0PSIxMi4xNzIiLz4KICAgIDx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMjEuNTIxNiA0My40NjU1KSIgZmlsbD0iI0ZGRkZGRiIgZm9udC1mYW1pbHk9IidQcm94aW1hTm92YUNvbmQtUmVndWxhciciIGZvbnQtc2l6ZT0iMTMuMjA2OCI+VHJpcCB0byBCZXJsaW4tU2Now7ZuZWZlbGQ8L3RleHQ+CiAgPC9nPgogIDxnPgogICAgPHJlY3QgeD0iMTExLjU0MSIgeT0iMzcuNTMyIiBmaWxsPSJub25lIiB3aWR0aD0iMTMzLjQxOCIgaGVpZ2h0PSIxMi4xNzIiLz4KICAgIDx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMTU5LjgyMTEgNDMuNTM0OCkiIGZpbGw9IiNGRkZGRkYiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjkiPjI1LjA5LjIwMTUgLyAxNDoxMSAtIDE0OjI1PC90ZXh0PgogIDwvZz4KICA8cmVjdCB4PSIyOS41MjEiIHk9Ijg0Ljc0MyIgZmlsbD0ibm9uZSIgd2lkdGg9IjExOS42NjYiIGhlaWdodD0iMTIuMTcyIi8+CiAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAyOS41MjE2IDkzLjU1MTcpIiBmaWxsPSIjMzMzMzMzIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSIxMy4yMDY4Ij5Zb3Ugc2F2ZWQ8L3RleHQ+CiAgPHBhdGggZmlsbD0iI0Y4RjhGOCIgZD0iTTEyNS4wMTUsMzUyLjQ3SDEyLjkzM2MtMC41NTIsMC0xLDAuNDQ4LTEsMXY0MS4yNDJjMCwwLjU1MiwwLjQ0OCwxLDEsMWgxMTIuMDgyYzAuNTUyLDAsMS0wLjQ0OCwxLTEKICAgIFYzNTMuNDdDMTI2LjAxNSwzNTIuOTE4LDEyNS41NjcsMzUyLjQ3LDEyNS4wMTUsMzUyLjQ3eiIvPgogIDxwYXRoIGZpbGw9IiNGOEY4RjgiIGQ9Ik0xMjUuMDE1LDMwNC4zOTRIMTIuOTMzYy0wLjU1MiwwLTEsMC40NDgtMSwxdjQxLjI0MmMwLDAuNTUyLDAuNDQ4LDEsMSwxaDExMi4wODJjMC41NTIsMCwxLTAuNDQ4LDEtMQogICAgdi00MS4yNDJDMTI2LjAxNSwzMDQuODQyLDEyNS41NjcsMzA0LjM5NCwxMjUuMDE1LDMwNC4zOTR6Ii8+CiAgPHBhdGggZmlsbD0iI0Y4RjhGOCIgZD0iTTI0My45NTgsMzUyLjQ3SDEzMS44NzZjLTAuNTUyLDAtMSwwLjQ0OC0xLDF2NDEuMjQyYzAsMC41NTIsMC40NDgsMSwxLDFoMTEyLjA4MmMwLjU1MiwwLDEtMC40NDgsMS0xCiAgICBWMzUzLjQ3QzI0NC45NTgsMzUyLjkxOCwyNDQuNTExLDM1Mi40NywyNDMuOTU4LDM1Mi40N3oiLz4KICA8cGF0aCBmaWxsPSIjRjhGOEY4IiBkPSJNMjQzLjk1OCwzMDQuMzk0SDEzMS44NzZjLTAuNTUyLDAtMSwwLjQ0OC0xLDF2NDEuMjQyYzAsMC41NTIsMC40NDgsMSwxLDFoMTEyLjA4MmMwLjU1MiwwLDEtMC40NDgsMS0xCiAgICB2LTQxLjI0MkMyNDQuOTU4LDMwNC44NDIsMjQ0LjUxMSwzMDQuMzk0LDI0My45NTgsMzA0LjM5NHoiLz4KICA8Zz4KICAgIDxyZWN0IHg9IjY1LjA4MyIgeT0iMzY1LjIxOCIgZmlsbD0ibm9uZSIgd2lkdGg9IjQ0LjQ4NSIgaGVpZ2h0PSIxNi44NDYiLz4KICAgIDx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgNjUuMDgzMiAzODAuMTQ4MSkiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjIyLjM4NDIiPjE0a208L3RleHQ+CiAgPC9nPgogIDxnPgogICAgPHJlY3QgeD0iMjMuOTMzIiB5PSIzNjQuOTU3IiBmaWxsPSJub25lIiB3aWR0aD0iNTAuNTk1IiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAyMy45MzI4IDM3MC45NTk1KSI+PHRzcGFuIHg9IjAiIHk9IjAiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjkiPnRyaXA8L3RzcGFuPjx0c3BhbiB4PSIwIiB5PSIxMC44IiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij5sZW5ndGg8L3RzcGFuPjwvdGV4dD4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB4PSIxODUuNTY4IiB5PSIzNjUuMjE4IiBmaWxsPSJub25lIiB3aWR0aD0iNTEuNzM1IiBoZWlnaHQ9IjE2Ljg0NiIvPgogICAgCiAgICAgIDx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMTg1LjU2ODYgMzgwLjE0ODEpIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSIyMi4zODQyIj4yMW1pbjwvdGV4dD4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB4PSIxNDQuNDE5IiB5PSIzNjQuOTU3IiBmaWxsPSJub25lIiB3aWR0aD0iNTAuNTk1IiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAxNDQuNDE4MiAzNzAuOTU5NSkiPjx0c3BhbiB4PSIwIiB5PSIwIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij50cmlwPC90c3Bhbj48dHNwYW4geD0iMCIgeT0iMTAuOCIgZmlsbD0iIzFBMUExQSIgZm9udC1mYW1pbHk9IidQcm94aW1hTm92YUNvbmQtUmVndWxhciciIGZvbnQtc2l6ZT0iOSI+ZHVyYXRpb248L3RzcGFuPjwvdGV4dD4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB4PSI2NS4wODMiIHk9IjMxNy41OTIiIGZpbGw9Im5vbmUiIHdpZHRoPSI2Ny44ODUiIGhlaWdodD0iMTYuODQ2Ii8+CiAgICA8dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDY1LjA4MzIgMzMyLjUyMTMpIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSIyMi4zODQyIj4yLDYwPC90ZXh0PgogIDwvZz4KICA8Zz4KICAgIDxyZWN0IHg9IjI1LjI4MyIgeT0iMTE5LjQ0NyIgZmlsbD0ibm9uZSIgd2lkdGg9IjE5NS42OTMiIGhlaWdodD0iNDMuMzExIi8+CiAgICA8dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDI1LjI4MzIgMTU3LjgzMTgpIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI1Ny41NDk0Ij4zMWcgQ088L3RleHQ+CiAgICAKICAgICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMC41ODMgMCAwIDAuNTgzIDE3Ni4wNTk1IDE2OS43MTU1KSIgZmlsbD0iIzFBMUExQSIgZm9udC1mYW1pbHk9IidQcm94aW1hTm92YUNvbmQtUmVndWxhciciIGZvbnQtc2l6ZT0iNTcuNTQ5NCI+MjwvdGV4dD4KICA8L2c+CiAgPHJlY3QgeD0iMjkuNTIxIiB5PSIyMDQuNTkyIiBmaWxsPSJub25lIiB3aWR0aD0iMTE5LjY2NiIgaGVpZ2h0PSIxMi4xNzIiLz4KICA8dGV4dCB0cmFuc2Zvcm09Im1hdHJpeCgxIDAgMCAxIDI5LjUyMTYgMjEzLjQwMTIpIiBmaWxsPSIjMzMzMzMzIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSIxMy4yMDY4Ij5Zb3Ugc2F2ZWQ8L3RleHQ+CiAgPGc+CiAgICA8cmVjdCB4PSIyNS4yODMiIHk9IjIzOS4yOTYiIGZpbGw9Im5vbmUiIHdpZHRoPSIxOTUuNjkzIiBoZWlnaHQ9IjQzLjMxMSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAyNS4yODMyIDI4MC4xNTU5KSI+PHRzcGFuIHg9IjAiIHk9IjAiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjU3LjU0OTQiPjAsNzA8L3RzcGFuPjx0c3BhbiB4PSI5Ni43MzkiIHk9IjAiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInTXlyaWFkUHJvLVJlZ3VsYXInIiBmb250LXNpemU9IjU3LjU0OTQiPs6ePC90c3Bhbj48L3RleHQ+CiAgPC9nPgogIDxnPgogICAgPHJlY3QgeD0iMjMuOTMzIiB5PSIzMTcuMzMxIiBmaWxsPSJub25lIiB3aWR0aD0iNTAuNTk1IiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAyMy45MzI4IDMyMy4zMzM3KSI+PHRzcGFuIHg9IjAiIHk9IjAiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjkiPnRyaXA8L3RzcGFuPjx0c3BhbiB4PSIwIiB5PSIxMC44IiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij5wcmljZSAoPC90c3Bhbj48dHNwYW4geD0iMjEuMTQiIHk9IjEwLjgiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInTXlyaWFkUHJvLVJlZ3VsYXInIiBmb250LXNpemU9IjkiPs6ePC90c3Bhbj48dHNwYW4geD0iMjYuMDczIiB5PSIxMC44IiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij4pPC90c3Bhbj48L3RleHQ+CiAgPC9nPgogIDxnPgogICAgPHJlY3QgeD0iOTAuODQ1IiB5PSI4OC4yMzEiIGZpbGw9Im5vbmUiIHdpZHRoPSIxMDIuMDYzIiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA5MC44NDUzIDk0LjIzMzYpIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij5CeSBub3QgdXNpbmcgYSBjYXI8L3RleHQ+CiAgPC9nPgogIDxnPgogICAgPHJlY3QgeD0iOTAuODQ1IiB5PSIyMDcuMDgiIGZpbGw9Im5vbmUiIHdpZHRoPSIxMDIuMDYzIiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSA5MC44NDUzIDIxMy4wODMpIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij5Gcm9tIHRoZSByZWd1bGFyIHRpY2tldCBwcmljZTwvdGV4dD4KICA8L2c+CiAgPGc+CiAgICA8cmVjdCB4PSIxNDQuNDE5IiB5PSIzMTcuMzMxIiBmaWxsPSJub25lIiB3aWR0aD0iNTAuNTk1IiBoZWlnaHQ9IjE3LjM2OSIvPgogICAgPHRleHQgdHJhbnNmb3JtPSJtYXRyaXgoMSAwIDAgMSAxNDQuNDE4MiAzMjMuMzMzNykiPjx0c3BhbiB4PSIwIiB5PSIwIiBmaWxsPSIjMUExQTFBIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSI5Ij5QcmljZTwvdHNwYW4+PHRzcGFuIHg9IjAiIHk9IjEwLjgiIGZpbGw9IiMxQTFBMUEiIGZvbnQtZmFtaWx5PSInUHJveGltYU5vdmFDb25kLVJlZ3VsYXInIiBmb250LXNpemU9IjkiPlJhdGluZzwvdHNwYW4+PC90ZXh0PgogIDwvZz4KICA8cGF0aCBmaWxsPSIjMzlCNTRBIiBkPSJNMjExLjk3NiwzMTcuMTA5aC0yOC4wOTVjLTAuNTUyLDAtMSwwLjQ0OC0xLDF2MTYuODA1YzAsMC41NTIsMC40NDgsMSwxLDFoMjguMDk1YzAuNTUyLDAsMS0wLjQ0OCwxLTEKICAgIHYtMTYuODA1QzIxMi45NzYsMzE3LjU1NiwyMTIuNTI4LDMxNy4xMDksMjExLjk3NiwzMTcuMTA5eiIvPgogIDxnPgogICAgPHJlY3QgeD0iMTg4LjcxMSIgeT0iMzIyLjM5MSIgZmlsbD0ibm9uZSIgd2lkdGg9IjIxLjQ4OSIgaGVpZ2h0PSI4LjExMiIvPgogICAgCiAgICAgIDx0ZXh0IHRyYW5zZm9ybT0ibWF0cml4KDEgMCAwIDEgMTg4LjcwOTkgMzI5LjY3NjQpIiBmaWxsPSIjRkZGRkZGIiBmb250LWZhbWlseT0iJ1Byb3hpbWFOb3ZhQ29uZC1SZWd1bGFyJyIgZm9udC1zaXplPSIxMC45MjI4Ij5iZXN0PC90ZXh0PgogIDwvZz4KICA8Y2lyY2xlIGZpbGw9IiMzMzMzMzMiIGN4PSIxMjguNDQ2IiBjeT0iNDA4LjY2NSIgcj0iMjMuNTU0Ii8+CiAgPHBvbHlsaW5lIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHBvaW50cz0iCiAgICAxMTYuNjkyLDQwMy42MjkgMTI4Ljg0Nyw0MTUuNzg0IDE0MC42OTgsNDAzLjkzMyAgICIvPgo8L2c+Cjwvc3ZnPgo="
+
+/***/ },
+/* 144 */
+/*!*************************************************!*\
+  !*** ./app/images/pages/page_live-overview.svg ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "b37170ea153ea93267b3c09b5a3e3a06.svg"
+
+/***/ },
+/* 145 */
+/*!*******************************!*\
+  !*** ./app/components/Map.js ***!
+  \*******************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, '__esModule', {
+	  value: true
+	});
+
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _react = __webpack_require__(/*! react */ 2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _superagent = __webpack_require__(/*! superagent */ 146);
+
+	var _superagent2 = _interopRequireDefault(_superagent);
+
+	var traffic = __webpack_require__(/*! ./traffic.json */ 147);
+
+	var platform = new H.service.Platform({
+	  'app_id': 'r7ElBPghk3pWDgiRQV8j',
+	  'app_code': 'jdDUjr1MRWVtQKuvkg1NXw'
+	});
+
+	var bbox = [[52.564873, 13.347359], [52.482571, 13.488121]];
+
+	var apiUrl = "https://traffic.cit.api.here.com/traffic/6.0/incidents.json?bbox=52.564873%2C%2013.347359%3B52.482571%2C%2013.488121&criticality=0&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg";
+
+	var map = null;
+
+	__webpack_require__(/*! ./map.styl */ 148);
+
+	function requestIncidents(scb, ecb, scope) {
+	  var trafficService = platform.getTrafficIncidentsService(),
+	      parameters = {
+	    bbox: '52.564873, 13.347359;52.482571, 13.488121',
+	    criticality: '0' };
+
+	  trafficService.requestIncidents(parameters, function (result) {
+	    scb.call(scope, result);
+	  }, function (error) {
+	    ecb.call(scope, result);
+	  });
+	}
+
+	function distance(lat1, lon1, lat2, lon2, unit) {
+	  var radlat1 = Math.PI * lat1 / 180;
+	  var radlat2 = Math.PI * lat2 / 180;
+	  var radlon1 = Math.PI * lon1 / 180;
+	  var radlon2 = Math.PI * lon2 / 180;
+	  var theta = lon1 - lon2;
+	  var radtheta = Math.PI * theta / 180;
+	  var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+	  dist = Math.acos(dist);
+	  dist = dist * 180 / Math.PI;
+	  dist = dist * 60 * 1.1515;
+	  if (unit == "K") {
+	    dist = dist * 1.609344;
+	  }
+	  if (unit == "N") {
+	    dist = dist * 0.8684;
+	  }
+	  return dist;
+	}
+
+	function eucledianCenter(x1, x2, y1, y2) {
+	  var x = (x1 + y1) / 2;
+	  var y = (x2 + y2) / 2;
+	  return [x, y];
+	}
+
+	var Map = (function (_React$Component) {
+	  _inherits(Map, _React$Component);
+
+	  function Map(props) {
+	    _classCallCheck(this, Map);
+
+	    _get(Object.getPrototypeOf(Map.prototype), 'constructor', this).call(this, props);
+
+	    this.state = {
+	      traffic: []
+	    };
+	  }
+
+	  _createClass(Map, [{
+	    key: 'handleTraffic',
+	    value: function handleTraffic(traffic) {
+	      var tr = traffic.TRAFFICITEMS.TRAFFICITEM;
+	      tr = tr.map(function (item) {
+	        var loc = item.LOCATION.GEOLOC;
+	        var origin = loc.ORIGIN;
+	        var to = loc.TO[0];
+
+	        var res = {
+	          critical: parseInt(item.CRITICALITY.ID, 10),
+	          center: eucledianCenter(origin.LATITUDE, origin.LONGITUDE, to.LATITUDE, to.LONGITUDE),
+	          radius: distance(origin.LATITUDE, origin.LONGITUDE, to.LATITUDE, to.LONGITUDE, "K") / 2
+	        };
+
+	        return res;
+	      });
+	      return tr;
+	    }
+	  }, {
+	    key: 'componentDidMount',
+	    value: function componentDidMount() {
+	      // Obtain the default map types from the platform object:
+	      var defaultLayers = platform.createDefaultLayers();
+
+	      var trafficData = this.handleTraffic(traffic);
+
+	      //		requestIncidents(this.handleTraffic.bind(this), function fail(err) {
+	      //											console.log('error');
+	      //										}, this);
+
+	      // Instantiate (and display) a map object:
+	      map = new H.Map(_react2['default'].findDOMNode(this.refs.map), defaultLayers.normal.traffic, {
+	        zoom: 10,
+	        center: { lat: 52.5, lng: 13.4 }
+	      });
+
+	      // Enable the event system on the map instance:
+	      var mapEvents = new H.mapevents.MapEvents(map);
+
+	      // Add event listener:
+	      map.addEventListener('tap', function (evt) {
+	        // Log 'tap' and 'mouse' events:
+	        console.log(evt.type, evt.currentPointer.type);
+	      });
+
+	      // Instantiate the default behavior, providing the mapEvents object:
+	      var behavior = new H.mapevents.Behavior(mapEvents);
+
+	      // Create the parameters for the routing request:
+	      var routingParametersPublic = {
+	        // The routing mode:
+	        'mode': 'fastest;publicTransport',
+	        // The start point of the route:
+	        'waypoint0': 'geo!52.503861,13.331128',
+	        // The end point of the route:
+	        'waypoint1': 'geo!52.51366,13.47506',
+	        // To retrieve the shape of the route we choose the route
+	        // representation mode 'display'
+	        'representation': 'display'
+	      };
+	      // Create the parameters for the routing request:
+	      var routingParametersCar = {
+	        // The routing mode:
+	        'mode': 'fastest;car',
+	        // The start point of the route:
+	        'waypoint0': 'geo!52.503861,13.331128',
+	        // The end point of the route:
+	        'waypoint1': 'geo!52.51366,13.47506',
+	        // To retrieve the shape of the route we choose the route
+	        // representation mode 'display'
+	        'representation': 'display'
+	      };
+
+	      // Define a callback function to process the routing response:
+	      var onPublicResult = function onPublicResult(result) {
+	        var route, routeShape, startPoint, endPoint, strip;
+	        if (result.response.route) {
+	          // Pick the first route from the response:
+	          route = result.response.route[0];
+	          // Pick the route's shape:
+	          routeShape = route.shape;
+
+	          // Create a strip to use as a point source for the route line
+	          strip = new H.geo.Strip();
+
+	          // Push all the points in the shape into the strip:
+	          routeShape.forEach(function (point) {
+	            var parts = point.split(',');
+	            strip.pushLatLngAlt(parts[0], parts[1]);
+	          });
+
+	          // Retrieve the mapped positions of the requested waypoints:
+	          startPoint = route.waypoint[0].mappedPosition;
+	          endPoint = route.waypoint[1].mappedPosition;
+
+	          // Create a polyline to display the route:
+	          var routeLine = new H.map.Polyline(strip, {
+	            style: { strokeColor: 'rgba(44, 219, 44, 0.7)', lineWidth: 5 }
+	          });
+
+	          // Create a marker for the start point:
+	          var startMarker = new H.map.Marker({
+	            lat: startPoint.latitude,
+	            lng: startPoint.longitude
+	          });
+
+	          // Create a marker for the end point:
+	          var endMarker = new H.map.Marker({
+	            lat: endPoint.latitude,
+	            lng: endPoint.longitude
+	          });
+
+	          // Add the route polyline and the two markers to the map:
+	          map.addObjects([routeLine, startMarker, endMarker]);
+
+	          // Set the map's viewport to make the whole route visible:
+	          map.setViewBounds(routeLine.getBounds());
+	        }
+	      };
+	      // Define a callback function to process the routing response:
+	      var onCarResult = function onCarResult(result) {
+	        var route, routeShape, startPoint, endPoint, strip;
+	        if (result.response.route) {
+	          // Pick the first route from the response:
+	          route = result.response.route[0];
+	          // Pick the route's shape:
+	          routeShape = route.shape;
+
+	          // Create a strip to use as a point source for the route line
+	          strip = new H.geo.Strip();
+
+	          // Push all the points in the shape into the strip:
+	          routeShape.forEach(function (point) {
+	            var parts = point.split(',');
+	            strip.pushLatLngAlt(parts[0], parts[1]);
+	          });
+
+	          // Retrieve the mapped positions of the requested waypoints:
+	          startPoint = route.waypoint[0].mappedPosition;
+	          endPoint = route.waypoint[1].mappedPosition;
+
+	          // Create a polyline to display the route:
+	          var routeLine = new H.map.Polyline(strip, {
+	            style: { strokeColor: 'rgba(225, 54, 44, 0.7)', lineWidth: 5 }
+	          });
+
+	          // Create a marker for the start point:
+	          var startMarker = new H.map.Marker({
+	            lat: startPoint.latitude,
+	            lng: startPoint.longitude
+	          });
+
+	          // Create a marker for the end point:
+	          var endMarker = new H.map.Marker({
+	            lat: endPoint.latitude,
+	            lng: endPoint.longitude
+	          });
+
+	          // Add the route polyline and the two markers to the map:
+	          map.addObjects([routeLine, startMarker, endMarker]);
+
+	          // Set the map's viewport to make the whole route visible:
+	          map.setViewBounds(routeLine.getBounds());
+	        }
+	      };
+
+	      // Get an instance of the routing service:
+	      var routerCar = platform.getRoutingService();
+	      var routerPublic = platform.getRoutingService();
+
+	      // Call calculateRoute() with the routing parameters,
+	      // the callback and an error callback function (called if a
+	      // communication error occurs):
+	      routerCar.calculateRoute(routingParametersCar, onCarResult, function (error) {
+	        alert(error.message);
+	      });
+	      // Call calculateRoute() with the routing parameters,
+	      // the callback and an error callback function (called if a
+	      // communication error occurs):
+	      routerPublic.calculateRoute(routingParametersPublic, onPublicResult, function (error) {
+	        alert(error.message);
+	      });
+
+	      // TRAFFIC
+
+	      console.log('ttr', trafficData);
+
+	      var colors = ["rgba(0, 150, 136, 0.2)", "rgba(174, 213, 129, 0.2)", "rgba(0, 145, 234, 0.2)", "rgba(251, 173, 51, 0.2)"];
+	      trafficData.forEach(function (date) {
+	        var args = [{ lat: date.center[0], lng: date.center[1] }, date.radius * 1000, {
+	          style: {
+	            fillColor: colors[date.critical],
+	            lineWidth: 2,
+	            strokeColor: colors[date.critical]
+	          }
+	        }];
+	        map.addObject(new H.map.Circle({ lat: date.center[0], lng: date.center[1] }, date.radius * 2000, {
+	          style: {
+	            fillColor: colors[date.critical],
+	            lineWidth: 0,
+	            strokeColor: colors[date.critical]
+	          }
+	        }));
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2['default'].createElement(
+	        'div',
+	        { className: 'map' },
+	        _react2['default'].createElement('div', { id: 'map', ref: 'map' })
+	      );
+	    }
+	  }]);
+
+	  return Map;
+	})(_react2['default'].Component);
+
+	exports['default'] = Map;
+	module.exports = exports['default'];
+
+/***/ },
+/* 146 */
+/*!*****************************!*\
+  !*** external "superagent" ***!
+  \*****************************/
+/***/ function(module, exports) {
+
+	module.exports = require("superagent");
+
+/***/ },
+/* 147 */
+/*!*************************************!*\
+  !*** ./app/components/traffic.json ***!
+  \*************************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+		"TRAFFICITEMS": {
+			"TRAFFICITEM": [
+				{
+					"TRAFFICITEMID": 332406100493388800,
+					"ORIGINALTRAFFICITEMID": 2779665487568672300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 19:28:12",
+					"ENDTIME": "09/27/2015 15:16:17",
+					"ENTRYTIME": "09/27/2015 05:16:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20250",
+									"LOCATIONDESC": "Bülowstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Schöneberger Ufer",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Schöneberger Ufer",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Schöneberger Ufer",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20250
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bülowstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bülowstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bülowstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20250
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.504141,
+								"LONGITUDE": 13.366583
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.497843,
+									"LONGITUDE": 13.362011
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092027595",
+									"1092027596",
+									"1092042525",
+									"1092042526",
+									"53471927",
+									"53501048",
+									"565028026",
+									"780281852",
+									"780281853",
+									"820005627",
+									"822630808"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Bülowstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Bülowstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1710398336042027800,
+					"ORIGINALTRAFFICITEMID": 3193919456074939000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:02",
+					"ENDTIME": "03/17/2016 22:59:00",
+					"ENTRYTIME": "09/08/2015 16:25:02",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1004, Stadtgebiet Berlin, Bornholmer Straße bis Osloer Straße, zwischen Kreuzung Schönhauser Allee und Kreuzung Prinzenallee, Fahrbahn auf einen Fahrstreifen verengt, Bauarbeiten, eine Umleitung ist eingerichtet, bis 17.03.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27299",
+									"LOCATIONDESC": "Neumannstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "30072",
+									"LOCATIONDESC": "Prinzenallee",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 514,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "D15",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27299",
+									"LOCATIONDESC": "Neumannstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "30072",
+									"LOCATIONDESC": "Prinzenallee",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 803,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Bauarbeiten auf Abschnitt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 11,
+									"PHRASECODE": "E11",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50736
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Neumannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Neumannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Neumannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27299
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MOABIT",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Osloer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50736
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Prinzenallee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Prinzenallee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Prinzenallee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 30072
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MOABIT",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.55378,
+								"LONGITUDE": 13.41561
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.55603,
+									"LONGITUDE": 13.38442
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1088481866",
+									"1088481867",
+									"53502083",
+									"53502085",
+									"53502087",
+									"53502089",
+									"53502092",
+									"53502094",
+									"53502096",
+									"53503493",
+									"53503711",
+									"53503767",
+									"53503890",
+									"53507277",
+									"737781248",
+									"754457163",
+									"754457164",
+									"754457165",
+									"77268760",
+									"77268764",
+									"77268765",
+									"77272643",
+									"779103143",
+									"781773104",
+									"781848933",
+									"781848934",
+									"835789452",
+									"835789453",
+									"835789454",
+									"835789455",
+									"835789456",
+									"989087609",
+									"989087610"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Neumannstraße und Prinzenallee - Bauarbeiten auf Abschnitt. Fahrbahn von auf einen Fahrstreifen verengt. eine Umleitung ist eingerichtet.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Neumannstraße und Prinzenallee - Bauarbeiten auf Abschnitt. Fahrbahn von auf einen Fahrstreifen verengt. eine Umleitung ist eingerichtet. L1004, Stadtgebiet Berlin, Bornholmer Straße bis Osloer Straße, zwischen Kreuzung Schönhauser Allee und Kreuzung Prinzenallee, Fahrbahn auf einen Fahrstreifen verengt, Bauarbeiten, eine Umleitung ist eingerichtet, bis 17.03.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Bauarbeiten auf Abschnitt. Fahrbahn von auf einen Fahrstreifen verengt. eine Umleitung ist eingerichtet. L1004, Stadtgebiet Berlin, Bornholmer Straße bis Osloer Straße, zwischen Kreuzung Schönhauser Allee und Kreuzung Prinzenallee, Fahrbahn auf einen Fahrstreifen verengt, Bauarbeiten, eine Umleitung ist eingerichtet, bis 17.03.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4585830533235118000,
+					"ORIGINALTRAFFICITEMID": 1366909001524351700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/31/2015 18:03:42",
+					"ENDTIME": "09/27/2015 15:05:17",
+					"ENTRYTIME": "09/27/2015 05:05:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27209",
+									"LOCATIONDESC": "Martin-Luther-Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50716
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27209
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50716
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27209
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49054,
+								"LONGITUDE": 13.36
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.48915,
+									"LONGITUDE": 13.34511
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1046157011",
+									"1046157012",
+									"53474908",
+									"53475049",
+									"53475055",
+									"53475158",
+									"53475218",
+									"53475241",
+									"53475249",
+									"53595045",
+									"53595048",
+									"77270052",
+									"77270053",
+									"821634549",
+									"821634550",
+									"821634551",
+									"822599786",
+									"822599787",
+									"835919109",
+									"835919110"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Martin-Luther-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Martin-Luther-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4046406232564382700,
+					"ORIGINALTRAFFICITEMID": 4046406232564382700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "PLANNED EVENT",
+					"STARTTIME": "09/05/2015 15:17:14",
+					"ENDTIME": "09/27/2015 15:32:18",
+					"ENTRYTIME": "09/25/2015 14:32:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "EVENT",
+						"DESCRIPTION": "event"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26947",
+									"LOCATIONDESC": "Behrenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26948",
+									"LOCATIONDESC": "Dorotheenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 1527,
+									"DESCRIPTION": "Veranstaltung; Straße gesperrt.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 9,
+									"PHRASECODE": "P1.C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9320
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Behrenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26947
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9320
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26948
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51505,
+								"LONGITUDE": 13.37752
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51743,
+									"LONGITUDE": 13.37704
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845809",
+									"1089845810",
+									"1089845869",
+									"1089845870",
+									"53609842",
+									"53609843",
+									"572713670",
+									"592186756",
+									"592191656",
+									"592191657",
+									"724484273",
+									"733185668",
+									"733185669"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"PLANNEDEVENT": {
+								"PLANNEDEVENTTYPEDESC": "PLANNED EVENT",
+								"PLANNEDEVENTDESC": "event"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Behrenstraße und Dorotheenstraße - Veranstaltung; Straße gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Behrenstraße und Dorotheenstraße - Veranstaltung; Straße gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Veranstaltung; Straße gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2100679863526460700,
+					"ORIGINALTRAFFICITEMID": 965847044975310000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:03",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/09/2015 06:44:55",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31037",
+									"LOCATIONDESC": "Liebermannstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31037
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31037
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.55708,
+								"LONGITUDE": 13.46681
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.55999,
+									"LONGITUDE": 13.46711
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092136546",
+									"1092136547",
+									"53497715",
+									"572712155",
+									"572712156",
+									"64988173"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Liebermannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Liebermannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2702001123575100000,
+					"ORIGINALTRAFFICITEMID": 4061144837547603000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 15:45:28",
+					"ENDTIME": "09/27/2015 15:20:17",
+					"ENTRYTIME": "09/27/2015 05:20:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51234,
+								"LONGITUDE": 13.39346
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5125,
+									"LONGITUDE": 13.39646
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500680"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Markgrafenstraße und Jerusalemer Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Markgrafenstraße und Jerusalemer Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2342606394636993500,
+					"ORIGINALTRAFFICITEMID": 4385333680682048000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:00",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/25/2015 15:14:54",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31038",
+									"LOCATIONDESC": "Feldtmannstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31038
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31038
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DREIECK BARNIM",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.56399,
+								"LONGITUDE": 13.46976
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.56422,
+									"LONGITUDE": 13.46993
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53497628"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Feldtmannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Feldtmannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2659990649740780000,
+					"ORIGINALTRAFFICITEMID": 4587484358384773000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/31/2015 18:08:43",
+					"ENDTIME": "09/27/2015 15:05:17",
+					"ENTRYTIME": "09/27/2015 05:05:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "02489",
+									"LOCATIONDESC": "Grunewaldstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27165",
+									"LOCATIONDESC": "Hauptstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9359
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 2489
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9359
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Hauptstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27165
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "FRIEDENAU",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.4886,
+								"LONGITUDE": 13.34497
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.47937,
+									"LONGITUDE": 13.34492
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53475566",
+									"53476077",
+									"53476152",
+									"53476193",
+									"53476383",
+									"53476451",
+									"53476521",
+									"53476619",
+									"53476908",
+									"53477301",
+									"53477513",
+									"64950069",
+									"64950072",
+									"791224057",
+									"791224063",
+									"791224064",
+									"833675831",
+									"833675839",
+									"833675840",
+									"846557119",
+									"846557128",
+									"846557129"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Grunewaldstraße und Hauptstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Grunewaldstraße und Hauptstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2884265361534783500,
+					"ORIGINALTRAFFICITEMID": 4102722429644181500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:00:51",
+					"ENDTIME": "09/27/2015 15:21:17",
+					"ENTRYTIME": "09/27/2015 05:21:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51323,
+								"LONGITUDE": 13.39333
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5128,
+									"LONGITUDE": 13.39339
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"733154918",
+									"733154919"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Französische Straße und Mohrenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Französische Straße und Mohrenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1429902199550396000,
+					"ORIGINALTRAFFICITEMID": 1429902199550396000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONGESTION",
+					"STARTTIME": "09/27/2015 09:28:14",
+					"ENDTIME": "09/27/2015 15:28:17",
+					"ENTRYTIME": "09/27/2015 09:28:17",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "SLOW",
+						"DESCRIPTION": "slow"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32810",
+									"LOCATIONDESC": "Alt-Moabit",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32811",
+									"LOCATIONDESC": "Perleberger Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 108,
+									"QUANTIFIERS": 4,
+									"DESCRIPTION": "Stockender Verkehr.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 1,
+									"PHRASECODE": "A2",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32810",
+									"LOCATIONDESC": "Alt-Moabit",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32811",
+									"LOCATIONDESC": "Perleberger Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 1621,
+									"DESCRIPTION": "Zeitverlust bis zu 5 min.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 20,
+									"PHRASECODE": "Q1(5)",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32808
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Alt-Moabit",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Alt-Moabit",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Alt-Moabit",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32810
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32808
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Perleberger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Perleberger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Perleberger Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Rathenower Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32811
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52673,
+								"LONGITUDE": 13.35535
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.53256,
+									"LONGITUDE": 13.3506
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53499793",
+									"53499826",
+									"53499987",
+									"53500056",
+									"53516956",
+									"572707869",
+									"572707870",
+									"781680415",
+									"835790549",
+									"836163603",
+									"836163604",
+									"836163605",
+									"836163606",
+									"836163607",
+									"836163608"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"CONGESTIONINCIDENT": {
+								"CONGESTIONTYPEDESC": "CONGESTION",
+								"CONGESTIONFACTOR": 50
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Alt-Moabit und Perleberger Straße - Stockender Verkehr. Zeitverlust bis zu 5 min.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Alt-Moabit und Perleberger Straße - Stockender Verkehr. Zeitverlust bis zu 5 min.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Stockender Verkehr. Zeitverlust bis zu 5 min.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3796514051925259000,
+					"ORIGINALTRAFFICITEMID": 3540045265315392000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/31/2015 17:56:58",
+					"ENDTIME": "09/27/2015 15:05:17",
+					"ENTRYTIME": "09/27/2015 05:05:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20249",
+									"LOCATIONDESC": "Goebenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20249
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Goebenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20249
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49061,
+								"LONGITUDE": 13.36049
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.49426,
+									"LONGITUDE": 13.361
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089834069",
+									"1089834070",
+									"1092051529",
+									"1092054197",
+									"1092054198",
+									"53474788",
+									"53474928",
+									"53641649",
+									"572708692"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Goebenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Goebenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1916413977904900000,
+					"ORIGINALTRAFFICITEMID": 2420506453752700000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/27/2015 20:56:12",
+					"ENDTIME": "09/27/2015 15:03:17",
+					"ENTRYTIME": "09/27/2015 05:03:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27190",
+									"LOCATIONDESC": "Köpenicker Straße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27189",
+									"LOCATIONDESC": "Gitschiner Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9363
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27190
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9363
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27189
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51089,
+								"LONGITUDE": 13.41639
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.501808,
+									"LONGITUDE": 13.409259
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472202",
+									"53501050",
+									"53509682",
+									"53509684",
+									"724080451",
+									"724080452",
+									"733361300",
+									"733370159",
+									"781882149",
+									"781882150",
+									"781882460",
+									"781882461",
+									"781885416",
+									"781885417",
+									"833329661",
+									"833329662",
+									"834175902",
+									"834175903"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Köpenicker Straße und Gitschiner Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Köpenicker Straße und Gitschiner Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2160425873616288800,
+					"ORIGINALTRAFFICITEMID": 2845970150591554000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/15/2015 07:30:15",
+					"ENDTIME": "10/30/2015 22:59:00",
+					"ENTRYTIME": "09/27/2015 09:29:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26901",
+									"LOCATIONDESC": "Friedrichstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26901
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MARZAHN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MARZAHN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MARZAHN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26901
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MARZAHN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MARZAHN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MARZAHN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52716,
+								"LONGITUDE": 13.38716
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52716,
+									"LONGITUDE": 13.38716
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"544596855"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Friedrichstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Friedrichstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4447218003428013600,
+					"ORIGINALTRAFFICITEMID": 394288742567851600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/21/2015 07:16:28",
+					"ENDTIME": "10/05/2015 21:59:00",
+					"ENTRYTIME": "09/21/2015 07:16:28",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32732",
+									"LOCATIONDESC": "Unter den Linden",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32729
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32732
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32729
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32732
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51715,
+								"LONGITUDE": 13.38879
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.516901,
+									"LONGITUDE": 13.38883
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"733069222",
+									"733069223"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Unter den Linden - Wegen Baustelle gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Unter den Linden - Wegen Baustelle gesperrt. L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 388364944582470900,
+					"ORIGINALTRAFFICITEMID": 388364944582470900,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/27/2015 05:32:51",
+					"ENDTIME": "09/27/2015 15:32:51",
+					"ENTRYTIME": "09/27/2015 05:32:51",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "A100, Stadtring Berlin, Neukölln - Wilmersdorf in beiden Richtungen, zwischen Tunnel Innsbrucker Platz und Anschlussstelle Wexstraße, Ausfahrt gesperrt, Einfahrt gesperrt, Sportveranstaltung",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31023",
+									"LOCATIONDESC": "Innsbrucker Platz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "10231",
+									"LOCATIONDESC": "Wexstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 406,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Einfahrt gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 8,
+									"PHRASECODE": "C6",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31023",
+									"LOCATIONDESC": "Innsbrucker Platz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "10231",
+									"LOCATIONDESC": "Wexstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 407,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Ausfahrt gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 7,
+									"PHRASECODE": "C7",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31023",
+									"LOCATIONDESC": "Innsbrucker Platz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "10231",
+									"LOCATIONDESC": "Wexstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 1502,
+									"DESCRIPTION": "Sportveranstaltung.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 18,
+									"PHRASECODE": "P2",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50062
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Innsbrucker Platz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Innsbrucker Platz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Innsbrucker Platz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31023
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50062
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Wexstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wexstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wexstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Stadtring Berlin",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 10231
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.47869,
+								"LONGITUDE": 13.343136
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.47856,
+									"LONGITUDE": 13.33711
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"565028398",
+									"565028399",
+									"572708933",
+									"572708934",
+									"721709338",
+									"721709339",
+									"737388109"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Innsbrucker Platz und Wexstraße - Einfahrt gesperrt. Ausfahrt gesperrt. Sportveranstaltung.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Innsbrucker Platz und Wexstraße - Einfahrt gesperrt. Ausfahrt gesperrt. Sportveranstaltung. A100, Stadtring Berlin, Neukölln - Wilmersdorf in beiden Richtungen, zwischen Tunnel Innsbrucker Platz und Anschlussstelle Wexstraße, Ausfahrt gesperrt, Einfahrt gesperrt, Sportveranstaltung",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Einfahrt gesperrt. Ausfahrt gesperrt. Sportveranstaltung. A100, Stadtring Berlin, Neukölln - Wilmersdorf in beiden Richtungen, zwischen Tunnel Innsbrucker Platz und Anschlussstelle Wexstraße, Ausfahrt gesperrt, Einfahrt gesperrt, Sportveranstaltung",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1573402658416855300,
+					"ORIGINALTRAFFICITEMID": 4273975238906700300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/10/2015 19:10:29",
+					"ENDTIME": "09/27/2015 15:04:17",
+					"ENTRYTIME": "09/27/2015 05:04:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27208",
+									"LOCATIONDESC": "Potsdamer Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50716
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27208
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50716
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Grunewaldstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27208
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.489843,
+								"LONGITUDE": 13.353391
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.49042,
+									"LONGITUDE": 13.36014
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1046157011",
+									"1046157012",
+									"53474946",
+									"53474959",
+									"53475049",
+									"53475088",
+									"821634549",
+									"821634550",
+									"821634551",
+									"835919109",
+									"835919110"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Potsdamer Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Potsdamer Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 639489068500215400,
+					"ORIGINALTRAFFICITEMID": 2752553627895459000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:06",
+					"ENDTIME": "12/20/2015 22:59:00",
+					"ENTRYTIME": "09/26/2015 13:33:54",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26930",
+									"LOCATIONDESC": "Gertraudenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26932",
+									"LOCATIONDESC": "Inselstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 742,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.E14",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Fischerinsel",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26930
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Wallstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wallstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wallstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Inselstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Inselstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Inselstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Wallstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26932
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51402,
+								"LONGITUDE": 13.40582
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51227,
+									"LONGITUDE": 13.40989
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500565",
+									"53500648",
+									"53500703",
+									"53500704",
+									"53501247",
+									"53595391",
+									"774043298",
+									"774043299"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Gertraudenstraße und Inselstraße - Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Gertraudenstraße und Inselstraße - Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei. L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei. L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1450537960352593000,
+					"ORIGINALTRAFFICITEMID": 3750647296360486400,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:55:31",
+					"ENDTIME": "09/27/2015 15:08:17",
+					"ENTRYTIME": "09/27/2015 05:08:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26823",
+									"LOCATIONDESC": "Unter den Linden",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Behrenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26823
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26823
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51546,
+								"LONGITUDE": 13.385882
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.516831,
+									"LONGITUDE": 13.383953
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500479",
+									"572713710",
+									"724151417",
+									"724151422",
+									"724151423",
+									"733069227",
+									"733069228"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Unter den Linden - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Unter den Linden - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2112947031889017900,
+					"ORIGINALTRAFFICITEMID": 1352455125241831700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 17:14:14",
+					"ENDTIME": "09/27/2015 15:08:17",
+					"ENTRYTIME": "09/27/2015 05:08:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32848",
+									"LOCATIONDESC": "Behrenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32848
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Behrenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32848
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.516423,
+								"LONGITUDE": 13.385856
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.515451,
+									"LONGITUDE": 13.385735
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"572713710",
+									"724151417",
+									"724151422",
+									"724151423"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Behrenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Behrenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3343760768846278700,
+					"ORIGINALTRAFFICITEMID": 1902242374343242800,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/26/2015 20:51:36",
+					"ENDTIME": "09/27/2015 14:59:17",
+					"ENTRYTIME": "09/25/2015 15:59:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "21543",
+									"LOCATIONDESC": "Großer Stern",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21543
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Großer Stern",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Großer Stern",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Großer Stern",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21543
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51581,
+								"LONGITUDE": 13.36941
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.515085,
+									"LONGITUDE": 13.358214
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53516332",
+									"53516335",
+									"572658027",
+									"572706733",
+									"733623068",
+									"733623070",
+									"733623071",
+									"781335619",
+									"781335620",
+									"792897690",
+									"792897691"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Großer Stern - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Großer Stern - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3652490175389705700,
+					"ORIGINALTRAFFICITEMID": 4497238289840895500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:15:49",
+					"ENDTIME": "09/27/2015 15:21:17",
+					"ENTRYTIME": "09/27/2015 05:21:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51458,
+								"LONGITUDE": 13.38622
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51477,
+									"LONGITUDE": 13.38916
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500608",
+									"779602169",
+									"779602170"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Glinkastraße und Markgrafenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Glinkastraße und Markgrafenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1262384082963187000,
+					"ORIGINALTRAFFICITEMID": 1262384082963187000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/16/2015 09:43:38",
+					"ENDTIME": "10/03/2015 02:59:30",
+					"ENTRYTIME": "09/21/2015 07:29:46",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26812",
+									"LOCATIONDESC": "Fennstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26809",
+									"LOCATIONDESC": "Transvaalstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 518,
+									"DESCRIPTION": "Fahrbahnverengung.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "D19",
+									"EXTENT": "3",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9293
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Fennstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Fennstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Fennstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26812
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9293
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Transvaalstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Transvaalstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Transvaalstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26809
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.541123,
+								"LONGITUDE": 13.368614
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.554569,
+									"LONGITUDE": 13.344933
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089989592",
+									"1089989593",
+									"1091968738",
+									"1091968739",
+									"1092230782",
+									"1092230783",
+									"53499113",
+									"53499329",
+									"53502402",
+									"53502405",
+									"53502480",
+									"53502568",
+									"53502575",
+									"53502607",
+									"53502611",
+									"53502667",
+									"53517184",
+									"565027671",
+									"572705889",
+									"572705890",
+									"572705941",
+									"77270483",
+									"77270484",
+									"841190413",
+									"841190414",
+									"842340527",
+									"842340528",
+									"842340529",
+									"842340537",
+									"842340538",
+									"842340539",
+									"842340540",
+									"842353162",
+									"846777766",
+									"846777767",
+									"924404279",
+									"924404286",
+									"924404287"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Fennstraße und Transvaalstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Fahrbahnverengung.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Fennstraße und Transvaalstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Fahrbahnverengung.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Fahrbahnverengung.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 851210502246709900,
+					"ORIGINALTRAFFICITEMID": 1483753656269107500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:58",
+					"ENDTIME": "05/31/2017 21:59:00",
+					"ENTRYTIME": "09/26/2015 17:34:14",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B1, Stadtgebiet Berlin, Grunerstraße bis Mühlendamm, zwischen Einmündung Alexanderstraße und Kreuzung Stralauer Straße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, Stau zu erwarten, bis 31.05.2017",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20257",
+									"LOCATIONDESC": "Karl-Marx-Allee",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20256",
+									"LOCATIONDESC": "Stralauer Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Grunerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Grunerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Grunerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Marx-Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Marx-Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Marx-Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Grunerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20257
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Mühlendamm",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Mühlendamm",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Mühlendamm",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Stralauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Stralauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Stralauer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Mühlendamm",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20256
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.520979,
+								"LONGITUDE": 13.415118
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51685,
+									"LONGITUDE": 13.40876
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53501356",
+									"53619075",
+									"53628357",
+									"77272531",
+									"77272532",
+									"77272535",
+									"77272536",
+									"779453991",
+									"779453992",
+									"779453993",
+									"779490734",
+									"779490735",
+									"799546214"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Karl-Marx-Allee und Stralauer Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Karl-Marx-Allee und Stralauer Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B1, Stadtgebiet Berlin, Grunerstraße bis Mühlendamm, zwischen Einmündung Alexanderstraße und Kreuzung Stralauer Straße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, Stau zu erwarten, bis 31.05.2017",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B1, Stadtgebiet Berlin, Grunerstraße bis Mühlendamm, zwischen Einmündung Alexanderstraße und Kreuzung Stralauer Straße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, Stau zu erwarten, bis 31.05.2017",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4214800688282347000,
+					"ORIGINALTRAFFICITEMID": 4214800688282347000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/15/2015 00:53:48",
+					"ENDTIME": "10/18/2015 15:59:30",
+					"ENTRYTIME": "09/21/2015 09:22:46",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26893",
+									"LOCATIONDESC": "Landsberger Allee",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26894",
+									"LOCATIONDESC": "Hauptstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Hohenschönhauser Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hohenschönhauser Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hohenschönhauser Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9309
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Hohenschönhauser Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26893
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Konrad-Wolf-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Konrad-Wolf-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Konrad-Wolf-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9309
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Hauptstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Konrad-Wolf-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26894
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "HOHENSCHÖNHAUSEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.535925,
+								"LONGITUDE": 13.473172
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.54904,
+									"LONGITUDE": 13.50159
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1085537046",
+									"1085537047",
+									"1085537055",
+									"1085537056",
+									"1103439911",
+									"1103439912",
+									"53505400",
+									"53505411",
+									"53505413",
+									"53505421",
+									"53505436",
+									"53505461",
+									"53505473",
+									"53505705",
+									"53505707",
+									"53505708",
+									"53505727",
+									"53505728",
+									"53511321",
+									"572712060",
+									"592203571",
+									"592203572",
+									"901482474",
+									"901482475",
+									"901489896",
+									"901489897",
+									"901489898",
+									"901489899",
+									"901805990",
+									"925695084",
+									"932574328",
+									"932574329"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Landsberger Allee und Hauptstraße - Wegen Baustelle gesperrt. eine örtliche Umleitung ist eingerichtet.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Landsberger Allee und Hauptstraße - Wegen Baustelle gesperrt. eine örtliche Umleitung ist eingerichtet.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. eine örtliche Umleitung ist eingerichtet.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2375134624924531000,
+					"ORIGINALTRAFFICITEMID": 4278079080700337000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/26/2015 20:50:56",
+					"ENDTIME": "09/27/2015 15:16:18",
+					"ENTRYTIME": "09/27/2015 05:16:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32778",
+									"LOCATIONDESC": "Yitzhak-Rabin-Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Großer Stern",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Großer Stern",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Großer Stern",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32778
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32778
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.515095,
+								"LONGITUDE": 13.359855
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5157,
+									"LONGITUDE": 13.36944
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53516331",
+									"53516334",
+									"733623073",
+									"733623074",
+									"733623075",
+									"781335621",
+									"781335622",
+									"792897693",
+									"792897694"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Yitzhak-Rabin-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Yitzhak-Rabin-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2729408375332007400,
+					"ORIGINALTRAFFICITEMID": 1947382748948624600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/08/2015 13:46:12",
+					"ENDTIME": "09/27/2015 15:18:17",
+					"ENTRYTIME": "09/27/2015 05:18:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Adalbertstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Prinzenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.50106,
+								"LONGITUDE": 13.41161
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50177,
+									"LONGITUDE": 13.40923
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472343",
+									"781881290",
+									"781881291",
+									"781881310",
+									"781881311",
+									"781900855",
+									"781900857",
+									"781900858"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Adalbertstraße und Prinzenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Adalbertstraße und Prinzenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 781443343842071300,
+					"ORIGINALTRAFFICITEMID": 2162364527897646300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/21/2015 07:16:28",
+					"ENDTIME": "10/30/2015 22:59:00",
+					"ENTRYTIME": "09/27/2015 09:29:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31173",
+									"LOCATIONDESC": "Torstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26820",
+									"LOCATIONDESC": "Reinhardtstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31173
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26820
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52703,
+								"LONGITUDE": 13.38702
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.526106,
+									"LONGITUDE": 13.387227
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"572708772",
+									"572708773",
+									"901505417"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Torstraße und Reinhardtstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Torstraße und Reinhardtstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4178815672618929700,
+					"ORIGINALTRAFFICITEMID": 4178815672618929700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "PLANNED EVENT",
+					"STARTTIME": "09/16/2015 01:00:29",
+					"ENDTIME": "09/27/2015 13:37:20",
+					"ENTRYTIME": "09/27/2015 08:59:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "EVENT",
+						"DESCRIPTION": "event"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32762",
+									"LOCATIONDESC": "Otto-von-Bismarck-Allee",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32763",
+									"LOCATIONDESC": "Straße-dES-17.Juni",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 1527,
+									"DESCRIPTION": "Veranstaltung; Straße gesperrt.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 9,
+									"PHRASECODE": "P1.C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Heinrich-von-Gagern-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heinrich-von-Gagern-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heinrich-von-Gagern-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32760
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Heinrich-von-Gagern-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32762
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32760
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32763
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51957,
+								"LONGITUDE": 13.37202
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51584,
+									"LONGITUDE": 13.36975
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500530",
+									"541310673",
+									"541380019",
+									"733187140",
+									"734788835",
+									"735364883",
+									"735364884",
+									"735364890",
+									"770378532"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"PLANNEDEVENT": {
+								"PLANNEDEVENTTYPEDESC": "PLANNED EVENT",
+								"PLANNEDEVENTDESC": "event"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Otto-von-Bismarck-Allee und Straße-dES-17.Juni - Veranstaltung; Straße gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Otto-von-Bismarck-Allee und Straße-dES-17.Juni - Veranstaltung; Straße gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Veranstaltung; Straße gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4100890010630037000,
+					"ORIGINALTRAFFICITEMID": 4100890010630037000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "PLANNED EVENT",
+					"STARTTIME": "09/10/2015 12:30:35",
+					"ENDTIME": "09/27/2015 15:32:18",
+					"ENTRYTIME": "09/25/2015 14:32:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "EVENT",
+						"DESCRIPTION": "event"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26948",
+									"LOCATIONDESC": "Dorotheenstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32912",
+									"LOCATIONDESC": "Behrenstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 1527,
+									"DESCRIPTION": "Veranstaltung; Straße gesperrt.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 9,
+									"PHRASECODE": "P1.C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9320
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26948
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9320
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Behrenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32912
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.517516,
+								"LONGITUDE": 13.376997
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51505,
+									"LONGITUDE": 13.37752
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845809",
+									"1089845810",
+									"1089845869",
+									"1089845870",
+									"53609842",
+									"53609843",
+									"572713670",
+									"592186756",
+									"592191656",
+									"592191657",
+									"724484273",
+									"733185668",
+									"733185669"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"PLANNEDEVENT": {
+								"PLANNEDEVENTTYPEDESC": "PLANNED EVENT",
+								"PLANNEDEVENTDESC": "event"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Dorotheenstraße und Behrenstraße - Veranstaltung; Straße gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Dorotheenstraße und Behrenstraße - Veranstaltung; Straße gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Veranstaltung; Straße gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4429832194309406700,
+					"ORIGINALTRAFFICITEMID": 3086622182536440300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 13:24:05",
+					"ENDTIME": "09/27/2015 14:55:17",
+					"ENTRYTIME": "09/26/2015 11:55:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Werderscher Markt"
+								},
+								"STREET2": {
+									"ADDRESS1": "Kurstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51543,
+								"LONGITUDE": 13.39794
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51525,
+									"LONGITUDE": 13.39676
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500567",
+									"53500574",
+									"53523032",
+									"905200618",
+									"905200619"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Kurstraße und Markgrafenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Kurstraße und Markgrafenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 561635029108416400,
+					"ORIGINALTRAFFICITEMID": 2462178233061480000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/27/2015 21:13:53",
+					"ENDTIME": "09/27/2015 15:18:17",
+					"ENTRYTIME": "09/27/2015 05:18:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Adalbertstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Prinzenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.50106,
+								"LONGITUDE": 13.41161
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50177,
+									"LONGITUDE": 13.40923
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53473989",
+									"53474080",
+									"53474104",
+									"53474154",
+									"53641659",
+									"833328907",
+									"833556663",
+									"833556664"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Adalbertstraße und Prinzenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Adalbertstraße und Prinzenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 943015043232714000,
+					"ORIGINALTRAFFICITEMID": 3094247710614827000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 19:11:24",
+					"ENDTIME": "09/27/2015 15:15:17",
+					"ENTRYTIME": "09/27/2015 05:15:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27144",
+									"LOCATIONDESC": "Nollendorfplatz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27143",
+									"LOCATIONDESC": "Martin-Luther-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Kleiststraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9355
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27144
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Kleiststraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9355
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27143
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WILMERSDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49967,
+								"LONGITUDE": 13.35453
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.501067,
+									"LONGITUDE": 13.346915
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472298",
+									"53472638",
+									"53472702",
+									"53515181",
+									"572708630",
+									"734638467",
+									"77269801",
+									"775768394",
+									"775768395",
+									"821709421",
+									"821709422"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Nollendorfplatz und Martin-Luther-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Nollendorfplatz und Martin-Luther-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4288575471809619500,
+					"ORIGINALTRAFFICITEMID": 2185292045459172000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:16:53",
+					"ENDTIME": "09/27/2015 15:21:17",
+					"ENTRYTIME": "09/27/2015 05:21:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51489,
+								"LONGITUDE": 13.3911
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51483,
+									"LONGITUDE": 13.39008
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500608",
+									"779602169",
+									"779602170"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Markgrafenstraße und Glinkastraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Markgrafenstraße und Glinkastraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2834976395545467000,
+					"ORIGINALTRAFFICITEMID": 2621464759813014000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:46",
+					"ENDTIME": "06/30/2016 21:59:00",
+					"ENTRYTIME": "09/26/2015 18:44:39",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26923",
+									"LOCATIONDESC": "Karl-Liebknecht-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9315
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Mühlendamm",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Mühlendamm",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Mühlendamm",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26923
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9315
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26923
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52003,
+								"LONGITUDE": 13.40495
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52013,
+									"LONGITUDE": 13.40481
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"77301951"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Karl-Liebknecht-Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Karl-Liebknecht-Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung. L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung. L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2325588808221013500,
+					"ORIGINALTRAFFICITEMID": 2533432300908492000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/27/2015 21:11:53",
+					"ENDTIME": "09/27/2015 15:18:17",
+					"ENTRYTIME": "09/27/2015 05:18:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Prinzenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Ritterstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Adalbertstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.50177,
+								"LONGITUDE": 13.40923
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50106,
+									"LONGITUDE": 13.41161
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472343",
+									"781881290",
+									"781881291",
+									"781881310",
+									"781881311",
+									"781900855",
+									"781900857",
+									"781900858"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Prinzenstraße und Adalbertstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Prinzenstraße und Adalbertstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2281514075880157200,
+					"ORIGINALTRAFFICITEMID": 4452088343677695500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:04",
+					"ENDTIME": "09/30/2015 21:59:00",
+					"ENTRYTIME": "09/20/2015 15:44:16",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "25612",
+									"LOCATIONDESC": "Modersohnstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "25614",
+									"LOCATIONDESC": "Frankfurter Allee",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "3",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50459
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 25612
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50459
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 25614
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ORANIENBURG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.50264,
+								"LONGITUDE": 13.44699
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51574,
+									"LONGITUDE": 13.45419
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089025899",
+									"1089025900",
+									"1089030793",
+									"1089030794",
+									"1089030795",
+									"1092153034",
+									"1092153035",
+									"1092156695",
+									"1092156696",
+									"53507396",
+									"544599217",
+									"64988486",
+									"704283042",
+									"724036386",
+									"724036387",
+									"766830988",
+									"77272136",
+									"781745480",
+									"781746890",
+									"781760882",
+									"781760883",
+									"781761852",
+									"781761853",
+									"812907310",
+									"812907311",
+									"812907312",
+									"812932110",
+									"813193796",
+									"813193797"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Modersohnstraße und Frankfurter Allee - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Modersohnstraße und Frankfurter Allee - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 107329625344735460,
+					"ORIGINALTRAFFICITEMID": 4013581368948669000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:50:48",
+					"ENDTIME": "09/27/2015 15:22:17",
+					"ENTRYTIME": "09/27/2015 05:22:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Pariser Platz"
+								},
+								"STREET2": {
+									"ADDRESS1": "Pariser Platz"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Pariser Platz"
+								},
+								"STREET2": {
+									"ADDRESS1": "Wilhelmstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51634,
+								"LONGITUDE": 13.37822
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51622,
+									"LONGITUDE": 13.37866
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"60930151",
+									"826632450",
+									"826632451",
+									"826632452",
+									"826632453"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Pariser Platz und Wilhelmstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Pariser Platz und Wilhelmstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4681879801955541000,
+					"ORIGINALTRAFFICITEMID": 318825940645896100,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 15:40:13",
+					"ENDTIME": "09/27/2015 15:19:17",
+					"ENTRYTIME": "09/27/2015 05:19:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "B1"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51095,
+								"LONGITUDE": 13.39676
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51115,
+									"LONGITUDE": 13.39672
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500721",
+									"778876691",
+									"778876692"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen B1 und Mohrenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen B1 und Mohrenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2009179210121170000,
+					"ORIGINALTRAFFICITEMID": 2009179210121170000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "PLANNED EVENT",
+					"STARTTIME": "09/19/2015 19:15:32",
+					"ENDTIME": "09/29/2015 03:46:24",
+					"ENTRYTIME": "09/27/2015 08:59:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "EVENT",
+						"DESCRIPTION": "event"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32763",
+									"LOCATIONDESC": "Straße-dES-17.Juni",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32761",
+									"LOCATIONDESC": "Otto-von-Bismarck-Allee",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 1527,
+									"DESCRIPTION": "Veranstaltung; Straße gesperrt.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 9,
+									"PHRASECODE": "P1.C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32760
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße-dES-17.Juni",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32763
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MOABIT",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Willy-Brandt-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Willy-Brandt-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Willy-Brandt-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32760
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Otto-von-Bismarck-Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Willy-Brandt-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32761
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MOABIT",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MOABIT",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51584,
+								"LONGITUDE": 13.36975
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52074,
+									"LONGITUDE": 13.37205
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500530",
+									"541310669",
+									"541310673",
+									"541310674",
+									"592199220",
+									"733187140",
+									"735364883",
+									"735364884",
+									"735364890",
+									"770378532"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"PLANNEDEVENT": {
+								"PLANNEDEVENTTYPEDESC": "PLANNED EVENT",
+								"PLANNEDEVENTDESC": "event"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Straße-dES-17.Juni und Otto-von-Bismarck-Allee - Veranstaltung; Straße gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Straße-dES-17.Juni und Otto-von-Bismarck-Allee - Veranstaltung; Straße gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Veranstaltung; Straße gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3444780593192702000,
+					"ORIGINALTRAFFICITEMID": 3524572083500724700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:26:51",
+					"ENDTIME": "09/27/2015 15:21:17",
+					"ENTRYTIME": "09/27/2015 05:21:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Behrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51458,
+								"LONGITUDE": 13.38622
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51547,
+									"LONGITUDE": 13.38605
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500609"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Französische Straße und Behrenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Französische Straße und Behrenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1911118022163688700,
+					"ORIGINALTRAFFICITEMID": 2874084038168525000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 16:38:21",
+					"ENDTIME": "09/27/2015 15:12:17",
+					"ENTRYTIME": "09/27/2015 05:12:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26842",
+									"LOCATIONDESC": "Heinrich-Heine-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Engeldamm",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Engeldamm",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Engeldamm",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26842
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26842
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.510014,
+								"LONGITUDE": 13.420362
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51084,
+									"LONGITUDE": 13.41717
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"781909345",
+									"781909350",
+									"781909352",
+									"781909353",
+									"821711091",
+									"821711092"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Heinrich-Heine-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Heinrich-Heine-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2734679137522829300,
+					"ORIGINALTRAFFICITEMID": 2704213346106224600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/27/2015 18:04:41",
+					"ENDTIME": "09/27/2015 14:53:17",
+					"ENTRYTIME": "09/25/2015 15:53:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Paul-Löbe-Allee"
+								},
+								"STREET2": {
+									"ADDRESS1": "Konrad-Adenauer-Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Paul-Löbe-Allee"
+								},
+								"STREET2": {
+									"ADDRESS1": "Konrad-Adenauer-Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51939,
+								"LONGITUDE": 13.37202
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51939,
+									"LONGITUDE": 13.37353
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"541310668",
+									"541310672",
+									"779114831"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Konrad-Adenauer-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Konrad-Adenauer-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 640899290823081000,
+					"ORIGINALTRAFFICITEMID": 640899290823081000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/24/2015 04:03:06",
+					"ENDTIME": "10/02/2015 06:59:30",
+					"ENTRYTIME": "09/27/2015 08:00:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24088",
+									"LOCATIONDESC": "Bachstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24090",
+									"LOCATIONDESC": "Platz des 18. März",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24088",
+									"LOCATIONDESC": "Bachstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24090",
+									"LOCATIONDESC": "Platz des 18. März",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 1461,
+									"DESCRIPTION": "Marathon.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 18,
+									"PHRASECODE": "P28",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bachstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bachstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bachstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 24088
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 24090
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.513905,
+								"LONGITUDE": 13.349606
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.516128,
+									"LONGITUDE": 13.376187
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845862",
+									"1089845863",
+									"1089845867",
+									"1089845868",
+									"53500623",
+									"53516331",
+									"53516334",
+									"544598384",
+									"572658022",
+									"572706728",
+									"572706731",
+									"716810194",
+									"724484271",
+									"733078703",
+									"733164593",
+									"733164594",
+									"733185691",
+									"733623073",
+									"733623074",
+									"733623075",
+									"735509724",
+									"735509725",
+									"735509726",
+									"735509727",
+									"781335621",
+									"781335622",
+									"792897693",
+									"792897694",
+									"792897696"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Bachstraße und Platz des 18. März - Gesperrt. Marathon.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Bachstraße und Platz des 18. März - Gesperrt. Marathon.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. Marathon.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4576671315467424300,
+					"ORIGINALTRAFFICITEMID": 813631464231555100,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:58",
+					"ENDTIME": "06/30/2016 21:59:00",
+					"ENTRYTIME": "09/09/2015 15:00:25",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1075, Stadtgebiet Berlin, Rummelsburger Straße bis Rummelsburger Landstraße in beiden Richtungen, zwischen Überführung Treskowallee und Einmündung Blockdammweg, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.06.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26989",
+									"LOCATIONDESC": "Schlichtallee",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26990",
+									"LOCATIONDESC": "Treskowallee",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Rummelsburger Landstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rummelsburger Landstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rummelsburger Landstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9325
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Schlichtallee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Schlichtallee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Schlichtallee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Rummelsburger Landstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26989
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Rummelsburger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rummelsburger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rummelsburger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9325
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Treskowallee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Treskowallee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Treskowallee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Rummelsburger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26990
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49877,
+								"LONGITUDE": 13.48116
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.469123,
+									"LONGITUDE": 13.513925
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089740331",
+									"1089740332",
+									"53474498",
+									"53474630",
+									"53475244",
+									"53475633",
+									"53475912",
+									"53476223",
+									"53476846",
+									"53476965",
+									"53479303",
+									"53479391",
+									"53515924",
+									"53519058",
+									"572713491",
+									"572713492",
+									"572714036",
+									"592189699",
+									"592189753",
+									"592189754",
+									"592198275",
+									"64993678",
+									"77272093",
+									"77272094",
+									"782862846",
+									"820508274",
+									"820508275",
+									"820508276",
+									"828873379",
+									"828873380",
+									"839499588",
+									"839499595",
+									"839499596"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Schlichtallee und Treskowallee - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Schlichtallee und Treskowallee - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1075, Stadtgebiet Berlin, Rummelsburger Straße bis Rummelsburger Landstraße in beiden Richtungen, zwischen Überführung Treskowallee und Einmündung Blockdammweg, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.06.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1075, Stadtgebiet Berlin, Rummelsburger Straße bis Rummelsburger Landstraße in beiden Richtungen, zwischen Überführung Treskowallee und Einmündung Blockdammweg, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.06.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2690092005700138500,
+					"ORIGINALTRAFFICITEMID": 2690092005700138500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:55",
+					"ENDTIME": "01/07/2016 21:59:00",
+					"ENTRYTIME": "09/27/2015 05:16:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24092",
+									"LOCATIONDESC": "Alexanderplatz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "24091",
+									"LOCATIONDESC": "Wilhelmstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Alexanderplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Alexanderplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Alexanderplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 24092
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 24091
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52003,
+								"LONGITUDE": 13.40464
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.516967,
+									"LONGITUDE": 13.385863
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500452",
+									"53507112",
+									"53507118",
+									"53507119",
+									"53516278",
+									"53516291",
+									"53516297",
+									"53516342",
+									"53517201",
+									"53517202",
+									"53523160",
+									"53594251",
+									"572679720",
+									"572706269",
+									"572706270",
+									"709936264",
+									"709936265",
+									"77269776",
+									"77269777",
+									"77301896",
+									"779384493",
+									"779384494",
+									"779384495",
+									"779395079",
+									"779395080",
+									"779461615",
+									"779461616"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Alexanderplatz und Wilhelmstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Alexanderplatz und Wilhelmstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2086808159760333600,
+					"ORIGINALTRAFFICITEMID": 3467377847223777300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:06",
+					"ENDTIME": "12/20/2015 22:59:00",
+					"ENTRYTIME": "09/08/2015 16:25:06",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26931",
+									"LOCATIONDESC": "Inselstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26930",
+									"LOCATIONDESC": "Gertraudenstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 742,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.E14",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Neue Roßstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Neue Roßstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Neue Roßstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Inselstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Inselstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Inselstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Neue Roßstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26931
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Fischerinsel",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gertraudenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Fischerinsel",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26930
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51227,
+								"LONGITUDE": 13.40989
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51402,
+									"LONGITUDE": 13.40582
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500565",
+									"53500648",
+									"53500703",
+									"53500704",
+									"53501247",
+									"53595391",
+									"774043298",
+									"774043299"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Inselstraße und Gertraudenstraße - Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Inselstraße und Gertraudenstraße - Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei. L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; für beide Richtungen nur ein Fahrstreifen abwechselnd frei. L1066, Stadtgebiet Berlin, Neue Roßstraße bis Fischerinsel in beiden Richtungen, zwischen Kreuzung Wallstraße und Kreuzung Gertraudenstraße, Baustelle, Für beide Richtungen nur ein Fahrstreifen abwechselnd frei, bis 20.12.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3596423772351249400,
+					"ORIGINALTRAFFICITEMID": 468963029079317950,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 19:05:21",
+					"ENDTIME": "09/27/2015 15:15:17",
+					"ENTRYTIME": "09/27/2015 05:15:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27325",
+									"LOCATIONDESC": "Kleiststraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50738
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27325
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50738
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kleiststraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kleiststraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27325
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.501235,
+								"LONGITUDE": 13.346419
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50121,
+									"LONGITUDE": 13.34639
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472324",
+									"754467646"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Kleiststraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Kleiststraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1235750896812604000,
+					"ORIGINALTRAFFICITEMID": 2412239305511855000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/27/2015 14:39:45",
+					"ENDTIME": "09/27/2015 15:34:17",
+					"ENTRYTIME": "09/25/2015 14:34:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Otto-Von-Bismarck-Allee"
+								},
+								"STREET2": {
+									"ADDRESS1": "Konrad-Adenauer-Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Otto-Von-Bismarck-Allee"
+								},
+								"STREET2": {
+									"ADDRESS1": "Konrad-Adenauer-Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52076,
+								"LONGITUDE": 13.3735
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52074,
+									"LONGITUDE": 13.3753
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"733185620"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Konrad-Adenauer-Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Konrad-Adenauer-Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4513691183503401500,
+					"ORIGINALTRAFFICITEMID": 4277283290598750000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/31/2015 18:11:14",
+					"ENDTIME": "09/27/2015 15:06:17",
+					"ENTRYTIME": "09/27/2015 05:06:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26723",
+									"LOCATIONDESC": "Martin-Luther-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26722",
+									"LOCATIONDESC": "Saarstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Hauptstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9277
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Martin-Luther-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Hauptstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26723
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TELTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TELTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TELTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Rheinstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rheinstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rheinstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9277
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Saarstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Saarstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Saarstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Rheinstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26722
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TELTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TELTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TELTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.47894,
+								"LONGITUDE": 13.34438
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.469848,
+									"LONGITUDE": 13.333472
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53478023",
+									"53478405",
+									"53478534",
+									"53479221",
+									"53479586",
+									"53479643",
+									"53597463",
+									"551694620",
+									"565028390",
+									"565028391",
+									"64959278",
+									"64959279",
+									"737388106",
+									"737388107",
+									"77272862",
+									"77272863",
+									"828794073",
+									"830576329",
+									"846562665",
+									"846562666",
+									"846562667",
+									"846562668",
+									"862709806",
+									"862709807"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Martin-Luther-Straße und Saarstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Martin-Luther-Straße und Saarstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4484772612388381700,
+					"ORIGINALTRAFFICITEMID": 4591024563879210500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:55",
+					"ENDTIME": "07/11/2016 14:39:09",
+					"ENTRYTIME": "09/25/2015 18:03:39",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "41098",
+									"LOCATIONDESC": "Invalidenstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "25556",
+									"LOCATIONDESC": "Müllerstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "3",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Tiergarten-Spreebogen",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Tiergarten-Spreebogen",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Tiergarten-Spreebogen",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50458
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Invalidenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Invalidenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Invalidenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Tiergarten-Spreebogen",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 41098
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Sellerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Sellerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Sellerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50458
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Sellerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 25556
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "REINICKENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.524471,
+								"LONGITUDE": 13.368186
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5398,
+									"LONGITUDE": 13.3704
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092028950",
+									"1092028951",
+									"53499416",
+									"53499540",
+									"53499902",
+									"53517051",
+									"541226518",
+									"565047171",
+									"572714780",
+									"592184576",
+									"592184577",
+									"592184578",
+									"724189206",
+									"724189207",
+									"734788829",
+									"734788830",
+									"764220503",
+									"764220504",
+									"773702436",
+									"773702437",
+									"811849198",
+									"811849199",
+									"843678385",
+									"843678387",
+									"843678388",
+									"929256202",
+									"929256203"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Invalidenstraße und Müllerstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Invalidenstraße und Müllerstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1773692518370489000,
+					"ORIGINALTRAFFICITEMID": 1104494823272608400,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 15:59:10",
+					"ENDTIME": "09/27/2015 15:20:17",
+					"ENTRYTIME": "09/27/2015 05:20:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51234,
+								"LONGITUDE": 13.39346
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5128,
+									"LONGITUDE": 13.39339
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"733154918",
+									"733154919"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Mohrenstraße und Französische Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Mohrenstraße und Französische Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2456919991395584500,
+					"ORIGINALTRAFFICITEMID": 2456919991395584500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/14/2015 23:37:57",
+					"ENDTIME": "09/27/2015 15:29:17",
+					"ENTRYTIME": "09/25/2015 14:29:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32779",
+									"LOCATIONDESC": "Yitzhak-Rabin-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32779",
+									"LOCATIONDESC": "Yitzhak-Rabin-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 1461,
+									"DESCRIPTION": "Marathon.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 18,
+									"PHRASECODE": "P28",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Platz des 18. März",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32779
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yitzhak-Rabin-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Straße des 17. Juni",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32779
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "CHARLOTTENBURG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51624,
+								"LONGITUDE": 13.37632
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51584,
+									"LONGITUDE": 13.36979
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845859",
+									"1089845860",
+									"1089845864",
+									"1089845865",
+									"1090336836",
+									"1090336837",
+									"592199387",
+									"592199388",
+									"779114816"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Yitzhak-Rabin-Straße - Gesperrt. Marathon.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Yitzhak-Rabin-Straße - Gesperrt. Marathon.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. Marathon.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3875892120937754000,
+					"ORIGINALTRAFFICITEMID": 2447107622293166600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:43",
+					"ENDTIME": "12/31/2016 22:59:00",
+					"ENTRYTIME": "09/25/2015 16:01:17",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B96, Stadtgebiet Berlin, Heidestraße bis Minna-Cauer-Straße in beiden Richtungen, zwischen Einmündung Sellerstraße und Einmündung Heidestraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 31.12.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32856",
+									"LOCATIONDESC": "Müllerstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32715",
+									"LOCATIONDESC": "Heidestraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Heidestraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heidestraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heidestraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50458
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Heidestraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32856
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Minna-Cauer-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Minna-Cauer-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Minna-Cauer-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50458
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Heidestraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heidestraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heidestraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Minna-Cauer-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32715
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.535951,
+								"LONGITUDE": 13.36345
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52898,
+									"LONGITUDE": 13.36955
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092028950",
+									"1092028951",
+									"53499614",
+									"53499902",
+									"53517012",
+									"53517016",
+									"565047171",
+									"572714780"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Müllerstraße und Heidestraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Müllerstraße und Heidestraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96, Stadtgebiet Berlin, Heidestraße bis Minna-Cauer-Straße in beiden Richtungen, zwischen Einmündung Sellerstraße und Einmündung Heidestraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 31.12.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96, Stadtgebiet Berlin, Heidestraße bis Minna-Cauer-Straße in beiden Richtungen, zwischen Einmündung Sellerstraße und Einmündung Heidestraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 31.12.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 112849085001527340,
+					"ORIGINALTRAFFICITEMID": 3195263269005403600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:46",
+					"ENDTIME": "06/30/2016 21:59:00",
+					"ENTRYTIME": "09/26/2015 23:34:39",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26923",
+									"LOCATIONDESC": "Karl-Liebknecht-Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9315
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26923
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9315
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Liebknecht-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Spandauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26923
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52003,
+								"LONGITUDE": 13.40464
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51994,
+									"LONGITUDE": 13.40477
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"77301949"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Karl-Liebknecht-Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Karl-Liebknecht-Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung. L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. Vorsicht an der Kreuzung. L1065, Stadtgebiet Berlin, Spandauer Straße in beiden Richtungen, Kreuzung Karl-Liebknecht-Straße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, Vorsicht an der Kreuzung, bis 30.06.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2216101253405938400,
+					"ORIGINALTRAFFICITEMID": 470822139363875140,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 16:26:31",
+					"ENDTIME": "09/27/2015 15:17:17",
+					"ENTRYTIME": "09/27/2015 05:17:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Michaelkirchstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Holzmarktstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Michaelkirchstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Köpenicker Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5134,
+								"LONGITUDE": 13.42405
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5098,
+									"LONGITUDE": 13.4212
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53501249",
+									"754278089",
+									"781909348",
+									"781909349",
+									"781909621",
+									"781909622",
+									"782864430",
+									"782864431"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Holzmarktstraße und Köpenicker Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Holzmarktstraße und Köpenicker Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3988985190475400000,
+					"ORIGINALTRAFFICITEMID": 2736051601117079000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:03",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/17/2015 11:01:30",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "21557",
+									"LOCATIONDESC": "Bernkasteler Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Liebermannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21557
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bernkasteler Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21557
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.55999,
+								"LONGITUDE": 13.46711
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.55708,
+									"LONGITUDE": 13.46681
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092136546",
+									"1092136547",
+									"53497715",
+									"572712155",
+									"572712156",
+									"64988173"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Bernkasteler Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Bernkasteler Straße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Liebermannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3013876158657540600,
+					"ORIGINALTRAFFICITEMID": 3013876158657540600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/13/2015 22:40:08",
+					"ENDTIME": "09/27/2015 15:13:18",
+					"ENTRYTIME": "09/27/2015 05:13:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "21144",
+									"LOCATIONDESC": "Kottbusser Tor",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "21142",
+									"LOCATIONDESC": "Hermannplatz",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Kottbusser Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kottbusser Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kottbusser Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 41195
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kottbusser Tor",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kottbusser Tor",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kottbusser Tor",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Kottbusser Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21144
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 41195
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Hermannplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hermannplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hermannplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21142
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.499299,
+								"LONGITUDE": 13.418048
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.486383,
+									"LONGITUDE": 13.424086
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1092150076",
+									"1092150077",
+									"53472965",
+									"53473664",
+									"53475630",
+									"53475963",
+									"53476012",
+									"53519820",
+									"565029277",
+									"592188961",
+									"60918650",
+									"77271728",
+									"77271729",
+									"77271805",
+									"77271807",
+									"77271808",
+									"77271809",
+									"77271810",
+									"77271812",
+									"778870281",
+									"781885573",
+									"781885574",
+									"781900867",
+									"781900868",
+									"781907565",
+									"781907566",
+									"846570589",
+									"846570590"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Kottbusser Tor und Hermannplatz - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Kottbusser Tor und Hermannplatz - Gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 121247703581063950,
+					"ORIGINALTRAFFICITEMID": 1720314578858026200,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:00",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/14/2015 13:42:30",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31038",
+									"LOCATIONDESC": "Feldtmannstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Darßer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Darßer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Darßer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31038
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Berliner Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50232
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Feldtmannstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Berliner Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31038
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEIßENSEE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.56422,
+								"LONGITUDE": 13.46993
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.56399,
+									"LONGITUDE": 13.46976
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53497628"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Feldtmannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Feldtmannstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B2, Stadtgebiet Berlin, Berliner Allee in beiden Richtungen, Kreuzung Feldtmannstraße, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4203498728524220400,
+					"ORIGINALTRAFFICITEMID": 231942580614714000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 16:35:39",
+					"ENDTIME": "09/27/2015 15:34:17",
+					"ENTRYTIME": "09/27/2015 09:34:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26933",
+									"LOCATIONDESC": "Engeldamm",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26933
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9316
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Engeldamm",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Engeldamm",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Engeldamm",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26933
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TREPTOW",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TREPTOW",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51084,
+								"LONGITUDE": 13.41717
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.509382,
+									"LONGITUDE": 13.422692
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1065677565",
+									"781909345",
+									"781909350",
+									"781909352",
+									"781909353",
+									"821711091",
+									"821711092"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Engeldamm - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Engeldamm - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2199770385489644300,
+					"ORIGINALTRAFFICITEMID": 2199770385489644300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/11/2015 09:12:59",
+					"ENDTIME": "09/27/2015 15:05:46",
+					"ENTRYTIME": "09/27/2015 05:05:46",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32775",
+									"LOCATIONDESC": "Spreeweg",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26942",
+									"LOCATIONDESC": "Ebertstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32775",
+									"LOCATIONDESC": "Spreeweg",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26942",
+									"LOCATIONDESC": "Ebertstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 1461,
+									"DESCRIPTION": "Marathon.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 18,
+									"PHRASECODE": "P28",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9319
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Spreeweg",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spreeweg",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spreeweg",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32775
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9319
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Dorotheenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26942
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "DOROTHEENSTRAßE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.517341,
+								"LONGITUDE": 13.368352
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51776,
+									"LONGITUDE": 13.374521
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845798",
+									"1089845799",
+									"53500412",
+									"53500431",
+									"541310666",
+									"592199196",
+									"733183055",
+									"733183056",
+									"733185682",
+									"733362782"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Spreeweg und Ebertstraße - Gesperrt. Marathon.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Spreeweg und Ebertstraße - Gesperrt. Marathon.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. Marathon.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2594069264355957000,
+					"ORIGINALTRAFFICITEMID": 1120394351474393200,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:04",
+					"ENDTIME": "09/30/2015 21:59:00",
+					"ENTRYTIME": "09/26/2015 18:58:29",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "25614",
+									"LOCATIONDESC": "Bersarinplatz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "29982",
+									"LOCATIONDESC": "Modersohnstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "4",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50459
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bersarinplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bersarinplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bersarinplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Warschauer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 25614
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Stralauer Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Stralauer Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Stralauer Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50459
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Modersohnstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Stralauer Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 29982
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51578,
+								"LONGITUDE": 13.45375
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50264,
+									"LONGITUDE": 13.44699
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089025899",
+									"1089025900",
+									"1089030793",
+									"1089030794",
+									"1089030795",
+									"1092198129",
+									"1092198130",
+									"1092198132",
+									"1092296716",
+									"1092296717",
+									"1092298035",
+									"1092298036",
+									"53504440",
+									"53507395",
+									"544599217",
+									"565027288",
+									"704283042",
+									"724036386",
+									"724036387",
+									"766830988",
+									"779156641",
+									"781745478",
+									"781746891",
+									"781746892",
+									"781760880",
+									"781760881",
+									"781760884",
+									"781760885",
+									"843852177",
+									"843852178"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Bersarinplatz und Modersohnstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Bersarinplatz und Modersohnstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. B96a, Stadtgebiet Berlin, Warschauer Straße in beiden Richtungen, zwischen Kreuzung Stralauer Allee und Kreuzung Frankfurter Allee, Baustelle, Fahrbahn auf einen Fahrstreifen verengt, bis 30.09.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3131146543285491700,
+					"ORIGINALTRAFFICITEMID": 1808151645533581600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:03",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/27/2015 00:18:14",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1005, Stadtgebiet Berlin, Waterlooufer bis Tempelhofer Ufer, zwischen Kreuzung Zossener Straße und Kreuzung Mehringdamm, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27303",
+									"LOCATIONDESC": "Prinzenstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27302",
+									"LOCATIONDESC": "Mehringdamm",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 744,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D16",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Waterlooufer",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Waterlooufer",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Waterlooufer",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9387
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Waterlooufer",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27303
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Tempelhofer Ufer",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Tempelhofer Ufer",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Tempelhofer Ufer",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9387
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Mehringdamm",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Mehringdamm",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Mehringdamm",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Tempelhofer Ufer",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27302
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.498367,
+								"LONGITUDE": 13.395906
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.4981,
+									"LONGITUDE": 13.3888
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53473045",
+									"53473091",
+									"565026937",
+									"781844949",
+									"781844950",
+									"781866641",
+									"781866642",
+									"782395003",
+									"927981892",
+									"927981893"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Prinzenstraße und Mehringdamm - Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Prinzenstraße und Mehringdamm - Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt. L1005, Stadtgebiet Berlin, Waterlooufer bis Tempelhofer Ufer, zwischen Kreuzung Zossener Straße und Kreuzung Mehringdamm, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt. L1005, Stadtgebiet Berlin, Waterlooufer bis Tempelhofer Ufer, zwischen Kreuzung Zossener Straße und Kreuzung Mehringdamm, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1275432887011740200,
+					"ORIGINALTRAFFICITEMID": 978772210237797400,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/07/2015 17:01:40",
+					"ENDTIME": "09/27/2015 15:03:18",
+					"ENTRYTIME": "09/27/2015 05:03:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27190",
+									"LOCATIONDESC": "Gitschiner Straße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27191",
+									"LOCATIONDESC": "Köpenicker Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9363
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gitschiner Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Prinzenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27190
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9363
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Köpenicker Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Heinrich-Heine-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27191
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.502386,
+								"LONGITUDE": 13.409694
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51089,
+									"LONGITUDE": 13.41639
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472202",
+									"53501050",
+									"53509683",
+									"53509685",
+									"724080451",
+									"724080452",
+									"733361300",
+									"733370159",
+									"781882149",
+									"781882150",
+									"781882460",
+									"781882461",
+									"781885416",
+									"781885417",
+									"833329661",
+									"833329662",
+									"834175902",
+									"834175903"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Gitschiner Straße und Köpenicker Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Gitschiner Straße und Köpenicker Straße - Gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3533005226816562700,
+					"ORIGINALTRAFFICITEMID": 761834440031832300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/31/2015 17:56:07",
+					"ENDTIME": "09/27/2015 15:05:17",
+					"ENTRYTIME": "09/27/2015 05:05:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20248",
+									"LOCATIONDESC": "Langenscheidtstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Goebenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20248
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Langenscheidtstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20248
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "ZEHLENDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49379,
+								"LONGITUDE": 13.36101
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.49049,
+									"LONGITUDE": 13.36021
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089834069",
+									"1089834070",
+									"1092051529",
+									"1092054197",
+									"1092054198",
+									"53474788",
+									"53474907",
+									"53474945",
+									"572708692"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Langenscheidtstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Langenscheidtstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 74119816093691680,
+					"ORIGINALTRAFFICITEMID": 13588851445699708,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/21/2015 07:16:28",
+					"ENDTIME": "10/30/2015 22:59:00",
+					"ENTRYTIME": "09/27/2015 09:28:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31173",
+									"LOCATIONDESC": "Reinhardtstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26819",
+									"LOCATIONDESC": "Torstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Reinhardtstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31173
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Chausseestraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Chausseestraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Chausseestraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9295
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Chausseestraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26819
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "WEDDING",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "WEDDING",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5261,
+								"LONGITUDE": 13.38738
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52703,
+									"LONGITUDE": 13.3872
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"572708774",
+									"733054266",
+									"812293298"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Reinhardtstraße und Torstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Reinhardtstraße und Torstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1044, Stadtgebiet Berlin, Friedrichstraße bis Chausseestraße in beiden Richtungen, zwischen Einmündung Oranienburger Straße und Kreuzung Torstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4114137962766697500,
+					"ORIGINALTRAFFICITEMID": 181228709558791680,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/11/2015 11:57:31",
+					"ENDTIME": "09/30/2015 21:59:00",
+					"ENTRYTIME": "09/14/2015 06:44:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1042, Stadtgebiet Berlin, Müllerstraße in beiden Richtungen, zwischen Kreuzung Fennstraße und Kreuzung Leopoldplatz, Fahrbahnverengung, Baustelle, bis 30.09.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26811",
+									"LOCATIONDESC": "Seestraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26812",
+									"LOCATIONDESC": "Fennstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 518,
+									"DESCRIPTION": "Fahrbahnverengung.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "D19",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26811",
+									"LOCATIONDESC": "Seestraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26812",
+									"LOCATIONDESC": "Fennstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 701,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 11,
+									"PHRASECODE": "E1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9293
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Seestraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Seestraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Seestraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26811
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Müllerstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9293
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Fennstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Fennstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Fennstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Müllerstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26812
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.54632,
+								"LONGITUDE": 13.35915
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.541017,
+									"LONGITUDE": 13.36844
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53499122",
+									"53499268",
+									"53499342",
+									"53501431",
+									"53517182",
+									"565027672",
+									"572705939",
+									"572705940",
+									"572705943",
+									"841190416",
+									"841190417",
+									"842340531",
+									"842340533",
+									"842340534",
+									"846777765",
+									"924404298",
+									"924404299"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Seestraße und Fennstraße - Baustelle. Fahrbahnverengung.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Seestraße und Fennstraße - Baustelle. Fahrbahnverengung. L1042, Stadtgebiet Berlin, Müllerstraße in beiden Richtungen, zwischen Kreuzung Fennstraße und Kreuzung Leopoldplatz, Fahrbahnverengung, Baustelle, bis 30.09.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle. Fahrbahnverengung. L1042, Stadtgebiet Berlin, Müllerstraße in beiden Richtungen, zwischen Kreuzung Fennstraße und Kreuzung Leopoldplatz, Fahrbahnverengung, Baustelle, bis 30.09.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2698494744316158500,
+					"ORIGINALTRAFFICITEMID": 2698494744316158500,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/27/2015 05:13:00",
+					"ENDTIME": "09/27/2015 15:13:17",
+					"ENTRYTIME": "09/27/2015 05:13:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31024",
+									"LOCATIONDESC": "Hermannplatz",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32830",
+									"LOCATIONDESC": "Kulmer Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "5",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Gneisenaustraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gneisenaustraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gneisenaustraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Hermannplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Hermannplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Hermannplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Gneisenaustraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31024
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Goebenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Goebenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32830
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.48674,
+								"LONGITUDE": 13.42318
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.49349,
+									"LONGITUDE": 13.3668
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1041120967",
+									"1041120968",
+									"1088821952",
+									"1088821953",
+									"1092283310",
+									"1092283312",
+									"1092453554",
+									"1092453555",
+									"53474112",
+									"53474256",
+									"53474281",
+									"53474298",
+									"53474299",
+									"53474381",
+									"53474387",
+									"53474529",
+									"53474603",
+									"53474719",
+									"53474785",
+									"53475174",
+									"53475176",
+									"53475474",
+									"53475495",
+									"53475698",
+									"53475964",
+									"53515571",
+									"53614732",
+									"53614760",
+									"592203620",
+									"737263668",
+									"737489736",
+									"737545739",
+									"737545740",
+									"755859981",
+									"77271724",
+									"77271725",
+									"781791581",
+									"781791582",
+									"781865593",
+									"781865594",
+									"781866171",
+									"781866178",
+									"781866179",
+									"781866180",
+									"781866185",
+									"781866186",
+									"821660649",
+									"821660650",
+									"821665658",
+									"822617165",
+									"822617166",
+									"822617172",
+									"822617173",
+									"822617179",
+									"822617180",
+									"824874743",
+									"824874744",
+									"833328911",
+									"833328912",
+									"836320422",
+									"842193735",
+									"842193736",
+									"842195462",
+									"842195463",
+									"918507194",
+									"925829937"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Hermannplatz und Kulmer Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Hermannplatz und Kulmer Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3250757196192960500,
+					"ORIGINALTRAFFICITEMID": 3086890281426121000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "08/28/2015 16:04:42",
+					"ENDTIME": "09/27/2015 15:03:17",
+					"ENTRYTIME": "09/27/2015 05:03:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27252",
+									"LOCATIONDESC": "Strausberger Platz",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9376
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27252
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9376
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27252
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.518111,
+								"LONGITUDE": 13.428376
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51877,
+									"LONGITUDE": 13.42881
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500372",
+									"53500391",
+									"53500397",
+									"781934668"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Strausberger Platz - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Strausberger Platz - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3452111569922848000,
+					"ORIGINALTRAFFICITEMID": 3452111569922848000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:58",
+					"ENDTIME": "12/31/2015 22:59:00",
+					"ENTRYTIME": "09/11/2015 11:09:48",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1176, Stadtgebiet Berlin, Karl-Marx-Straße, zwischen Kreuzung Ganghoferstraße und Kreuzung Lahnstraße, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 31.12.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "31025",
+									"LOCATIONDESC": "Erkstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "21140",
+									"LOCATIONDESC": "Lahnstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 41195
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Erkstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Erkstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Erkstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 31025
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 41195
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Lahnstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Lahnstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Lahnstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Karl-Marx-Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 21140
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHÖNEFELD",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.47927,
+								"LONGITUDE": 13.43731
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.46781,
+									"LONGITUDE": 13.44195
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1103721967",
+									"1103721968",
+									"53477859",
+									"53478106",
+									"53478281",
+									"53478700",
+									"53479179",
+									"53479306",
+									"53479506",
+									"53479884",
+									"53480048",
+									"53515216",
+									"565026859",
+									"565026862",
+									"565026889",
+									"565026890",
+									"64988104",
+									"64988105",
+									"736504080",
+									"736504082",
+									"781656295",
+									"781656296",
+									"781656297"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Erkstraße und Lahnstraße - Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Erkstraße und Lahnstraße - Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet. L1176, Stadtgebiet Berlin, Karl-Marx-Straße, zwischen Kreuzung Ganghoferstraße und Kreuzung Lahnstraße, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 31.12.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet. L1176, Stadtgebiet Berlin, Karl-Marx-Straße, zwischen Kreuzung Ganghoferstraße und Kreuzung Lahnstraße, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 31.12.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 618661430203429000,
+					"ORIGINALTRAFFICITEMID": 618661430203429000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "PLANNED EVENT",
+					"STARTTIME": "09/06/2015 02:32:25",
+					"ENDTIME": "09/27/2015 15:03:18",
+					"ENTRYTIME": "09/26/2015 15:03:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "EVENT",
+						"DESCRIPTION": "event"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32775",
+									"LOCATIONDESC": "Ebertstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32774",
+									"LOCATIONDESC": "Spreeweg",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 1527,
+									"DESCRIPTION": "Veranstaltung; Straße gesperrt.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 9,
+									"PHRASECODE": "P1.C1",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9319
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Ebertstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Ebertstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Scheidemannstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32775
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "John-Foster-Dulles-Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "John-Foster-Dulles-Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "John-Foster-Dulles-Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9319
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Spreeweg",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Spreeweg",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Spreeweg",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "John-Foster-Dulles-Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32774
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "SCHEIDEMANNSTRAßE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51776,
+								"LONGITUDE": 13.374521
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.517376,
+									"LONGITUDE": 13.367764
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1089845798",
+									"1089845799",
+									"53500412",
+									"541310666",
+									"592199196",
+									"733183055",
+									"733183056",
+									"733185682",
+									"733362782"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"PLANNEDEVENT": {
+								"PLANNEDEVENTTYPEDESC": "PLANNED EVENT",
+								"PLANNEDEVENTDESC": "event"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Ebertstraße und Spreeweg - Veranstaltung; Straße gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Ebertstraße und Spreeweg - Veranstaltung; Straße gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Veranstaltung; Straße gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2527498296605934000,
+					"ORIGINALTRAFFICITEMID": 3938957826528530400,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/21/2015 07:16:28",
+					"ENDTIME": "10/05/2015 21:59:00",
+					"ENTRYTIME": "09/21/2015 07:16:28",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32732",
+									"LOCATIONDESC": "Unter den Linden",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32729
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Behrenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Behrenstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32732
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 32729
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32732
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.516901,
+								"LONGITUDE": 13.38883
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51715,
+									"LONGITUDE": 13.38879
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"733069222",
+									"733069223"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Unter den Linden - Wegen Baustelle gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Unter den Linden - Wegen Baustelle gesperrt. L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. L1051, Stadtgebiet Berlin, Friedrichstraße in beiden Richtungen, im Bereich Kreuzung Unter den Linden, gesperrt, Baustelle, bis 05.10.2015, Rechtsabbiegen jeweils möglich",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3514820590907802000,
+					"ORIGINALTRAFFICITEMID": 1400724357669893400,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/14/2015 23:37:57",
+					"ENDTIME": "09/29/2015 06:23:30",
+					"ENTRYTIME": "09/27/2015 05:04:18",
+					"CRITICALITY": {
+						"ID": "1",
+						"DESCRIPTION": "major"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32583",
+									"LOCATIONDESC": "Katzbachstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Yorckstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kulmer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32583
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Yorckstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Katzbachstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Katzbachstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Katzbachstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Yorckstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32583
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "KREUZBERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "KREUZBERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.493228,
+								"LONGITUDE": 13.368068
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.491754,
+									"LONGITUDE": 13.375426
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1041120967",
+									"1041120968",
+									"1088821952",
+									"1088821953",
+									"53474271",
+									"53474299",
+									"53474381",
+									"53474387",
+									"737263668",
+									"737489736",
+									"737545739",
+									"737545740",
+									"836320422",
+									"918507194",
+									"925829937"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Katzbachstraße - Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Katzbachstraße - Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 4318003231334119000,
+					"ORIGINALTRAFFICITEMID": 4284510437583687700,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 16:29:39",
+					"ENDTIME": "09/27/2015 15:17:17",
+					"ENTRYTIME": "09/27/2015 05:17:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Michaelkirchstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Köpenicker Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Michaelkirchstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": " Holzmarktstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5098,
+								"LONGITUDE": 13.4212
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5134,
+									"LONGITUDE": 13.42405
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53501249",
+									"754278089",
+									"781909348",
+									"781909349",
+									"781909621",
+									"781909622",
+									"782864430",
+									"782864431"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Köpenicker Straße und  Holzmarktstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Köpenicker Straße und  Holzmarktstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1060851458054328200,
+					"ORIGINALTRAFFICITEMID": 1325312960870402000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:47",
+					"ENDTIME": "10/09/2015 21:59:00",
+					"ENTRYTIME": "09/25/2015 08:05:19",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1000, Stadtgebiet Berlin, Kurfürstenstraße, zwischen Kreuzung Olof-Palme-Platz und Kreuzung An der Urania, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32771",
+									"LOCATIONDESC": "Kantstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26625",
+									"LOCATIONDESC": "An der Urania",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Kantstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kantstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kantstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32771
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "An der Urania",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "An der Urania",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "An der Urania",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Kurfürstenstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26625
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.50514,
+								"LONGITUDE": 13.34084
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.50308,
+									"LONGITUDE": 13.34963
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53471781",
+									"53471788",
+									"53471920",
+									"53471951",
+									"53501039",
+									"53521805",
+									"53521807",
+									"53523132",
+									"77277053",
+									"77277054",
+									"822803882",
+									"822803883",
+									"833675827",
+									"833675828"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Kantstraße und An der Urania - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Kantstraße und An der Urania - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1000, Stadtgebiet Berlin, Kurfürstenstraße, zwischen Kreuzung Olof-Palme-Platz und Kreuzung An der Urania, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L1000, Stadtgebiet Berlin, Kurfürstenstraße, zwischen Kreuzung Olof-Palme-Platz und Kreuzung An der Urania, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 09.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 449229548562610370,
+					"ORIGINALTRAFFICITEMID": 1983540916207215900,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/25/2015 12:17:18",
+					"ENDTIME": "10/02/2015 21:59:00",
+					"ENTRYTIME": "09/25/2015 19:40:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L33, Stadtgebiet Berlin, Landsberger Allee, zwischen Kreuzung Storkower Straße und Kreuzung Petersburger Straße, Verkehrsbehinderung durch geplatzte Wasserleitung, Fahrbahn auf zwei Fahrstreifen verengt, bis 02.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26639",
+									"LOCATIONDESC": "Karl-Lade-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26638",
+									"LOCATIONDESC": "Petersburger Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 515,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Fahrbahn von auf zwei Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "D16",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							},
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26639",
+									"LOCATIONDESC": "Karl-Lade-Straße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26638",
+									"LOCATIONDESC": "Petersburger Straße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 919,
+									"DESCRIPTION": "Verkehrsbehinderung durch geplatzte Wasserleitung.",
+									"ALERTCDURATION": "D",
+									"ALERTCDIRECTION": 2,
+									"UPDATECLASS": 12,
+									"PHRASECODE": "F14",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Karl-Lade-Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Karl-Lade-Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Karl-Lade-Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26639
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Petersburger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Petersburger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Petersburger Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Landsberger Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26638
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52917,
+								"LONGITUDE": 13.45825
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52639,
+									"LONGITUDE": 13.44742
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1088708585",
+									"1088708586",
+									"1092284907",
+									"1092284908",
+									"1105030651",
+									"1105030652",
+									"53504911",
+									"572659612",
+									"592191898",
+									"754338529",
+									"812427797",
+									"821703209",
+									"821703210"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Karl-Lade-Straße und Petersburger Straße - Verkehrsbehinderung durch geplatzte Wasserleitung. Fahrbahn von auf zwei Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Karl-Lade-Straße und Petersburger Straße - Verkehrsbehinderung durch geplatzte Wasserleitung. Fahrbahn von auf zwei Fahrstreifen verengt. L33, Stadtgebiet Berlin, Landsberger Allee, zwischen Kreuzung Storkower Straße und Kreuzung Petersburger Straße, Verkehrsbehinderung durch geplatzte Wasserleitung, Fahrbahn auf zwei Fahrstreifen verengt, bis 02.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Verkehrsbehinderung durch geplatzte Wasserleitung. Fahrbahn von auf zwei Fahrstreifen verengt. L33, Stadtgebiet Berlin, Landsberger Allee, zwischen Kreuzung Storkower Straße und Kreuzung Petersburger Straße, Verkehrsbehinderung durch geplatzte Wasserleitung, Fahrbahn auf zwei Fahrstreifen verengt, bis 02.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 497886094744036350,
+					"ORIGINALTRAFFICITEMID": 3248550040663803000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/05/2015 04:33:01",
+					"ENDTIME": "12/17/2015 07:49:30",
+					"ENTRYTIME": "09/27/2015 05:08:18",
+					"CRITICALITY": {
+						"ID": "1",
+						"DESCRIPTION": "major"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32736",
+									"LOCATIONDESC": "Friedrichstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Wilhelmstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32736
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "BIESDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Unter den Linden",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50398
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Unter den Linden",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32736
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "BIESDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51649,
+								"LONGITUDE": 13.38278
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5169,
+									"LONGITUDE": 13.38883
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53516284",
+									"724151418",
+									"724151419",
+									"724151420",
+									"724151421",
+									"733069283",
+									"733069284"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Friedrichstraße - Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Friedrichstraße - Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 322590445128806100,
+					"ORIGINALTRAFFICITEMID": 160314329295637760,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/15/2015 07:30:15",
+					"ENDTIME": "10/30/2015 22:59:00",
+					"ENTRYTIME": "09/27/2015 09:29:18",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26901",
+									"LOCATIONDESC": "Friedrichstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Rosenthaler Platz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rosenthaler Platz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rosenthaler Platz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26901
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Torstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50617
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Torstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26901
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.52716,
+								"LONGITUDE": 13.38716
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.52716,
+									"LONGITUDE": 13.38716
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"544596855"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Bei Friedrichstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Bei Friedrichstraße - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt. L33, Stadtgebiet Berlin, Torstraße in beiden Richtungen, Kreuzung Friedrichstraße, Fahrbahn auf einen Fahrstreifen verengt, Baustelle, bis 30.10.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 544105397060650240,
+					"ORIGINALTRAFFICITEMID": 2482645645262650000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:24:44",
+					"ENDTIME": "09/30/2015 21:59:00",
+					"ENTRYTIME": "09/25/2015 19:24:14",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "B1, Stadtgebiet Berlin, Frankfurter Allee bis Alt- Friedrichsfelde, zwischen Kreuzung Schulze-Boysen-Straße und Kreuzung Rosenfelder Straße, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 30.09.2015",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32919",
+									"LOCATIONDESC": "Gürtelstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32920",
+									"LOCATIONDESC": "Rosenfelder Straße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 744,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D16",
+									"EXTENT": "1",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Gürtelstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Gürtelstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Gürtelstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Frankfurter Allee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32919
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "BIESDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Alt- Friedrichsfelde",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Alt- Friedrichsfelde",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Alt- Friedrichsfelde",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Rosenfelder Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Rosenfelder Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Rosenfelder Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Alt- Friedrichsfelde",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32920
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "BIESDORF",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "BIESDORF",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5128,
+								"LONGITUDE": 13.48324
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51078,
+									"LONGITUDE": 13.50304
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1088481100",
+									"1088481104",
+									"1088481105",
+									"1088481108",
+									"1088481109",
+									"1088482666",
+									"1088482667",
+									"1092244440",
+									"1092244441",
+									"1092498105",
+									"1092509813",
+									"1092509814",
+									"1102549480",
+									"1102549481",
+									"1102586841",
+									"53505758",
+									"759294773",
+									"827526139",
+									"925174765",
+									"925174766",
+									"993398316"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Gürtelstraße und Rosenfelder Straße - Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Gürtelstraße und Rosenfelder Straße - Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt. B1, Stadtgebiet Berlin, Frankfurter Allee bis Alt- Friedrichsfelde, zwischen Kreuzung Schulze-Boysen-Straße und Kreuzung Rosenfelder Straße, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 30.09.2015",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf zwei Fahrstreifen verengt. B1, Stadtgebiet Berlin, Frankfurter Allee bis Alt- Friedrichsfelde, zwischen Kreuzung Schulze-Boysen-Straße und Kreuzung Rosenfelder Straße, Fahrbahn auf zwei Fahrstreifen verengt, Baustelle, bis 30.09.2015",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2296301203805991000,
+					"ORIGINALTRAFFICITEMID": 2296301203805991000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:01",
+					"ENDTIME": "06/04/2016 10:59:00",
+					"ENTRYTIME": "09/11/2015 12:43:35",
+					"CRITICALITY": {
+						"ID": "2",
+						"DESCRIPTION": "minor"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27180",
+									"LOCATIONDESC": "Blücherstraße",
+									"RDSDIRECTION": "+"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27177",
+									"LOCATIONDESC": "Dammweg",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 743,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.D15",
+									"EXTENT": "3",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Urbanstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Urbanstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Urbanstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9361
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Blücherstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Blücherstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Blücherstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Urbanstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27180
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Sonnenallee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Sonnenallee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Sonnenallee",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9361
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Dammweg",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Dammweg",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Dammweg",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Sonnenallee",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27177
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "NIEDERSCHÖNEWEIDE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.493915,
+								"LONGITUDE": 13.402944
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.47029,
+									"LONGITUDE": 13.46447
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1075223207",
+									"1075223208",
+									"1089126179",
+									"1089126180",
+									"1104363334",
+									"1104363335",
+									"53474108",
+									"53474576",
+									"53474614",
+									"53474655",
+									"53474811",
+									"53474843",
+									"53474874",
+									"53475060",
+									"53475103",
+									"53475123",
+									"53475310",
+									"53475579",
+									"53475631",
+									"53475673",
+									"53475802",
+									"53476100",
+									"53476135",
+									"53476690",
+									"53476929",
+									"53476948",
+									"53477194",
+									"53477322",
+									"53477363",
+									"53477490",
+									"53477684",
+									"53477836",
+									"53478275",
+									"53479104",
+									"53479153",
+									"53479455",
+									"53479925",
+									"53479945",
+									"53600415",
+									"724603342",
+									"724603343",
+									"754456008",
+									"77271726",
+									"77271727",
+									"77272847",
+									"77272848",
+									"77272849",
+									"781866131",
+									"781866132",
+									"782545519",
+									"792424237",
+									"792424238",
+									"812427818",
+									"812427819",
+									"833326755",
+									"833326756",
+									"833326765",
+									"833326766",
+									"833326773",
+									"833326774",
+									"833504455",
+									"833504456",
+									"833558979",
+									"833558980",
+									"836012637",
+									"836332177",
+									"836332178",
+									"924051864",
+									"924051865",
+									"924051872",
+									"924051873",
+									"924909927",
+									"924909928",
+									"929573137",
+									"929573138",
+									"960364346",
+									"960364347"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": false,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Zwischen Blücherstraße und Dammweg - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Zwischen Blücherstraße und Dammweg - Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Baustelle; Fahrbahn von auf einen Fahrstreifen verengt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3112067126642168300,
+					"ORIGINALTRAFFICITEMID": 3112067126642168300,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/14/2015 01:23:27",
+					"ENDTIME": "09/27/2015 15:15:18",
+					"ENTRYTIME": "09/27/2015 05:15:18",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "32669",
+									"LOCATIONDESC": "Bülowstraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "20254",
+									"LOCATIONDESC": "Friedrichstraße",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "5",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Bülowstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bülowstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bülowstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 32669
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Leipziger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Leipziger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Leipziger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50187
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Friedrichstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Leipziger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 20254
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "MITTE",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "MITTE",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.49842,
+								"LONGITUDE": 13.36225
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51018,
+									"LONGITUDE": 13.3874
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1065670125",
+									"1065670126",
+									"1092027595",
+									"1092027596",
+									"1092042525",
+									"1092042526",
+									"53471927",
+									"53500909",
+									"53500927",
+									"53500934",
+									"53500965",
+									"53500978",
+									"53501004",
+									"53501047",
+									"53501256",
+									"53672464",
+									"541380041",
+									"551705733",
+									"551705845",
+									"551706009",
+									"565017197",
+									"565028020",
+									"565028026",
+									"572713675",
+									"592199080",
+									"592199081",
+									"709754066",
+									"709798176",
+									"733185719",
+									"733185726",
+									"733185727",
+									"733310106",
+									"770381357",
+									"770381358",
+									"77316587",
+									"77316655",
+									"779114801",
+									"780281852",
+									"780281853",
+									"810871653",
+									"810871654",
+									"820005627",
+									"824090032",
+									"824090033",
+									"991477933",
+									"991477934"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Bülowstraße und Friedrichstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Bülowstraße und Friedrichstraße - Gesperrt.",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt.",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3690436294639871000,
+					"ORIGINALTRAFFICITEMID": 651836235271127600,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 15:42:35",
+					"ENDTIME": "09/27/2015 15:20:17",
+					"ENTRYTIME": "09/27/2015 05:20:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"STREET2": {
+									"ADDRESS1": "B1"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5125,
+								"LONGITUDE": 13.39646
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51162,
+									"LONGITUDE": 13.39662
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500721",
+									"778876691",
+									"778876692"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Mohrenstraße und B1 - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Mohrenstraße und B1 - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2905209228640013000,
+					"ORIGINALTRAFFICITEMID": 2313582816524265000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "CONSTRUCTION",
+					"STARTTIME": "09/08/2015 16:25:05",
+					"ENDTIME": "03/17/2016 22:59:00",
+					"ENTRYTIME": "09/08/2015 16:25:05",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CONST",
+						"DESCRIPTION": "construction"
+					},
+					"COMMENTS": "L1004, Stadtgebiet Berlin, Osloer Straße bis Bornholmer Straße, zwischen Kreuzung Prinzenallee und Kreuzung Schönhauser Allee, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 17.03.2016",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "30072",
+									"LOCATIONDESC": "Koloniestraße",
+									"RDSDIRECTION": "-"
+								},
+								"TO": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27299",
+									"LOCATIONDESC": "Schönhauser Allee",
+									"RDSDIRECTION": "-"
+								},
+								"DIRECTION": "+",
+								"ALERTC": {
+									"TRAFFICCODE": 735,
+									"QUANTIFIERS": 0,
+									"DESCRIPTION": "Wegen Baustelle gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "E1.C1",
+									"EXTENT": "2",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Osloer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50736
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Koloniestraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Koloniestraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Koloniestraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Osloer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 30072
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 50736
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Schönhauser Allee",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Schönhauser Allee",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Schönhauser Allee",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Bornholmer Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27299
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "PRENZLAUER BERG",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.555749,
+								"LONGITUDE": 13.384071
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.55366,
+									"LONGITUDE": 13.41432
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"1088481863",
+									"1088481864",
+									"53502395",
+									"53503712",
+									"53503769",
+									"53507279",
+									"53522187",
+									"737781249",
+									"77268758",
+									"77268759",
+									"77268763",
+									"77268767",
+									"77272646",
+									"77272647",
+									"77272648",
+									"77272649",
+									"77272650",
+									"77272651",
+									"77272652",
+									"779103145",
+									"781773105",
+									"781773106",
+									"781848935",
+									"781848936",
+									"835789450",
+									"835789451",
+									"989087611",
+									"989087612"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"EVENT": {
+							"EVENTITEMCANCELLED": false,
+							"SCHEDULEDCONSTRUCTIONEVENT": {
+								"SCHEDULEDCONSTRUCTIONTYPEDESC": "CONSTRUCTION",
+								"SCHEDULEDCONSTRUCTIONDETAIL": "construction"
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Koloniestraße und Schönhauser Allee - Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Koloniestraße und Schönhauser Allee - Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet. L1004, Stadtgebiet Berlin, Osloer Straße bis Bornholmer Straße, zwischen Kreuzung Prinzenallee und Kreuzung Schönhauser Allee, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 17.03.2016",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Wegen Baustelle gesperrt. eine Umleitung ist eingerichtet. L1004, Stadtgebiet Berlin, Osloer Straße bis Bornholmer Straße, zwischen Kreuzung Prinzenallee und Kreuzung Schönhauser Allee, gesperrt, Baustelle, eine Umleitung ist eingerichtet, bis 17.03.2016",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 106122861820059840,
+					"ORIGINALTRAFFICITEMID": 3546473670795210000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/03/2015 19:16:07",
+					"ENDTIME": "09/27/2015 15:15:17",
+					"ENTRYTIME": "09/27/2015 05:15:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "26626",
+									"LOCATIONDESC": "Nollendorfplatz",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Einemstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Potsdamer Straße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26626
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Einemstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 51251
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Nollendorfplatz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Einemstraße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 26626
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "TIERGARTEN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.4982,
+								"LONGITUDE": 13.36073
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.499585,
+									"LONGITUDE": 13.354835
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53472701",
+									"53473001",
+									"572708703",
+									"572708747",
+									"710409454",
+									"710409455"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Nollendorfplatz - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Nollendorfplatz - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 1733731394094048000,
+					"ORIGINALTRAFFICITEMID": 1815535384117085200,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 16:29:14",
+					"ENDTIME": "09/27/2015 15:22:17",
+					"ENTRYTIME": "09/27/2015 05:22:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Behrenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Glinkastraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Französische Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51547,
+								"LONGITUDE": 13.38605
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51458,
+									"LONGITUDE": 13.38622
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500609"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Behrenstraße und Französische Straße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Behrenstraße und Französische Straße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 2483056648177296400,
+					"ORIGINALTRAFFICITEMID": 3802002655523823000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/01/2015 15:43:45",
+					"ENDTIME": "09/27/2015 15:20:17",
+					"ENTRYTIME": "09/27/2015 05:20:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"LOCATION": {
+						"INTERSECTION": {
+							"ORIGIN": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Jerusalemer Straße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							},
+							"TO": {
+								"ID": "",
+								"STREET1": {
+									"ADDRESS1": "Mohrenstraße"
+								},
+								"STREET2": {
+									"ADDRESS1": "Markgrafenstraße"
+								},
+								"COUNTY": "",
+								"STATE": "",
+								"PROXIMITY": {
+									"ID": "MID",
+									"DESCRIPTION": "midway between"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.5125,
+								"LONGITUDE": 13.39646
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.51234,
+									"LONGITUDE": 13.39346
+								}
+							]
+						},
+						"POLITICALBOUNDARY": {
+							"METROAREA": {
+								"value": "",
+								"ID": 218
+							}
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53500680"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen zwischen Jerusalemer Straße und Markgrafenstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen zwischen Jerusalemer Straße und Markgrafenstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				},
+				{
+					"TRAFFICITEMID": 3509800664118102000,
+					"ORIGINALTRAFFICITEMID": 3509800664118102000,
+					"TRAFFICITEMSTATUSSHORTDESC": "ACTIVE",
+					"TRAFFICITEMTYPEDESC": "MISCELLANEOUS",
+					"STARTTIME": "09/27/2015 05:11:26",
+					"ENDTIME": "09/27/2015 15:12:17",
+					"ENTRYTIME": "09/27/2015 05:12:17",
+					"CRITICALITY": {
+						"ID": "0",
+						"DESCRIPTION": "critical"
+					},
+					"VERIFIED": true,
+					"ABBREVIATION": {
+						"SHORTDESC": "CLOS",
+						"DESCRIPTION": ""
+					},
+					"COMMENTS": "BMW BERLIN MARATHON",
+					"RDSTMCLOCATIONS": {
+						"RDSTMC": [
+							{
+								"ORIGIN": {
+									"EBUCOUNTRYCODE": "D",
+									"TABLEID": 1,
+									"LOCATIONID": "27251",
+									"LOCATIONDESC": "Holzmarktstraße",
+									"RDSDIRECTION": "+"
+								},
+								"DIRECTION": "-",
+								"ALERTC": {
+									"TRAFFICCODE": 401,
+									"DESCRIPTION": "Gesperrt.",
+									"ALERTCDURATION": "L",
+									"ALERTCDIRECTION": 1,
+									"URGENCY": "U",
+									"UPDATECLASS": 5,
+									"PHRASECODE": "C1",
+									"EXTENT": "0",
+									"DURATION": 0
+								}
+							}
+						]
+					},
+					"LOCATION": {
+						"DEFINED": {
+							"ORIGIN": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9376
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Strausberger Platz",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27251
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							},
+							"TO": {
+								"ROADWAY": {
+									"DESCRIPTION": [
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "LOCAL"
+										}
+									],
+									"ID": 9376
+								},
+								"POINT": {
+									"DESCRIPTION": [
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "RDSGN"
+										},
+										{
+											"content": "Holzmarktstraße",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "Lichtenberger Straße",
+											"TYPE": "BNAME"
+										}
+									],
+									"ID": 27251
+								},
+								"DIRECTION": {
+									"DESCRIPTION": [
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "LOCAL"
+										},
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "NTCSA"
+										},
+										{
+											"content": "FRIEDRICHSHAIN",
+											"TYPE": "RDSGN"
+										}
+									],
+									"ID": 0
+								},
+								"PROXIMITY": {
+									"ID": "AT",
+									"DESCRIPTION": "at"
+								}
+							}
+						},
+						"GEOLOC": {
+							"ORIGIN": {
+								"LATITUDE": 52.51822,
+								"LONGITUDE": 13.42784
+							},
+							"TO": [
+								{
+									"LATITUDE": 52.5136,
+									"LONGITUDE": 13.42418
+								}
+							]
+						},
+						"NAVTECH": {
+							"EDGE": {
+								"EDGEID": [
+									"53507155",
+									"572712051",
+									"572712052",
+									"733292995",
+									"754278086",
+									"754278087",
+									"778482945",
+									"778482946",
+									"810885180",
+									"810885181",
+									"810885185",
+									"810885186",
+									"821667041",
+									"821676115"
+								]
+							},
+							"VERSIONID": "201503"
+						}
+					},
+					"TRAFFICITEMDETAIL": {
+						"ROADCLOSED": true,
+						"INCIDENT": {
+							"RESPONSEVEHICLES": false,
+							"MISCELLANEOUSINCIDENT": {
+								"MISCELLANEOUSTYPEDESC": ""
+							}
+						}
+					},
+					"TRAFFICITEMDESCRIPTION": [
+						{
+							"content": "Geschlossen bei Holzmarktstraße - Gesperrt.",
+							"TYPE": "short_desc"
+						},
+						{
+							"content": "Geschlossen bei Holzmarktstraße - Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "desc"
+						},
+						{
+							"content": "Gesperrt. BMW BERLIN MARATHON",
+							"TYPE": "no_exit_description"
+						}
+					]
+				}
+			]
+		},
+		"TIMESTAMP": "09/27/2015 09:35:08 GMT",
+		"VERSION": 5
+	};
+
+/***/ },
+/* 148 */
+/*!*********************************!*\
+  !*** ./app/components/map.styl ***!
+  \*********************************/
+/***/ function(module, exports) {
+
+	module.exports = {
+	  "map": "_3_LBjDtSqn8wxKq-V2wjcE"
+	};
+
+/***/ },
+/* 149 */
 /*!*************************************!*\
   !*** ./app/components/Estimator.js ***!
   \*************************************/
@@ -16298,6 +34685,8 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var page = __webpack_require__(/*! ../images/pages/page_estimator.svg */ 150);
+
 	var Overview = (function (_React$Component) {
 		_inherits(Overview, _React$Component);
 
@@ -16315,11 +34704,7 @@ module.exports =
 				return _react2["default"].createElement(
 					"div",
 					null,
-					_react2["default"].createElement(
-						"h1",
-						null,
-						"Estimator"
-					)
+					_react2["default"].createElement("img", { src: page, alt: "", className: "page-img" })
 				);
 			}
 		}]);
@@ -16331,7 +34716,16 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 140 */
+/* 150 */
+/*!*********************************************!*\
+  !*** ./app/images/pages/page_estimator.svg ***!
+  \*********************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "8728d527bc210a768ab0609b5f0f465c.svg"
+
+/***/ },
+/* 151 */
 /*!***********************************!*\
   !*** ./app/components/History.js ***!
   \***********************************/
@@ -16357,6 +34751,8 @@ module.exports =
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var page = __webpack_require__(/*! ../images/pages/page_travelhistory.svg */ 152);
+
 	var History = (function (_React$Component) {
 		_inherits(History, _React$Component);
 
@@ -16374,11 +34770,7 @@ module.exports =
 				return _react2["default"].createElement(
 					"div",
 					null,
-					_react2["default"].createElement(
-						"h1",
-						null,
-						"History"
-					)
+					_react2["default"].createElement("img", { className: "page-img", src: page, alt: "" })
 				);
 			}
 		}]);
@@ -16390,31 +34782,42 @@ module.exports =
 	module.exports = exports["default"];
 
 /***/ },
-/* 141 */
+/* 152 */
+/*!*************************************************!*\
+  !*** ./app/images/pages/page_travelhistory.svg ***!
+  \*************************************************/
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = __webpack_require__.p + "db86269a871013c9ef2eddb1eff76ac4.svg"
+
+/***/ },
+/* 153 */
 /*!************************************!*\
   !*** ./app/components/Settings.js ***!
   \************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
-	Object.defineProperty(exports, "__esModule", {
+	Object.defineProperty(exports, '__esModule', {
 		value: true
 	});
 
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
+	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
 
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
+	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ('value' in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _react = __webpack_require__(/*! react */ 2);
 
 	var _react2 = _interopRequireDefault(_react);
+
+	var page = __webpack_require__(/*! ../images/pages/page_settings.svg */ 154);
 
 	var Overview = (function (_React$Component) {
 		_inherits(Overview, _React$Component);
@@ -16422,90 +34825,47 @@ module.exports =
 		function Overview(props) {
 			_classCallCheck(this, Overview);
 
-			_get(Object.getPrototypeOf(Overview.prototype), "constructor", this).call(this, props);
+			_get(Object.getPrototypeOf(Overview.prototype), 'constructor', this).call(this, props);
 
-			this.state = {};
+			this.state = {
+				balance: 1870
+			};
+			window.socket.on('balance', (function (balance) {
+				this.setState({ balance: balance });
+			}).bind(this));
 		}
 
 		_createClass(Overview, [{
-			key: "render",
+			key: 'render',
 			value: function render() {
-				return _react2["default"].createElement(
-					"div",
+				return _react2['default'].createElement(
+					'div',
 					null,
-					_react2["default"].createElement(
-						"h1",
-						null,
-						"Settings"
-					)
+					_react2['default'].createElement(
+						'div',
+						{ className: 'clock money' },
+						'Ξ ',
+						this.state.balance
+					),
+					_react2['default'].createElement('img', { className: 'page-img', src: page, alt: '' })
 				);
 			}
 		}]);
 
 		return Overview;
-	})(_react2["default"].Component);
+	})(_react2['default'].Component);
 
-	exports["default"] = Overview;
-	module.exports = exports["default"];
+	exports['default'] = Overview;
+	module.exports = exports['default'];
 
 /***/ },
-/* 142 */
-/*!*******************************!*\
-  !*** ./app/components/Map.js ***!
-  \*******************************/
+/* 154 */
+/*!********************************************!*\
+  !*** ./app/images/pages/page_settings.svg ***!
+  \********************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = (function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; })();
-
-	var _get = function get(_x, _x2, _x3) { var _again = true; _function: while (_again) { var object = _x, property = _x2, receiver = _x3; desc = parent = getter = undefined; _again = false; if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { _x = parent; _x2 = property; _x3 = receiver; _again = true; continue _function; } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } } };
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _react = __webpack_require__(/*! react */ 2);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var Map = (function (_React$Component) {
-		_inherits(Map, _React$Component);
-
-		function Map(props) {
-			_classCallCheck(this, Map);
-
-			_get(Object.getPrototypeOf(Map.prototype), "constructor", this).call(this, props);
-
-			this.state = {};
-		}
-
-		_createClass(Map, [{
-			key: "render",
-			value: function render() {
-				return _react2["default"].createElement(
-					"div",
-					null,
-					_react2["default"].createElement(
-						"h1",
-						null,
-						"Map"
-					)
-				);
-			}
-		}]);
-
-		return Map;
-	})(_react2["default"].Component);
-
-	exports["default"] = Map;
-	module.exports = exports["default"];
+	module.exports = __webpack_require__.p + "f3d2a7f29a225ebb5a637ebc2dd26d0a.svg"
 
 /***/ }
 /******/ ]);
