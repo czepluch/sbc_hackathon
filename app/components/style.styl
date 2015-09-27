@@ -6,18 +6,24 @@ body
 	height 88vh
 	width 100vw
 .overview-container
-	overflow hidden
 	height 100vh 
 	&.active
 		height 88vh
+		.clock
+			display block
 
 .clock
 	position absolute
+	display none
 	top 8vh
 	right 2vh
 	color white
 	font-size 3.5vh
 	z-index 300
+	&.money
+		top 7vh
+		font-size 4vh
+		display block
 .page-img
 	width 100vw
 	&.overview
@@ -32,6 +38,7 @@ body
 	bottom 0
 	height 12vh
 	width 100vw
+	background rgba(255,255,255,.6)
 	ul
 		padding 0
 		list-style none

@@ -32,6 +32,25 @@ io.on('connection', function(socket) {
 		_sockets[socket.id] = socket;
 	}
 
+
+
+	socket.on('transaction', function() {
+	
+
+		// Ethereum specific stuff
+		var userAccount = web3.eth.accounts[1];
+		var wayPayAccount = web3.eth.accounts[2];
+		var wayPayBalance = web3.eth.getBalance(wayPayAccount);
+		var journeyPrice = 100;
+		console.log(web3.fromWei(userBalance, 'ether').toNumber());
+		console.log(web3.fromWei(wayPayBalance, 'ether').toNumber());
+
+		eth.sendTransaction({from: userAccount, to: wayPayAccount, value: journeyPrice})
+
+		var userBalance = web3.eth.getBalance(userAccount);
+		socket.emit('balance', userBalance);
+	});
+
 	socket.emit('found', _CONNECTED);
 
 });
@@ -76,18 +95,6 @@ function spawn() {
 
 setInterval(spawn, TIMEOUT);
 spawn();
-
-// Ethereum specific stuff
-var userAccount = web3.eth.accounts[1];
-var wayPayAccount = web3.eth.accounts[2];
-var userBalance = web3.eth.getBalance(userAccount);
-var wayPayBalance = web3.eth.getBalance(wayPayAccount);
-console.log(web3.fromWei(userBalance, 'ether').toNumber());
-console.log(web3.fromWei(wayPayBalance, 'ether').toNumber());
-
-function endJourneyTransaction() {
-    eth.sendTransaction({from: userAccount, to: wayPayAccount, value: journeyPrice})
-}
 io.listen(3001);
 
 	console.log('Bluetooth Server running');

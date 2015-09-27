@@ -5,9 +5,12 @@ import io from 'socket.io-client';
 
 var checkedIn = require('../images/pages/page_checkedin.svg');
 var notCheckedIn = require('../images/pages/page_notcheckedin.svg');
+var finishedPage = require('../images/pages/page_finishedtrip.svg');
 var activeTrip = require('../images/pages/page_live-overview.svg');
+var Map = require('./Map');
 
 var socket = io("localhost:3001");
+window.socket = socket;
 
 socket.on('connect', function(conn) {
 	console.log('connected ;)');
@@ -26,11 +29,15 @@ var _prefixZero = function(n) {
 	return n;
 }
 
+
+var timerValue = 0;
+
 export default class Overview extends React.Component {
 
 	startTimer() {
 		var tick = function () {
 			this.setState({ timer: this.state.timer + 1 });
+			timerValue = this.state.timer;
 		}.bind(this);
 
 		tick();
@@ -46,7 +53,9 @@ export default class Overview extends React.Component {
 		this.state = {
 			connected: false,
 			src: alreadyCheckedIn ? activeTrip : notCheckedIn,
-			timer: 0
+			timer: timerValue,
+			endView: false,
+			viewTimer: true
 		};
 
 		if (alreadyCheckedIn) {
@@ -56,7 +65,7 @@ export default class Overview extends React.Component {
 
 		socket.on('found', function(data) {
 
-			if (alreadyCheckedIn) {
+			if (this.state.endView) {
 				return;
 			}
 
@@ -66,10 +75,15 @@ export default class Overview extends React.Component {
 
 			if (connected) {
 				alreadyCheckedIn = true;
+				setTimeout(function() {
+				
+					this.setState({src: finishedPage, connected: false, endView: true, viewTimer: false});
+				}.bind(this), 10000);
 			}
 	
 			this.setState({src: src, connected: connected});
 		}.bind(this));
+
 	}
 
 
@@ -112,8 +126,9 @@ export default class Overview extends React.Component {
 		}
 
 		return <div className={overviewClass}>
-			{timer}
+			{this.state.viewTimer ? timer : null}
 			<img className={className} src={this.state.src} alt="" />
+			{this.state.endView ? <Map /> : null}
 		</div>;
 	}
 }

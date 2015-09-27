@@ -200,11 +200,6 @@ gg==" transform="matrix(0.2388 0 0 0.2388 97.5783 97.8723)">
   </g>
   <rect x="0" y="0" fill="#333333" width="259.2" height="58.298"/>
   <g>
-    <rect x="174.448" y="26.84" fill="none" width="70.51" height="19.989"/>
-    
-      <text transform="matrix(1 0 0 1 176.336 43.4837)" fill="#FFFFFF" font-family="'ProximaNovaCond-Regular'" font-size="24.9542" letter-spacing="1">51,70€</text>
-  </g>
-  <g>
     <rect x="21.521" y="34.657" fill="none" width="119.666" height="12.172"/>
     <text transform="matrix(1 0 0 1 21.5215 43.4655)" fill="#FFFFFF" font-family="'ProximaNovaCond-Regular'" font-size="13.2068">Settings</text>
   </g>
