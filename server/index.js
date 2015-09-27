@@ -1,5 +1,8 @@
 var Server = require('socket.io');
 var cp = require('child_process');
+// Ethereum import
+var web3 = require('web3');
+web3.setProvider(new web3.providers.HttpProvider('http://localhost:8101'));
 
 var io = new Server();
 
@@ -74,8 +77,17 @@ function spawn() {
 setInterval(spawn, TIMEOUT);
 spawn();
 
+// Ethereum specific stuff
+var userAccount = web3.eth.accounts[1];
+var wayPayAccount = web3.eth.accounts[2];
+var userBalance = web3.eth.getBalance(userAccount);
+var wayPayBalance = web3.eth.getBalance(wayPayAccount);
+console.log(web3.fromWei(userBalance, 'ether').toNumber());
+console.log(web3.fromWei(wayPayBalance, 'ether').toNumber());
 
-
+function endJourneyTransaction() {
+    eth.sendTransaction({from: userAccount, to: wayPayAccount, value: journeyPrice})
+}
 io.listen(3001);
 
 	console.log('Bluetooth Server running');
