@@ -98,7 +98,7 @@ export default class Map extends React.Component {
 
             // Create a polyline to display the route:
             var routeLine = new H.map.Polyline(strip, {
-              style: { strokeColor: 'rgba(0, 85, 170, 0.6)', lineWidth: 5 }
+              style: { strokeColor: 'rgba(44, 219, 44, 0.7)', lineWidth: 5 }
             });
 
             // Create a marker for the start point:
@@ -148,7 +148,7 @@ export default class Map extends React.Component {
 
             // Create a polyline to display the route:
             var routeLine = new H.map.Polyline(strip, {
-              style: { strokeColor: 'blue', lineWidth: 5 }
+              style: { strokeColor: 'rgba(225, 54, 44, 0.7)', lineWidth: 5 }
             });
 
             // Create a marker for the start point:
