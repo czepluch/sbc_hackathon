@@ -1,14 +1,57 @@
 
 
 import React from "react";
+import request from 'superagent';
+var traffic = require('./traffic.json');
 
 var platform = new H.service.Platform({
   'app_id': 'r7ElBPghk3pWDgiRQV8j',
   'app_code': 'jdDUjr1MRWVtQKuvkg1NXw'
 });
 
+var bbox = [[52.564873, 13.347359], [52.482571, 13.488121]];
+
+var apiUrl = "https://traffic.cit.api.here.com/traffic/6.0/incidents.json?bbox=52.564873%2C%2013.347359%3B52.482571%2C%2013.488121&criticality=0&app_id=DemoAppId01082013GAL&app_code=AJKnXv84fjrb0KIHawS0Tg";
+
+var map = null;
+
 require('./map.styl');
 
+function requestIncidents(scb, ecb, scope){
+  var trafficService = platform.getTrafficIncidentsService(),
+    parameters = {
+      bbox: '52.564873, 13.347359;52.482571, 13.488121',
+      criticality: '0'};
+
+  trafficService.requestIncidents(parameters,
+    function (result) {
+			scb.call(scope, result);
+    }, function (error) {
+			ecb.call(scope, result);
+    });
+}
+
+function distance(lat1, lon1, lat2, lon2, unit) {
+	var radlat1 = Math.PI * lat1/180
+	var radlat2 = Math.PI * lat2/180
+	var radlon1 = Math.PI * lon1/180
+	var radlon2 = Math.PI * lon2/180
+	var theta = lon1-lon2
+	var radtheta = Math.PI * theta/180
+	var dist = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+	dist = Math.acos(dist)
+	dist = dist * 180/Math.PI
+	dist = dist * 60 * 1.1515
+	if (unit=="K") { dist = dist * 1.609344 }
+	if (unit=="N") { dist = dist * 0.8684 }
+	return dist
+}
+
+function eucledianCenter(x1, x2, y1, y2) {
+	var x = (x1 + y1) / 2;
+	var y = (x2 + y2) / 2;
+	return [x, y];
+}
 
 export default class Map extends React.Component {
 
@@ -16,7 +59,32 @@ export default class Map extends React.Component {
 		super(props);
 
 		this.state = {
+			traffic: []
 		};
+
+
+	}
+
+
+	handleTraffic(traffic) {
+		var tr = traffic.TRAFFICITEMS.TRAFFICITEM;
+		tr = tr.map(function(item) {
+			var loc = item.LOCATION.GEOLOC;
+			var origin = loc.ORIGIN;
+			var to = loc.TO[0];
+
+
+			var res = {
+				critical: parseInt(item.CRITICALITY.ID, 10),
+				center: eucledianCenter(origin.LATITUDE, origin.LONGITUDE, to.LATITUDE, to.LONGITUDE),
+				radius: distance(origin.LATITUDE, origin.LONGITUDE, to.LATITUDE, to.LONGITUDE, "K") / 2
+			};
+
+			return res;
+
+
+		});
+		return tr;
 	}
 
 
@@ -24,8 +92,15 @@ export default class Map extends React.Component {
 		// Obtain the default map types from the platform object:
 		var defaultLayers = platform.createDefaultLayers();
 
+		var trafficData = this.handleTraffic(traffic);
+		
+
+//		requestIncidents(this.handleTraffic.bind(this), function fail(err) {
+	//											console.log('error');
+	//										}, this);
+
 		// Instantiate (and display) a map object:
-		var map = new H.Map(
+		map = new H.Map(
 			React.findDOMNode(this.refs.map),
 			defaultLayers.normal.traffic,
 			{
@@ -189,6 +264,43 @@ export default class Map extends React.Component {
             function(error) {
                 alert(error.message);
         });
+
+		
+		// TRAFFIC
+
+		console.log('ttr', trafficData);
+
+
+		var colors = [
+			"rgba(0, 150, 136, 0.2)",
+			"rgba(174, 213, 129, 0.2)",
+			"rgba(0, 145, 234, 0.2)",
+			"rgba(251, 173, 51, 0.2)"
+		];
+		trafficData.forEach(function(date) {
+			var args = [
+				{lat: date.center[0], lng: date.center[1]},
+				date.radius * 1000,
+				{
+					style: {
+						fillColor: colors[date.critical],
+						lineWidth: 2,
+						strokeColor: colors[date.critical]
+					}
+				}
+			];
+			map.addObject(new H.map.Circle(
+				{lat: date.center[0], lng: date.center[1]},
+				date.radius * 2000,
+				{
+					style: {
+						fillColor: colors[date.critical],
+						lineWidth: 0,
+						strokeColor: colors[date.critical]
+					}
+				}
+			));	
+		});
 
 	}
 
